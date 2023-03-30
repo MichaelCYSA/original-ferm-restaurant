@@ -18,7 +18,7 @@ const ProductCard = ({ item }: { item: Product }) => {
         display={"flex"}
         flexDirection={"column"}
       >
-        <Image src={"/salat.png"} alt="salat" width={200} height={200} />
+        <Image src={`/product-photos/${item.img}`} alt="salat" width={200} height={200} />
         <Typography mt={2} variant="h3">
           {item.name}
         </Typography>
