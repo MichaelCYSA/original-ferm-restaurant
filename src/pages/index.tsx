@@ -1,5 +1,3 @@
-export default function Home() {
-  return (
-    <></>
-  )
-}
+import MainView from "@/views/MainView"
+
+export default MainView

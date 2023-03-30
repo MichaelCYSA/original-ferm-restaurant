@@ -18,7 +18,8 @@ const createTypography = (): TypographyOptions => ({
   h1: {
     fontSize: 36,
     fontWeight: 'bold',
-    color: '#9FCD57',
+    fontFamily: 'MatchaSmoothies',
+    color: 'white',
   },
   h2: {
     fontSize: 24,
@@ -27,7 +28,12 @@ const createTypography = (): TypographyOptions => ({
   },
   h3: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: 700,
+    color: 'white',
+  },
+  h4: {
+    fontSize: 16,
+    fontWeight: 400,
     color: 'white',
   },
   link: {
