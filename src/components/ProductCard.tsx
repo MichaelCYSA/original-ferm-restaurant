@@ -18,15 +18,23 @@ const ProductCard = ({ item }: { item: Product }) => {
         display={"flex"}
         flexDirection={"column"}
       >
-        <Image src={`/product-photos/${item.img}`} alt="salat" width={200} height={200} />
+        <Image
+          src={`/product-photos/${item.img}`}
+          alt="salat"
+          width={200}
+          height={200}
+        />
         <Typography mt={2} variant="h3">
           {item.name}
         </Typography>
-        <Typography mt={1} variant="h4">
-          {item.description}
-        </Typography>
+        <Box sx={{ height: 40 }}>
+          {" "}
+          <Typography mt={1} variant="h4">
+            {item.description}
+          </Typography>
+        </Box>
         <Typography variant="h3" mt={"34px"}>
-          {item.price}
+          {item.price} MDL
         </Typography>
         <Box display={"flex"} gap={"21px"} mt={2} alignItems={"center"}>
           <Button variant="contained" sx={{ width: "153px", height: 42 }}>
