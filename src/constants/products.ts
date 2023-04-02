@@ -596,7 +596,6 @@ export const products: MenuSection[] = [
         ]
     }
 ]
-
 export const toppings: ArrayOfSupplementsItems = [
     {
         name: 'Becon',
@@ -621,7 +620,6 @@ export const toppings: ArrayOfSupplementsItems = [
         price: 25
     }
 ]
-
 export const sauces: ArrayOfSupplementsItems = [
     {
         name: 'Sos caesar',
@@ -660,74 +658,7 @@ export const sauces: ArrayOfSupplementsItems = [
         price: 15
     }
 ];
-
-let translatedSouces = [
-    {
-        "name": "sosCaesar",
-        "price": 15
-    },
-    {
-        "name": "sosTartar",
-        "price": 10
-    },
-    {
-        "name": "sosDeUsturoi",
-        "price": 10
-    },
-    {
-        "name": "sosDeCascaval",
-        "price": 15
-    },
-    {
-        "name": "maioneza",
-        "price": 10
-    },
-    {
-        "name": "ketchup",
-        "price": 10
-    },
-    {
-        "name": "smantana",
-        "price": 10
-    },
-    {
-        "name": "adjica",
-        "price": 10
-    },
-    {
-        "name": "miereDeAlbini",
-        "price": 15
-    },
-    {
-        "name": "becon",
-        "price": 25
-    },
-    {
-        "name": "sunca",
-        "price": 25
-    },
-    {
-        "name": "cascaval",
-        "price": 15
-    },
-    {
-        "name": "branza",
-        "price": 15
-    },
-    {
-        "name": "ciuperci",
-        "price": 15
-    },
-    {
-        "name": "slanina",
-        "price": 25
-    },
-    {
-        "name": "salamPicant",
-        "price": 25
-    }
-]
-let translatedProducts: MenuSection[] = [
+export let translatedProducts:  MenuSection[] = [
     {
         sectionName: 'breakFast',
         id: links.breakfast,
@@ -1299,5 +1230,73 @@ let translatedProducts: MenuSection[] = [
                 "name": "focaccia"
             }
         ]
+    }
+]
+export const translatedSauces: ArrayOfSupplementsItems = [
+    {
+        "name": "sosCaesar",
+        "price": 15
+    },
+    {
+        "name": "sosTartar",
+        "price": 10
+    },
+    {
+        "name": "sosDeUsturoi",
+        "price": 10
+    },
+    {
+        "name": "sosDeCascaval",
+        "price": 15
+    },
+    {
+        "name": "maioneza",
+        "price": 10
+    },
+    {
+        "name": "ketchup",
+        "price": 10
+    },
+    {
+        "name": "smantana",
+        "price": 10
+    },
+    {
+        "name": "adjica",
+        "price": 10
+    }
+]
+export const translatedToppings: ArrayOfSupplementsItems = [
+    {
+        "name": "miereDeAlbini",
+        "price": 15
+    },
+    {
+        "name": "becon",
+        "price": 25
+    },
+    {
+        "name": "sunca",
+        "price": 25
+    },
+    {
+        "name": "cascaval",
+        "price": 15
+    },
+    {
+        "name": "branza",
+        "price": 15
+    },
+    {
+        "name": "ciuperci",
+        "price": 15
+    },
+    {
+        "name": "slanina",
+        "price": 25
+    },
+    {
+        "name": "salamPicant",
+        "price": 25
     }
 ]

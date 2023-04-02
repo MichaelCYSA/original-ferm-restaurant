@@ -28,7 +28,7 @@ const Menu = () => {
                             onClick={scrollToDiv(link.link)}
                             key={link.link}
                             sx={{
-                                fontSize: '16px',
+                                fontSize: '18px',
                                 fontWeight: 400,
                                 color: (activeLink === link.link) ? '#9FCD57' : 'white'
                             }}

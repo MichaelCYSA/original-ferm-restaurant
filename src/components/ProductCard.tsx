@@ -1,6 +1,7 @@
 import { Product } from '@/constants/products';
+import { Translated } from '@/lang/languageContext';
 import { Box, Button, Typography } from '@mui/material';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 const ProductCard = ({ item }: { item: Product }) => {
   return (
@@ -26,12 +27,26 @@ const ProductCard = ({ item }: { item: Product }) => {
           height={200}
           layout="responsive"
         />
-        <Typography mt={2} variant="h3">
-          {item.name}
+        <Typography
+          component={'span'}
+          mt={1}
+          variant="h3"
+          sx={{
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            lineClamp: 2,
+            height: 46,
+            boxOrient: 'vertical'
+          }}>
+          {
+            Translated(item.name)
+          }
         </Typography>
         <Box sx={{ height: 46 }}>
           <Typography mb={1} variant="h4">
-            {item.description}
+            {
+              Translated(item.description)
+            }
           </Typography>
         </Box>
         <Typography variant="h3" mt={"34px"}>
@@ -49,7 +64,7 @@ const ProductCard = ({ item }: { item: Product }) => {
           />
         </Box>
       </Box>
-    </Box>
+    </Box >
   );
 };
 

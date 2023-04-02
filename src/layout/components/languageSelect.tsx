@@ -1,12 +1,13 @@
+import { useLangContext } from '@/lang/languageContext';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from 'react';
 
 const LanguageSelect = () => {
 
-    const [lang, setLang] = useState('Ro')
+    const { handleSelectLanguage, lang } = useLangContext()
 
-    const handleChange = (e: SelectChangeEvent<string>) => setLang(e.target.value)
+    const handleChange = (e: SelectChangeEvent<string>) => handleSelectLanguage(e.target.value)
 
     return (
         <Select
@@ -21,8 +22,8 @@ const LanguageSelect = () => {
                 },
             }}
         >
-            <MenuItem value={'Ro'}>Ro</MenuItem>
-            <MenuItem value={'Ru'}>Ru</MenuItem>
+            <MenuItem value={'ro'}>Ro</MenuItem>
+            <MenuItem value={'ru'}>Ru</MenuItem>
         </Select >
     );
 };

@@ -1,4 +1,5 @@
-import { sauces, SupplementsItem as SupplementsItemInterface, toppings } from '@/constants/products';
+import { SupplementsItem as SupplementsItemInterface, translatedSauces, translatedToppings } from '@/constants/products';
+import { Translated } from '@/lang/languageContext';
 import { Box, Typography } from '@mui/material';
 
 const Supplements = () => {
@@ -20,7 +21,7 @@ const Supplements = () => {
                     <Typography variant='h3'>50 g</Typography>
                 </Box>
                 {
-                    sauces.map(sauce => (
+                    translatedSauces.map(sauce => (
                         <SupplementsItem key={sauce.name} item={sauce} />
                     ))
                 }
@@ -36,7 +37,7 @@ const Supplements = () => {
                     <Typography variant='h3'>50 g</Typography>
                 </Box>
                 {
-                    toppings.map(topping => (
+                    translatedToppings.map(topping => (
                         <SupplementsItem key={topping.name} item={topping} />
                     ))
                 }
@@ -50,7 +51,7 @@ export default Supplements
 const SupplementsItem = ({ item }: { item: SupplementsItemInterface }) => {
     return (
         <Box display={'flex'} alignItems={'center'} gap={'4px'}>
-            <Typography variant='h3'>{item.name} - {item.price} mdl</Typography>
+            <Typography variant='h3'>{Translated(item.name)} - {item.price} mdl</Typography>
             {/* <Image src={'/add.png'} width={24} height={24} alt={'add'} />*/}
         </Box>
     )
