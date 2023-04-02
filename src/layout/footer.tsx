@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <Box component={'footer'} display={'flex'} justifyContent={'space-between'} pb={8} pt={8}>
+        <Box component={'footer'} display={'flex'} justifyContent={'space-between'} flexDirection={{ xs: 'column', md: 'row' }} pb={8} pt={8}>
             <Box display={'flex'} flexDirection={'column'} gap={'18px'}>
                 <Box display={'flex'} gap={8}>
                     <Box display={'flex'} flexDirection={'column'} gap={'12px'}>

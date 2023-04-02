@@ -1,18 +1,29 @@
+import * as links from './links';
+
 export interface Product {
-     name: string;
-     price: number;
-     description: string;
-     img?: string
+    name: string;
+    price: number;
+    description: string;
+    img?: string
 }
 
+export interface SupplementsItem {
+    name: string,
+    price: number
+}
+
+type ArrayOfSupplementsItems = SupplementsItem[]
+
 export interface MenuSection {
-     sectionName: string;
-     products?: Product[]
+    sectionName: string;
+    id: string;
+    products?: Product[]
 }
 
 export const products: MenuSection[] = [
     {
         sectionName: 'Mic dejun',
+        id: links.breakfast,
         products: [
             {
                 name: 'Brinzoaice',
@@ -54,6 +65,7 @@ export const products: MenuSection[] = [
     },
     {
         sectionName: 'Supe',
+        id: links.soup,
         products: [
             {
                 name: 'Bors rosu',
@@ -89,6 +101,7 @@ export const products: MenuSection[] = [
     },
     {
         sectionName: 'Salate',
+        id: links.salads,
         products: [
             {
                 name: 'Salata Shopski',
@@ -155,6 +168,7 @@ export const products: MenuSection[] = [
     },
     {
         sectionName: 'GUSTARI RECI',
+        id: links.goldSnacks,
         products: [
             {
                 name: 'Hering cu cartofi fierti',
@@ -227,6 +241,7 @@ export const products: MenuSection[] = [
     },
     {
         sectionName: 'GUSTARI FIERBINTI',
+        id: links.hostSnack,
         products: [
             {
                 name: 'Cascaval Buffalo',
@@ -256,6 +271,7 @@ export const products: MenuSection[] = [
     },
     {
         sectionName: 'GUSTARI LA BERE',
+        id: links.beerSnack,
         products: [
             {
                 name: 'Nacios',
@@ -298,11 +314,12 @@ export const products: MenuSection[] = [
                 description: '50 g',
                 price: 70.00,
                 img: 'basturma_de_vita.png'
-            } 
+            }
         ]
     },
     {
         sectionName: 'BUCATE PRINCIPALE',
+        id: links.mainDishes,
         products: [
             {
                 name: 'Ciolan de proc',
@@ -423,9 +440,864 @@ export const products: MenuSection[] = [
         ]
     },
     {
-        sectionName: 'GARNITURI'
+        sectionName: 'GARNITURI',
+        id: links.gaskets,
+        products: [
+            {
+                name: 'Cartofi copti',
+                description: 'cu rozmarin 250 g',
+                price: 40.00,
+                img: 'cartofi_copti.png'
+            },
+            {
+                name: 'Cartofi pai + ketchup',
+                description: '130/50 g',
+                price: 35.00,
+                img: 'cartofi_pai_ketchup.png'
+            },
+            {
+                name: 'Piure de cartofi',
+                description: '200 g',
+                price: 30.00,
+                img: 'piure_de_cartofi.png'
+            },
+            {
+                name: 'Cartofi prajiti ca acasa',
+                description: '300 g',
+                price: 50.00,
+                img: 'cartofi_prajiti_ca_acasa.png'
+            },
+            {
+                name: 'Mamaliga',
+                description: 'cu smantana, branza 350 g',
+                price: 50.00,
+                img: 'mamaliga.png'
+            },
+            {
+                name: 'Orez cu legume',
+                description: '250 g',
+                price: 35.00,
+                img: 'orez_cu_legume.png'
+            },
+            {
+                name: 'Piure de brocoli',
+                description: '200 g',
+                price: 45.00,
+                img: 'piure_de_brocoli.png'
+            },
+            {
+                name: 'Pastari',
+                description: '270 g',
+                price: 40.00,
+                img: 'pastari.png'
+            },
+            {
+                name: 'Paste cu unt',
+                description: '200 gg ',
+                price: 30.00,
+                img: 'paste_cu_unt.png'
+            },
+            {
+                name: 'Fasole cu legume',
+                description: '200 g',
+                price: 50.00,
+                img: 'fasole_cu_legume.png'
+            },
+            {
+                name: 'Varza calita',
+                description: '200 g',
+                price: 40.00,
+                img: 'varza_calita.png'
+            },
+        ]
     },
     {
-        sectionName: 'PIZZA'
+        sectionName: 'PIZZA',
+        id: links.pizza,
+        products: [
+            {
+                name: 'Margherita',
+                description: 'Sos de rosii, mozzarella',
+                price: 85.00,
+                img: 'margherita.png'
+            },
+            {
+                name: 'Diavola',
+                description: 'Sos de rosii,salam picant, mozzarella',
+                price: 95.00,
+                img: 'diavola.png'
+            },
+            {
+                name: 'Tonno',
+                description: 'Sos de rosii,rucola, cherry, Provola,mozzarella, ton',
+                price: 115.00,
+                img: 'tonno.png'
+            },
+            {
+                name: 'Capriciossa',
+                description: 'Ceafa de porc, vanata coapta, sos de rosii, ciuperci , branza decapra, mozzarella',
+                price: 110.00,
+                img: 'capriciossa.png'
+            },
+            {
+                name: 'Pollo',
+                description: 'Gogosari, ciuperci,piept de pui mozzarella, sos de rosii.',
+                price: 110.00,
+                img: 'pollo.png'
+            },
+            {
+                name: 'Prosciutto e funghi',
+                description: 'Mozzarella, prosciutto, cotto, ciuperci,sos de rosii',
+                price: 98.00,
+                img: 'prosciutto_e_funghi.png'
+            },
+            {
+                name: 'Quattro formaggi',
+                description: 'Mozzarella,gorgonzola, provola edam,ricotta',
+                price: 115.00,
+                img: 'quattro_formaggi.png'
+            },
+            {
+                name: 'Ferma cu origini',
+                description: 'Sos de rosii,mozzarella, porumb,prosciutto ,ciuperci, gogosari, masline',
+                price: 110.00,
+                img: 'ferma_cu_origini.png'
+            },
+            {
+                name: 'Carbonara',
+                description: 'Sos de rosii,mozzarella, bacon,ou',
+                price: 98.00,
+                img: 'carbonara.png'
+            },
+            {
+                name: 'Leggera',
+                description: 'Carne de vitel,piept de pui becon,sos de rosii, mozzarella,proschiutto ',
+                price: 115.00,
+                img: 'leggera.png'
+            },
+            {
+                name: 'Pizza Praga',
+                description: 'Sos de rosii,mozzarella,becon carnaciori vanatoresti de Praga,cascaval edam',
+                price: 105.00,
+                img: 'pizza_praga.png'
+            },
+            {
+                name: 'Vegetariana',
+                description: 'Sos de rosii, legume grill',
+                price: 85.00,
+                img: 'vegetariana.png'
+            },
+            {
+                name: 'Focaccia',
+                description: '200 g',
+                price: 25.00,
+                img: 'focaccia.png'
+            }
+        ]
+    }
+]
+
+export const toppings: ArrayOfSupplementsItems = [
+    {
+        name: 'Becon',
+        price: 25
+    }, {
+        name: 'Sunca',
+        price: 25
+    }, {
+        name: 'Cascaval',
+        price: 15
+    }, {
+        name: 'Branza',
+        price: 15
+    }, {
+        name: 'Ciuperci',
+        price: 15
+    }, {
+        name: 'Slanina',
+        price: 25
+    }, {
+        name: 'Salam picant',
+        price: 25
+    }
+]
+
+export const sauces: ArrayOfSupplementsItems = [
+    {
+        name: 'Sos caesar',
+        price: 15
+    },
+    {
+        name: 'Sos tartar',
+        price: 10
+    },
+    {
+        name: 'Sos de usturoi',
+        price: 10
+    },
+    {
+        name: 'Sos de cascaval',
+        price: 15
+    },
+    {
+        name: 'Maioneza',
+        price: 10
+    },
+    {
+        name: 'Ketchup',
+        price: 10
+    },
+    {
+        name: 'Smantana',
+        price: 10
+    },
+    {
+        name: 'Adjica',
+        price: 10
+    },
+    {
+        name: 'Miere de albini',
+        price: 15
+    }
+];
+
+let translatedSouces = [
+    {
+        "name": "sosCaesar",
+        "price": 15
+    },
+    {
+        "name": "sosTartar",
+        "price": 10
+    },
+    {
+        "name": "sosDeUsturoi",
+        "price": 10
+    },
+    {
+        "name": "sosDeCascaval",
+        "price": 15
+    },
+    {
+        "name": "maioneza",
+        "price": 10
+    },
+    {
+        "name": "ketchup",
+        "price": 10
+    },
+    {
+        "name": "smantana",
+        "price": 10
+    },
+    {
+        "name": "adjica",
+        "price": 10
+    },
+    {
+        "name": "miereDeAlbini",
+        "price": 15
+    },
+    {
+        "name": "becon",
+        "price": 25
+    },
+    {
+        "name": "sunca",
+        "price": 25
+    },
+    {
+        "name": "cascaval",
+        "price": 15
+    },
+    {
+        "name": "branza",
+        "price": 15
+    },
+    {
+        "name": "ciuperci",
+        "price": 15
+    },
+    {
+        "name": "slanina",
+        "price": 25
+    },
+    {
+        "name": "salamPicant",
+        "price": 25
+    }
+]
+let translatedProducts: MenuSection[] = [
+    {
+        sectionName: 'breakFast',
+        id: links.breakfast,
+        products: [
+            {
+                "img": "brinzoaice.png",
+                "price": 60,
+                "description": "cheeseBallsDescription",
+                "name": "cheeseBalls"
+            },
+            {
+                "img": "omleta_cu_salata.png",
+                "price": 50,
+                "description": "omeletteWithSaladDescription",
+                "name": "omeletteWithSalad"
+            },
+            {
+                "img": "ochiuri.png",
+                "price": 60,
+                "description": "eggsWithBaconDescription",
+                "name": "eggsWithBacon"
+            },
+            {
+                "img": "clatite.png",
+                "price": 60,
+                "description": "pancakesDescription",
+                "name": "pancakes"
+            },
+            {
+                "img": "terci_de_ovaz.png",
+                "price": 35,
+                "description": "oatmealDescription",
+                "name": "oatmeal"
+            },
+            {
+                "img": "croissant.png",
+                "price": 35,
+                "description": "croissantDescription",
+                "name": "croissant"
+            }
+
+        ]
+    },
+    {
+        sectionName: 'supe',
+        id: links.soup,
+        products: [
+            {
+                "img": "bors_rosu.png",
+                "price": 60,
+                "description": "descriptionBorsRosu",
+                "name": "borsRosu"
+            },
+            {
+                "img": "zeama_de_gaina.png",
+                "price": 55,
+                "description": "descriptionZeamaDeGaina",
+                "name": "zeamaDeGaina"
+            },
+            {
+                "img": "soleanca.png",
+                "price": 60,
+                "description": "descriptionSoleanca",
+                "name": "soleanca"
+            },
+            {
+                "img": "supa_de_spanac.png",
+                "price": 70,
+                "description": "descriptionSupaDeSpanac",
+                "name": "supaDeSpanac"
+            },
+            {
+                "img": "crem_supa.png",
+                "price": 55,
+                "description": "descriptionCremSupa",
+                "name": "cremSupa"
+            }
+        ]
+    },
+    {
+        sectionName: 'salads',
+        id: links.salads,
+        products: [
+            {
+                "img": "salata_shopski.png",
+                "price": 70,
+                "description": "descriptionSalataShopski",
+                "name": "salataShopski"
+            },
+            {
+                "img": "salata_caesar.png",
+                "price": 90,
+                "description": "descriptionSalataCaesar",
+                "name": "salataCaesar"
+            },
+            {
+                "img": "salata_de_varza.png",
+                "price": 40,
+                "description": "descriptionSalataDeVarza",
+                "name": "salataDeVarza"
+            },
+            {
+                "img": "salata_cu_varza_murata.png",
+                "price": 40,
+                "description": "descriptionSalataCuVarzaMurata",
+                "name": "salataCuVarzaMurata"
+            },
+            {
+                "img": "salata_exotic.png",
+                "price": 75,
+                "description": "descriptionSalataExotic",
+                "name": "salataExotic"
+            },
+            {
+                "img": "salata_mozzarella_perle.png",
+                "price": 75,
+                "description": "descriptionSalataMozzarellaPerle",
+                "name": "salataMozzarellaPerle"
+            },
+            {
+                "img": "salata_calda.png",
+                "price": 100,
+                "description": "descriptionSalataCalda",
+                "name": "salataCalda"
+            },
+            {
+                "img": "salata_din_legume.png",
+                "price": 75,
+                "description": "roasted_vegetables",
+                "name": "vegetable_salad"
+            },
+            {
+                "img": "salata_cu_ton.png",
+                "price": 95,
+                "description": "tuna",
+                "name": "tuna_salad"
+            },
+            {
+                "img": "mix_de_legume.png",
+                "price": 60,
+                "description": "vegetable_mix",
+                "name": "vegetable_mix"
+            }
+        ]
+    },
+    {
+        sectionName: 'goldSnacks',
+        id: links.goldSnacks,
+        products: [
+
+            {
+                "img": "hering_cu_cartofi_fierti.png",
+                "price": 70,
+                "description": "cuCartofiFierti100250g",
+                "name": "heringCuCartofiFierti"
+            },
+            {
+                "img": "gingerica.png",
+                "price": 70,
+                "description": "cuCartofiFierti10025050g",
+                "name": "gingerica"
+            },
+            {
+                "img": "platou_de_legume.png",
+                "price": 90,
+                "description": "proaspete450g",
+                "name": "platouDeLegume"
+            },
+            {
+                "img": "platou_de_cascavaluri.png",
+                "price": 120,
+                "description": "deLaFermaNoastra300g",
+                "name": "platouDeCascavaluri"
+            },
+            {
+                "img": "platou_de_slanina.png",
+                "price": 90,
+                "description": "380g",
+                "name": "platouDeSlanina"
+            },
+            {
+                "img": "platou_de_salamuri.png",
+                "price": 140,
+                "description": "250g",
+                "name": "platouDeSalamuri"
+            },
+            {
+                "img": "platou_de_muraturi.png",
+                "price": 60,
+                "description": "plate_of_pickles_description",
+                "name": "plate_of_pickles"
+            },
+            {
+                "img": "burratta_cu_salata.png",
+                "price": 99,
+                "description": "burrata_with_salad_description",
+                "name": "burrata_with_salad"
+            },
+            {
+                "img": "bruschete.png",
+                "price": 85,
+                "description": "bruschetta_with_salmon_description",
+                "name": "bruschetta_with_salmon"
+            },
+            {
+                "img": "bruschete_mozzarella.png",
+                "price": 65,
+                "description": "bruschetta_with_mozzarella_description",
+                "name": "bruschetta_with_mozzarella"
+            },
+            {
+                "img": "bruschete_rosbif.png",
+                "price": 70,
+                "description": "bruschetta_with_roast_beef_description",
+                "name": "bruschetta_with_roast_beef"
+            },
+        ]
+    },
+    {
+        sectionName: 'hostSnack',
+        id: links.hostSnack,
+        products: [
+            {
+                "img": "cascaval_buffalo.png",
+                "price": 140,
+                "description": "teleggioPane",
+                "name": "cascavalBuffalo"
+            },
+            {
+                "img": "aripioare_de_pui.png",
+                "price": 85,
+                "description": "cuCartofiPai",
+                "name": "aripioareDePui"
+            },
+            {
+                "img": "nughete_de_pui.png",
+                "price": 85,
+                "description": "cuCartofiPai",
+                "name": "nugheteDePui"
+            },
+            {
+                "img": "placinte_in_asortiment.png",
+                "price": 40,
+                "description": "twoHundredGrams",
+                "name": "placinteInAsortiment"
+            }
+        ]
+    },
+    {
+        sectionName: 'beerSnack',
+        id: links.beerSnack,
+        products: [
+            {
+                "img": "nacios.png",
+                "price": 40,
+                "description": "50g/50g",
+                "name": "nacios"
+            },
+            {
+                "img": "crutoane_cu_usturoi.png",
+                "price": 40,
+                "description": "250/50 g",
+                "name": "crutoane_cu_usturoi"
+            },
+            {
+                "img": "migdale_prajite.png",
+                "price": 60,
+                "description": "100 g",
+                "name": "migdale_prajite"
+            },
+            {
+                "img": "pietrosel.png",
+                "price": 65,
+                "description": "130/50 g",
+                "name": "pietrosel"
+            },
+            {
+                "img": "ineluse.png",
+                "price": 60,
+                "description": "лук+соус тартар 130/50 g",
+                "name": "ineluse_ceapa"
+            },
+            {
+                "img": "ineluse_calmar.png",
+                "price": 70,
+                "description": "кальмар+соус тартар 130/50 g",
+                "name": "ineluse_calmar"
+            },
+            {
+                "img": "basturma_de_vita.png",
+                "price": 70,
+                "description": "50 g",
+                "name": "basturma_de_vita"
+            },
+        ]
+    },
+    {
+        sectionName: 'mainDishes',
+        id: links.mainDishes,
+        products: [
+            {
+                "img": "ciolan_de_proc.png",
+                "price": 199,
+                "description": "pork_shank_description",
+                "name": "pork_shank"
+            },
+            {
+                "img": "guleas_unguresc.png",
+                "price": 80,
+                "description": "hungarian_goulash_description",
+                "name": "hungarian_goulash"
+            },
+            {
+                "img": "file_de_somon.png",
+                "price": 170,
+                "description": "grilled_salmon_description",
+                "name": "grilled_salmon"
+            },
+            {
+                "img": "tocanita_de_iepuras.png",
+                "price": 95,
+                "description": "rabbit_stew_description",
+                "name": "rabbit_stew"
+            },
+            {
+                "img": "paste_cu_carne.png",
+                "price": 90,
+                "description": "pasta_with_beef_description",
+                "name": "pasta_with_beef"
+            },
+            {
+                "img": "paste_cu_somon.png",
+                "price": 110,
+                "description": "pasta_with_salmon_description",
+                "name": "pasta_with_salmon"
+            },
+            {
+                "img": "piept_de_pui.png",
+                "price": 75,
+                "description": "chickenBreastDescription",
+                "name": "chickenBreast"
+            },
+            {
+                "img": "frigarui_de_pui.png",
+                "price": 95,
+                "description": "chickenSkewersDescription",
+                "name": "chickenSkewers"
+            },
+            {
+                "img": "frigarui_de_porc.png",
+                "price": 105,
+                "description": "porkSkewersDescription",
+                "name": "porkSkewers"
+            },
+            {
+                "img": "frigarui_de_vita.png",
+                "price": 155,
+                "description": "beefSkewersDescription",
+                "name": "beefSkewers"
+            },
+            {
+                "img": "mici_de_casa.png",
+                "price": 90,
+                "description": "homemadeMiciDescription",
+                "name": "homemadeMici"
+            },
+            {
+                "img": "steak.png",
+                "price": 155,
+                "description": "beefSteakDescription",
+                "name": "beefSteak"
+            },
+            {
+                "img": "carne_de_bivol_inabusit_in_vin.png",
+                "price": 140,
+                "description": "bisonStewInWineDescription",
+                "name": "bisonStewInWine"
+            },
+            {
+                "img": "snitel.png",
+                "price": 75,
+                "description": "chickenSchnitzelDescription",
+                "name": "chickenSchnitzel"
+            },
+            {
+                "img": "burger_de_pui.png",
+                "price": 90,
+                "description": "chickenBurgerDescription",
+                "name": "chickenBurger"
+            },
+            {
+                "img": "burger_de_vita.png",
+                "price": 90,
+                "description": "beefBurgerDescription",
+                "name": "beefBurger"
+            },
+            {
+                "img": "carnita_de_curcan.png",
+                "price": 155,
+                "description": "turkeyMeatWithPotatoesDescription",
+                "name": "turkeyMeatWithPotatoes"
+            },
+            {
+                "img": "costita_de_vitel.png",
+                "price": 35,
+                "description": "beefRibsDescription",
+                "name": "beefRibs"
+            },
+            {
+                "img": "platou_de_carne_gril.png",
+                "price": 600,
+                "description": "grilledMeatPlatterDescription",
+                "name": "grilledMeatPlatter"
+            }
+        ]
+    },
+    {
+        sectionName: 'GARNITURI',
+        id: links.gaskets,
+        products: [
+            {
+                "img": "cartofi_copti.png",
+                "price": 40,
+                "description": "roastedPotatoesDescription",
+                "name": "roastedPotatoes"
+            },
+            {
+                "img": "cartofi_pai_ketchup.png",
+                "price": 35,
+                "description": "friesAndKetchupDescription",
+                "name": "friesAndKetchup"
+            },
+            {
+                "img": "piure_de_cartofi.png",
+                "price": 30,
+                "description": "mashedPotatoesDescription",
+                "name": "mashedPotatoes"
+            },
+            {
+                "img": "cartofi_prajiti_ca_acasa.png",
+                "price": 50,
+                "description": "homeStyleFriedPotatoesDescription",
+                "name": "homeStyleFriedPotatoes"
+            },
+            {
+                "img": "mamaliga.png",
+                "price": 50,
+                "description": "polentaDescription",
+                "name": "polenta"
+            },
+            {
+                "img": "orez_cu_legume.png",
+                "price": 35,
+                "description": "riceWithVegetablesDescription",
+                "name": "riceWithVegetables"
+            },
+            {
+                "img": "piure_de_brocoli.png",
+                "price": 45,
+                "description": "broccoliPureeDescription",
+                "name": "broccoliPuree"
+            },
+            {
+                "img": "pastari.png",
+                "price": 40,
+                "description": "pastaDescription",
+                "name": "pasta"
+            },
+            {
+                "img": "paste_cu_unt.png",
+                "price": 30,
+                "description": "pastaWithButterDescription",
+                "name": "pastaWithButter"
+            },
+            {
+                "img": "fasole_cu_legume.png",
+                "price": 50,
+                "description": "beanVegetableStewDescription",
+                "name": "beanVegetableStew"
+            },
+            {
+                "img": "varza_calita.png",
+                "price": 40,
+                "description": "braisedCabbageDescription",
+                "name": "braisedCabbage"
+            }
+        ]
+    },
+    {
+        sectionName: 'pizza',
+        id: links.pizza,
+        products: [
+            {
+                "img": "margherita.png",
+                "price": 85,
+                "description": "margheritaDescription",
+                "name": "margherita"
+            },
+            {
+                "img": "diavola.png",
+                "price": 95,
+                "description": "diavolaDescription",
+                "name": "diavola"
+            },
+            {
+                "img": "tonno.png",
+                "price": 115,
+                "description": "tonnoDescription",
+                "name": "tonno"
+            },
+            {
+                "img": "capriciossa.png",
+                "price": 110,
+                "description": "capriciossaDescription",
+                "name": "capriciossa"
+            },
+            {
+                "img": "pollo.png",
+                "price": 110,
+                "description": "polloDescription",
+                "name": "pollo"
+            },
+            {
+                "img": "prosciutto_e_funghi.png",
+                "price": 98,
+                "description": "prosciuttoEFunghiDescription",
+                "name": "prosciuttoEFunghi"
+            },
+            {
+                "img": "quattro_formaggi.png",
+                "price": 115,
+                "description": "quattroFormaggiDescription",
+                "name": "quattroFormaggi"
+            },
+            {
+                "img": "ferma_cu_origini.png",
+                "price": 110,
+                "description": "fermaCuOriginiDescription",
+                "name": "fermaCuOrigini"
+            },
+            {
+                "img": "carbonara.png",
+                "price": 98,
+                "description": "carbonaraDescription",
+                "name": "carbonara"
+            },
+            {
+                "img": "leggera.png",
+                "price": 115,
+                "description": "leggeraDescription",
+                "name": "leggera"
+            },
+            {
+                "img": "pizza_praga.png",
+                "price": 105,
+                "description": "pizzaPragaDescription",
+                "name": "pizzaPraga"
+            },
+            {
+                "img": "vegetariana.png",
+                "price": 85,
+                "description": "vegetarianaDescription",
+                "name": "vegetariana"
+            },
+            {
+                "img": "focaccia.png",
+                "price": 25,
+                "description": "focacciaDescription",
+                "name": "focaccia"
+            }
+        ]
     }
 ]

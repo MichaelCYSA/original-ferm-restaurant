@@ -1,21 +1,35 @@
-import { Box, Typography, Divider } from "@mui/material";
+import { Box, Divider, Typography } from '@mui/material';
 
 const SectionDividerBox = ({
   sectionName,
   children,
+  id
 }: {
   sectionName: string;
   children: JSX.Element;
+  id: string
 }) => {
   return (
-    <Box display={"flex"} flexDirection={"column"} gap={8}>
-      <Box display="flex" gap={"20px"}>
+    <Box id={id} display={"flex"} flexDirection={"column"} gap={{ xs: 4, md: 8 }}>
+      <Box
+        display="flex"
+        gap={"20px"}
+        flexDirection={{
+          xs: 'column',
+          md: 'row'
+        }}
+      >
         <Typography variant="h1" sx={{ flexGrow: 0 }}>
           {sectionName}
         </Typography>
         <Divider
           flexItem
-          sx={{ flexGrow: 1, background: "white", height: "3px", mt: 2.5 }}
+          sx={{
+            flexGrow: 1,
+            background: "white",
+            height: "3px",
+            mt: { xs: 0, md: 2.5 }
+          }}
         />
       </Box>
       {children}

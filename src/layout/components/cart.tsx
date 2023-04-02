@@ -18,7 +18,16 @@ const Cart = () => {
                 alignItems: 'center'
 
             }}>
-                <Typography component={'span'} sx={{ color: '#9FCD57', fontSize: '16px', textAlign: 'center', width: '100%' }}>5</Typography>
+                <Typography
+                    component={'span'}
+                    sx={{
+                        color: '#9FCD57',
+                        fontSize: '16px',
+                        textAlign: 'center',
+                        width: '100%'
+                    }}>
+                    5
+                </Typography>
             </Box>
         </Box>
     )
