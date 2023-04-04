@@ -1,4 +1,5 @@
 import { Box, Divider, Typography } from '@mui/material';
+import { Translated } from '@/lang/languageContext';
 
 const SectionDividerBox = ({
   sectionName,
@@ -20,7 +21,7 @@ const SectionDividerBox = ({
         }}
       >
         <Typography variant="h1" sx={{ flexGrow: 0 }}>
-          {sectionName}
+          {Translated(sectionName)}
         </Typography>
         <Divider
           flexItem

@@ -1,6 +1,7 @@
 import { menuLinks } from '@/constants/links';
 import { Box, Typography } from '@mui/material';
 import { useState } from 'react';
+import { Translated } from '@/lang/languageContext';
 
 const Menu = () => {
 
@@ -35,7 +36,7 @@ const Menu = () => {
                             variant='link'
                         >
                             {
-                                link.name
+                                Translated(link.name)
                             }
                         </Typography>
 

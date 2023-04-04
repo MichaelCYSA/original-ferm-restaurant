@@ -185,5 +185,16 @@
         "branza": "Сыр фета",
         "ciuperci": "Грибы",
         "slanina": "Сало",
-        "salamPicant": "Острый салями"
+        "salamPicant": "Острый салями",
+        "breakFast": "Завтраки",
+        "supe": "Супы",
+        "salads": "Салаты",
+        "goldSnacks": "Холодные закуски",
+        "hostSnack": "Горячие закуски",
+        "beerSnack": "Закуски на пиво",
+        "mainDishes": "Основные блюда",
+        "gaskets": "Гарниры",
+        "pizza": "Пицца",
+        "deserts": "Десерты",
+        "order": "Заказать"
 }

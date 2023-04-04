@@ -1076,7 +1076,7 @@ export let translatedProducts:  MenuSection[] = [
         ]
     },
     {
-        sectionName: 'GARNITURI',
+        sectionName: 'gaskets',
         id: links.gaskets,
         products: [
             {

@@ -35,43 +35,43 @@ export const menuLinks = [
         link: mainContainer
     },
     {
-        name: 'Mic dejun',
+        name: 'breakFast',
         link: breakfast
     },
     {
-        name: 'Supe',
+        name: 'supe',
         link: soup
     },
     {
-        name: 'Salate',
+        name: 'salads',
         link: salads
     },
     {
-        name: 'Gustari Rece',
+        name: 'goldSnacks',
         link: goldSnacks
     },
     {
-        name: 'Pizza',
+        name: 'pizza',
         link: pizza
     },
     {
-        name: 'Gustari Ferbinte',
+        name: 'hostSnack',
         link: hostSnack
     },
     {
-        name: 'Gustari la bere',
+        name: 'beerSnack',
         link: beerSnack
     },
     {
-        name: 'Bucate Principale',
+        name: 'mainDishes',
         link: mainDishes
     },
     {
-        name: 'Garnituri',
+        name: 'gaskets',
         link: gaskets
     },
     {
-        name: 'Deserturi',
+        name: 'deserts',
         link: desserts
     },
 ]

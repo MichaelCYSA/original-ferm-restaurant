@@ -1,7 +1,7 @@
 import { Product } from '@/constants/products';
-import { Translated } from '@/lang/languageContext';
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/legacy/image';
+import { Translated } from '@/lang/languageContext';
 
 const ProductCard = ({ item }: { item: Product }) => {
   return (
@@ -54,7 +54,9 @@ const ProductCard = ({ item }: { item: Product }) => {
         </Typography>
         <Box display={"flex"} gap={"21px"} mt={2} alignItems={"center"}>
           <Button variant="contained" sx={{ width: "153px", height: 42 }}>
-            Заказать
+            {
+              Translated("order")
+            }
           </Button>
           <Image
             src={"/shopping_cart.png"}
