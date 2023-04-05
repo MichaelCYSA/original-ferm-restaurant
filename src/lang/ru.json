@@ -196,5 +196,19 @@
         "gaskets": "Гарниры",
         "pizza": "Пицца",
         "deserts": "Десерты",
-        "order": "Заказать"
+        "order": "Заказать",
+        "napoleon": "Наполеон",
+        "medovic": "Медовик",
+        "napoleonDescription": "180 г",
+        "medovicDescription": "140 г",
+        "gusmaLuiGuguta": "Гушма луй Гугуца",
+        "gusmaLuiGugutaDescription": "170 г",
+        "prajitura": "Пирожное",
+        "prajituraDescription": "Вкус детства 90 г",
+        "pruneCuNuca": "Сливы с орехами",
+        "pruneCuNucaDescription": "в винном сиропе с кремом из сметаны 200 г",
+        "fondant": "Фондан",
+        "fondantDescription": "шоколадный 70/50 г",
+        "inghetataAdevarata": "Настоящее мороженое",
+        "inghetataAdevarataDescription": "(Пломбир/Шоколад/Фундук/Фисташки/Ежевика, Клубника, 1 шарик 50 г)"
 }

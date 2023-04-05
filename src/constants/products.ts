@@ -594,6 +594,54 @@ export const products: MenuSection[] = [
                 img: 'focaccia.png'
             }
         ]
+    },
+    {
+        sectionName: 'DESERTURI',
+        id: links.desserts,
+        products: [
+            {
+                name: 'Napoleon',
+                description: '180 g',
+                price: 65.00,
+                img: 'napoleon.png'
+            },
+            {
+                name: 'Medovic',
+                description: '140 g',
+                price: 65.00,
+                img: 'medovic.png'
+            },
+            {
+                name: 'Cusma lui Guguta',
+                description: '170 g',
+                price: 65.00,
+                img: 'cusma_lui_guguta.png'
+            },
+            {
+                name: 'Prajitura',
+                description: 'Gustul copilariei90g',
+                price: 55.00,
+                img: 'prajitura.png'
+            },
+            {
+                name: 'Prune cu nuca',
+                description: 'n sirop de vincu crema de smantana 200 g',
+                price: 65.00,
+                img: 'prune_cu_nuca.png'
+            },
+            {
+                name: 'Fondant',
+                description: 'de ciocolata 70/50 g',
+                price: 70.00,
+                img: 'fondant.png'
+            },
+            {
+                name: 'Inghetata adevarata',
+                description: '(Plombir/Ciocolata /Nocciola/ Fistic/Mure,Capsuna ,1 bila  50 g',
+                price: 15.00,
+                img: 'inghetata_adevarata.png'
+            },
+        ]
     }
 ]
 export const toppings: ArrayOfSupplementsItems = [
@@ -1229,6 +1277,54 @@ export let translatedProducts:  MenuSection[] = [
                 "description": "focacciaDescription",
                 "name": "focaccia"
             }
+        ]
+    },
+    {
+        sectionName: 'deserts',
+        id: links.desserts,
+        products: [
+            {
+                name: 'napoleon',
+                description: 'napoleonDescription',
+                price: 65.00,
+                img: 'napoleon.png'
+            },
+            {
+                name: 'medovic',
+                description: 'medovicDescription',
+                price: 65.00,
+                img: 'medovic.png'
+            },
+            {
+                name: 'gusmaLuiGuguta',
+                description: 'gusmaLuiGugutaDescription',
+                price: 65.00,
+                img: 'cusma_lui_guguta.png'
+            },
+            {
+                name: 'prajitura',
+                description: 'prajituraDescription',
+                price: 55.00,
+                img: 'prajitura.png'
+            },
+            {
+                name: 'pruneCuNuca',
+                description: 'pruneCuNucaDescription',
+                price: 65.00,
+                img: 'prune_cu_nuca.png'
+            },
+            {
+                name: 'fondant',
+                description: 'fondantDescription',
+                price: 70.00,
+                img: 'fondant.png'
+            },
+            {
+                name: 'inghetataAdevarata',
+                description: 'inghetataAdevarataDescription',
+                price: 15.00,
+                img: 'inghetata_adevarata.png'
+            },
         ]
     }
 ]

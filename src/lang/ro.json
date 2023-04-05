@@ -195,5 +195,19 @@
     "gaskets": "Garnituri",
     "pizza": "Pizza",
     "deserts": "Deserturi",
-    "order": "Comanda"
+    "order": "Comanda",
+    "napoleon": "Napoleon",
+    "medovic": "Medovic",
+    "napoleonDescription": "180 g",
+    "medovicDescription": "140 g",
+    "gusmaLuiGuguta": "Cusma lui Guguta",
+    "gusmaLuiGugutaDescription": "170 g",
+    "prajitura": "Prajitura",
+    "prajituraDescription": "Gustul copilariei 90g",
+    "pruneCuNuca": "Prune cu nuca",
+    "pruneCuNucaDescription": "n sirop de vincu crema de smantana 200 g",
+    "fondant": "Fondant",
+    "fondantDescription": "de ciocolata 70/50 g",
+    "inghetataAdevarata": "Inghetata adevarata",
+    "inghetataAdevarataDescription": "(Plombir/Ciocolata /Nocciola/ Fistic/Mure,Capsuna ,1 bila  50 g"
 }
