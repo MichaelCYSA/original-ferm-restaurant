@@ -1470,7 +1470,103 @@ export let translatedProducts:  MenuSection[] = [
                 img: 'ceai_de_plante.png'
             },
         ]
-    }
+    },
+    {
+        sectionName: 'Bauturi Alcoolice',
+        id: links.alchogolCoctails,
+        products: [
+            {
+                name: 'Aperol Spritz',
+                description: '350  ml',
+                price: 65.00,
+                img: 'aperol_spritz.png'
+            },
+            {
+                name: 'Gin tonic',
+                description: '350 ml',
+                price: 55.00,
+                img: 'gin_tonic.png'
+            },
+            {
+                name: 'Cuba Libre',
+                description: '350 ml',
+                price: 60.00,
+                img: 'cuba_libre.png'
+            },
+            {
+                name: 'Green Mexican',
+                description: '60 ml',
+                price: 55.00,
+                img: 'green_mexican.png'
+            },
+            {
+                name: 'Long Island Ice Tea',
+                description: '',
+                price: 90.00,
+                img: 'long_island_ice_tea.png'
+            },
+            {
+                name: 'Glintwein',
+                description: '55 ml',
+                price: 30.00,
+                img: 'glintwein.png'
+            }
+        ]
+    },
+    {
+        sectionName: 'BERE LA STICLâ,LA HALBA',
+        id: links.alchogolCoctails,
+        products: [
+            {
+                name: 'Pale Ale',
+                description: '350  ml',
+                price: 45.00,
+                img: 'pale_ale.png'
+            },
+            {
+                name: 'Efes pilsner',
+                description: 'f/a ,c/a 500 ml',
+                price: 40.00,
+                img: 'efes_pilsner.png'
+            },
+            {
+                name: 'Kozel',
+                description: 'bruna / blonda 500 ml',
+                price: 40.00,
+                img: 'kozel.png'
+            },
+            {
+                name: 'Corona Extra',
+                description: '355 ml',
+                price: 55.00,
+                img: 'corona_extra.png'
+            },
+            {
+                name: 'Hoegaarden',
+                description: '330 ml',
+                price: 50.00,
+                img: 'hoegaarden.png'
+            },
+            {
+                name: 'Franziskaner',
+                description: 'Weissbier 500 ml',
+                price: 60.00,
+                img: 'franziskaner.png'
+            },
+            {
+                name: 'Kronenbourg',
+                description: '460 ml',
+                price: 45.00,
+                img: 'kronenbourg.png'
+            },
+            {
+                name: 'Kozel blonda  HALBA',
+                description: '500 ml',
+                price: 35.00,
+                img: 'kozel_blonda_halba.png'
+            }
+        ]
+    },
 ]
 export const translatedSauces: ArrayOfSupplementsItems = [
     {

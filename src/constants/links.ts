@@ -31,6 +31,7 @@ export const desserts = 'desserts'
 export const nonAlchogol = 'non_alchogol'
 export const milkShakes = 'milk_shakes'
 export const coffee = 'coffee'
+export const alchogolCoctails = 'alchogol_coctails'
 
 export const menuLinks = [
     {
