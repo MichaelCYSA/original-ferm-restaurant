@@ -2,7 +2,7 @@ import * as links from './links';
 
 export interface Product {
     name: string;
-    price: number;
+    price: number | string;
     description: string;
     img?: string
 }
@@ -1324,6 +1324,150 @@ export let translatedProducts:  MenuSection[] = [
                 description: 'inghetataAdevarataDescription',
                 price: 15.00,
                 img: 'inghetata_adevarata.png'
+            },
+        ]
+    },
+    {
+        sectionName: 'Bauturi non Alcoolice',
+        id: links.nonAlchogol,
+        products: [
+            {
+                name: 'Guizza',
+                description: '(apa plata/gazoasa) 500ml ',
+                price: 15.00,
+                img: 'guizza.png'
+            },
+            {
+                name: 'Plose',
+                description: '(apa plata/gazata) 250/750ml',
+                price: '30/60.00',
+                img: 'plose.png'
+            },
+            {
+                name: 'Coca Cola,Sprite,Fanta',
+                description: '300/500 ml',
+                price: '20/25.00',
+                img: 'coca_cola_sprite_fanta.png'
+            },
+            {
+                name: 'Ceai rece',
+                description: '500 ml',
+                price: 25.00,
+                img: 'ceai_rece.png'
+            },
+            {
+                name: 'Suc Jaffa',
+                description: '250/950 ml',
+                price: '20/65.00',
+                img: 'suc_jaffa.png'
+            },
+            {
+                name: 'Suc Fresh',
+                description: 'orange/grapefruit 250 ml',
+                price: 45.00,
+                img: 'suc_fresh.png'
+            },
+            {
+                name: 'Borjomi',
+                description: '500 ml',
+                price: 45.00,
+                img: 'borjomi.png'
+            },
+        ]
+    },
+    {
+        sectionName: 'Bauturi de casa',
+        id: links.milkShakes,
+        products: [
+            {
+                name: 'Milkshake',
+                description: '350 ml  ',
+                price: 45.00,
+                img: 'milkshake.png'
+            },
+            {
+                name: 'Limonada clasica',
+                description: '350 ml/1L',
+                price: '40/70.00',
+                img: 'limonada_clasica.png'
+            },
+            {
+                name: 'Limonada de capsuna',
+                description: '350 ml/1L',
+                price: '40/70.00',
+                img: 'limonada_de_capsuna.png'
+            },
+            {
+                name: 'Ceai rece de casa',
+                description: '350 ml/1L',
+                price: '35/65.00',
+                img: 'ceai_rece_de_casa.png'
+            },
+            {
+                name: 'Pina Colada',
+                description: '250/950 ml',
+                price: '45/65.00',
+                img: 'pina_colada.png'
+            },
+            {
+                name: 'Frappe',
+                description: '350 ml',
+                price: 35.00,
+                img: 'frappe.png'
+            }
+        ]
+    },
+    {
+        sectionName: 'Bauturi Fierbinte',
+        id: links.coffee,
+        products: [
+            {
+                name: 'Espresso',
+                description: '30 ml ',
+                price: 20.00,
+                img: 'espresso.png'
+            },
+            {
+                name: 'Americano',
+                description: '100 ml',
+                price: 20.00,
+                img: 'americano.png'
+            },
+            {
+                name: 'Cappuccino',
+                description: '250ml',
+                price: 30.00,
+                img: 'cappuccino.png'
+            },
+            {
+                name: 'Latte',
+                description: '300 ml',
+                price: 30.00,
+                img: 'latte.png'
+            },
+            {
+                name: 'Mocaccino',
+                description: '',
+                price: 30.00,
+                img: 'mocaccino.png'
+            },
+            {
+                name: 'Cacao',
+                description: '250 ml',
+                price: 30.00,
+                img: 'cacao.png'
+            },
+            {
+                name: 'Ceai de catina',
+                description: 'ghimbir si portocala ,450 ml',
+                price: 50.00,
+                img: 'ceai_de_catina.png'
+            },
+            {
+                name: 'Ceai de Plante',
+                description: '450 ml',
+                price: 45.00,
+                img: 'ceai_de_plante.png'
             },
         ]
     }
