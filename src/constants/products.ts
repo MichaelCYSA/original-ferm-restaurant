@@ -1567,6 +1567,104 @@ export let translatedProducts:  MenuSection[] = [
             }
         ]
     },
+    {
+        sectionName: 'VINUL FAUTOR,ASCONI,BOSTAVAN,CRICOVA ',
+        id: links.alchogolCoctails,
+        products: [
+            {
+                name: 'Sauvignon Blanc Aligote',
+                description: '(alb, sec) 0,75 ml',
+                price: 210.00,
+                img: 'sauvignon_blanc_aligote.png'
+            },
+            {
+                name: 'Merlot Rara Neagra',
+                description: '(rosu, sec) 0,75 ml',
+                price: 210.00,
+                img: 'merlot_rara_neagra.png'
+            },
+            {
+                name: 'Merlot Feteasca Nearga',
+                description: '(roz, sec)0,75 ml',
+                price: 210.00,
+                img: 'merlot_feteasca_nearga.png'
+            },
+            {
+                name: 'Aurore Feteasca Neagra',
+                description: '0,75 ml',
+                price: 350.00,
+                img: 'aurore_feteasca_neagra.png'
+            },
+            {
+                name: 'Aurore Pinot Grigio',
+                description: '0,75 ml',
+                price: 350.00,
+                img: 'aurore_pinot_grigio.png'
+            },
+            {
+                name: 'Aurore Rara Neagra',
+                description: '0,75 ml',
+                price: 350.00,
+                img: 'aurore_rara_neagra.png'
+            },
+            {
+                name: 'Uneori Cabernet Sauvignon',
+                description: '750 ml',
+                price: 200.00,
+                img: 'uneori_cabernet_sauvignon.png'
+            },
+            {
+                name: 'Uneori Riesling',
+                description: '750 ml',
+                price: 200.00,
+                img: 'uneori_riesling.png'
+            },
+
+            {
+                name: 'Uneori Muscat Rose',
+                description: '750 ml',
+                price: 240.00,
+                img: 'uneori_muscat_rose.png'
+            },
+            {
+                name: 'Cabernet Sauvignon',
+                description: '150/750 ml',
+                price: '30/150.00',
+                img: 'cabernet_sauvignon.png'
+            },
+            {
+                name: 'Muscat Rose',
+                description: '150/750 ml',
+                price: '30/150.00',
+                img: 'muscat_rose.png'
+            },
+            {
+                name: 'Chardonnay',
+                description: '150/750 ml ml',
+                price: '30/150.00',
+                img: 'chardonnay.png'
+            },
+            {
+                name: 'Orasul Subteran Viorica',
+                description: '750 ml',
+                price: 200.00,
+                img: 'orasul_subteran_viorica.png'
+            },
+
+            {
+                name: 'Orasul Subteran',
+                description: 'Cabernet /Rose  750 ml',
+                price: 200.00,
+                img: 'orasul_subteran_rose.png'
+            },
+            {
+                name: 'Orasul Subteran',
+                description: 'Feteasca Neagra 750 ml',
+                price: 200.00,
+                img: 'orasul_subteran_neagra.png'
+            }
+        ]
+    },
 ]
 export const translatedSauces: ArrayOfSupplementsItems = [
     {
