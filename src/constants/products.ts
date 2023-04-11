@@ -1665,6 +1665,159 @@ export let translatedProducts:  MenuSection[] = [
             }
         ]
     },
+    {
+        sectionName: 'VIN SPUMANT ',
+        id: links.alchogolCoctails,
+        products: [
+            {
+                name: 'Lacrima Dulce',
+                description: '750 ml',
+                price: 170.00,
+                img: 'lacrima_dulce.png'
+            },
+            {
+                name: 'Alb Brut',
+                description: '750 ml',
+                price: 210.00,
+                img: 'alb_brut.png'
+            },
+            {
+                name: 'Crisseco',
+                description: '150/ 750 ml',
+                price: '35/170.00',
+                img: 'crisseco.png'
+            },
+            {
+                name: 'Asti Martini',
+                description: '750 ml',
+                price: 295.00,
+                img: 'asti_martini.png'
+            }
+        ]
+    },
+    {
+        sectionName: 'Bauturi alcoolici Tare',
+        id: links.alchogolCoctails,
+        products: [
+            {
+                name: 'Jagermeister',
+                description: '50 ml',
+                price: 50.00,
+                img: 'jagermeister.png'
+            },
+            {
+                name: 'Bailey’s',
+                description: '50 ml',
+                price: 50.00,
+                img: 'bailey_s.png'
+            },
+            {
+                name: 'Martini Rosso',
+                description: '50 ml',
+                price: 35.00,
+                img: 'martini_rosso.png'
+            },
+            {
+                name: 'Martini Bianco',
+                description: '50 ml',
+                price: 35.00,
+                img: 'martini_bianco.png'
+            },
+
+            {
+                name: 'Jose Cuervo',
+                description: 'Reposado/ Silver 50 ml',
+                price: 50.00,
+                img: 'jose_cuervo.png'
+            },
+            {
+                name: 'Tabacco',
+                description: 'Silver Premium 50 ml',
+                price: 40.00,
+                img: 'tabacco.png'
+            },
+            {
+                name: 'Bacardi',
+                description: 'Oakheart 50 ml',
+                price: 50.00,
+                img: 'bacardi.png'
+            },
+            {
+                name: 'Tuica de gutui,caise prune',
+                description: '50 ml',
+                price: 35.00,
+                img: 'tuica_de_gutui_caise_prune.png'
+            },
+            {
+                name: 'Nemiroff',
+                description: '50 ml',
+                price: 25.00,
+                img: 'nemiroff.png'
+            },
+
+
+            {
+                name: 'Finlandia',
+                description: '50 ml',
+                price: 35.00,
+                img: 'finlandia.png'
+            },
+            {
+                name: 'Bardar 5 ani',
+                description: '50 ml',
+                price: 30.00,
+                img: 'bardar_5_ani.png'
+            },
+            {
+                name: 'Bardar 7 ani',
+                description: '50 ml',
+                price: 45.00,
+                img: 'bardar_7_ani.png'
+            },
+            {
+                name: 'Calarasi 5 ani',
+                description: '50 ml',
+                price: 30.00,
+                img: 'calarasi_5_ani.png'
+            },
+            {
+                name: 'Calarasi 7 ani',
+                description: '50 ml',
+                price: 40.00,
+                img: 'calarasi_7_ani.png'
+            },
+            {
+                name: 'Balti 7 ani',
+                description: '50 ml',
+                price: 40.00,
+                img: 'balti_7_ani.png'
+            },
+            {
+                name: 'Speranta 9 ani',
+                description: '50 ml',
+                price: 50.00,
+                img: 'speranta_9_ani.png'
+            },
+            {
+                name: 'Bucuria 10 anii',
+                description: '50 ml',
+                price: 55.00,
+                img: 'bucuria_10_anii.png'
+            },
+            {
+                name: 'Jameson',
+                description: '50 ml',
+                price: 50.00,
+                img: 'jameson.png'
+            },
+            {
+                name: 'Jack Daniel’s',
+                description: '50 ml',
+                price: 50.00,
+                img: 'jack_daniel_s.png'
+            }
+        ]
+    },
 ]
 export const translatedSauces: ArrayOfSupplementsItems = [
     {

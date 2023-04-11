@@ -4,7 +4,7 @@ import SectionDividerBox from '@/components/SectionDividerBox';
 import Supplements from '@/components/supplements';
 import { MenuSection, Product, products, translatedProducts } from '@/constants/products';
 import { Box } from '@mui/material';
-
+import ButtonScrollUp from '@/components/buttonScrollUp';
 
 const MainView = () => {
   return (
@@ -58,6 +58,7 @@ const MainView = () => {
           </SectionDividerBox>
         ))}
       </Box>
+      <ButtonScrollUp/>
     </Box>
   );
 };
