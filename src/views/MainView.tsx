@@ -68,47 +68,9 @@ const MainView = () => {
           )
         )}
 
-        <SectionDividerBox
-          sectionName={sectionBankets.sectionName}
-          key={sectionBankets.sectionName}
-          id={sectionBankets.sectionId}
-        >
-          <Box display={"flex"} flexDirection={"column"}>
-            <Box
-              display={"flex"}
-              gap={"45px"}
-              flexDirection={{ xs: "column", md: "row" }}
-            >
-              <Box
-                width={1}
-                display={"flex"}
-                flexDirection={"column"}
-                gap={"30px"}
-              >
-                <Typography component={"p"} variant="h3">
-                  {sectionBankets.descriptionOne}
-                </Typography>
-                <Typography component={"p"} variant="h3">
-                  {sectionBankets.descriptionTwo}
-                </Typography>
-                <Typography component={"p"} variant="h3">
-                  {sectionBankets.descriptionThree}
-                </Typography>
-              </Box>
-              <Box width={1}>
-                <Image
-                  layout="responsive"
-                  width={520}
-                  height={288}
-                  src={sectionBankets.img}
-                  alt={sectionBankets.sectionName}
-                />
-              </Box>
-            </Box>
-          </Box>
-        </SectionDividerBox>
+      
       </Box>
-      {/* <ButtonScrollUp />*/}
+      <ButtonScrollUp />
     </Box>
   );
 };
