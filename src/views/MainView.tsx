@@ -108,7 +108,7 @@ const MainView = () => {
           </Box>
         </SectionDividerBox>
       </Box>
-      <ButtonScrollUp />
+      {/* <ButtonScrollUp />*/}
     </Box>
   );
 };
