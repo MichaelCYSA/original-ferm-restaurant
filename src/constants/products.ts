@@ -1568,7 +1568,7 @@ export let translatedProducts:  MenuSection[] = [
         ]
     },
     {
-        sectionName: 'VINUL FAUTOR,ASCONI,BOSTAVAN,CRICOVA ',
+        sectionName: 'VINUL FAUTOR ,ASCONI ,BOSTAVAN ,CRICOVA',
         id: links.alchogolCoctails,
         products: [
             {
