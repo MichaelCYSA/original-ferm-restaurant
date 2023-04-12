@@ -6,3 +6,9 @@ export const sectionBankets = {
   descriptionTwo: 'Unitatea noastră oferă o mare varietate de feluri de mâncare, servicii excelente și o atmosferă confortabilă pentru a vă face să vă simțiți ca acasă.',
   descriptionThree: 'Nu aștepta prea mult, rezervă azi și organizează-ți următorul banchet cu noi!'
 };
+
+export const seactionContacts = {
+  sectionId: "concatcs",
+  sectionName: "Contacte",
+  img: '/contacte.png',
+}

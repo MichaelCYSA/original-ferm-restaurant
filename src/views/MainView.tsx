@@ -10,8 +10,14 @@ import {
 } from "@/constants/products";
 import { Box, Typography } from "@mui/material";
 import ButtonScrollUp from "@/components/buttonScrollUp";
-import { sectionBankets } from "@/constants/sections";
+import { sectionBankets, seactionContacts } from "@/constants/sections";
 import Image from "next/image";
+
+import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
+import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
+import QueryBuilderOutlinedIcon from "@mui/icons-material/QueryBuilderOutlined";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 const MainView = () => {
   return (
@@ -67,45 +73,8 @@ const MainView = () => {
             </SectionDividerBox>
           )
         )}
-        <SectionDividerBox
-          sectionName={sectionBankets.sectionName}
-          key={sectionBankets.sectionName}
-          id={sectionBankets.sectionId}
-        >
-          <Box display={"flex"} flexDirection={"column"}>
-            <Box
-              display={"flex"}
-              gap={"45px"}
-              flexDirection={{ xs: "column", md: "row" }}
-            >
-              <Box
-                width={1}
-                display={"flex"}
-                flexDirection={"column"}
-                gap={"30px"}
-              >
-                <Typography component={"p"} variant="h3">
-                  {sectionBankets.descriptionOne}
-                </Typography>
-                <Typography component={"p"} variant="h3">
-                  {sectionBankets.descriptionTwo}
-                </Typography>
-                <Typography component={"p"} variant="h3">
-                  {sectionBankets.descriptionThree}
-                </Typography>
-              </Box>
-              <Box width={1}>
-                <Image
-                  layout="responsive"
-                  width={520}
-                  height={288}
-                  src={sectionBankets.img}
-                  alt={sectionBankets.sectionName}
-                />
-              </Box>
-            </Box>
-          </Box>
-        </SectionDividerBox>
+        <Bankets />
+        <Contants />
       </Box>
       <ButtonScrollUp />
     </Box>
@@ -113,3 +82,110 @@ const MainView = () => {
 };
 
 export default MainView;
+
+const Bankets = () => (
+  <SectionDividerBox
+    sectionName={sectionBankets.sectionName}
+    key={sectionBankets.sectionName}
+    id={sectionBankets.sectionId}
+  >
+    <Box display={"flex"} flexDirection={"column"}>
+      <Box
+        display={"flex"}
+        gap={"45px"}
+        flexDirection={{ xs: "column", md: "row" }}
+      >
+        <Box width={1} display={"flex"} flexDirection={"column"} gap={"30px"}>
+          <Typography component={"p"} variant="h3">
+            {sectionBankets.descriptionOne}
+          </Typography>
+          <Typography component={"p"} variant="h3">
+            {sectionBankets.descriptionTwo}
+          </Typography>
+          <Typography component={"p"} variant="h3">
+            {sectionBankets.descriptionThree}
+          </Typography>
+        </Box>
+        <Box width={1}>
+          <Image
+            layout="responsive"
+            width={520}
+            height={288}
+            src={sectionBankets.img}
+            alt={sectionBankets.sectionName}
+          />
+        </Box>
+      </Box>
+    </Box>
+  </SectionDividerBox>
+);
+
+const Contants = () => (
+  <SectionDividerBox
+    sectionName={seactionContacts.sectionName}
+    key={seactionContacts.sectionName}
+    id={seactionContacts.sectionId}
+  >
+    <Box display={"flex"} flexDirection={"column"}>
+      <Box
+        display={"flex"}
+        gap={"45px"}
+        flexDirection={{ xs: "column", md: "row" }}
+      >
+        <Box width={1}>
+          <Image
+            layout="responsive"
+            width={520}
+            height={288}
+            src={seactionContacts.img}
+            alt={seactionContacts.sectionName}
+          />
+        </Box>
+        <Box width={1} display={"flex"} flexDirection={"column"} gap={"30px"}>
+          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+            <FmdGoodOutlinedIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
+            <Typography variant="h3">Calea Ieşilor 11/2, Chișinău</Typography>
+          </Box>
+
+          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+            <PhoneOutlinedIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
+            <Typography
+              component={"a"}
+              sx={{ textDecoration: "none" }}
+              href={"tel:373078323231"}
+              variant="h3"
+            >
+              +3730783 23 231
+            </Typography>
+          </Box>
+
+          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+            <QueryBuilderOutlinedIcon
+              sx={{ fontSize: "25px", color: "#9FCD57" }}
+            />
+            <Typography variant="h3">Lucram 10-22:00</Typography>
+          </Box>
+
+          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+            <FacebookIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/restaurant.fermacuorigini/#"
+            >
+              <InstagramIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
+            </a>
+            <Typography
+              component={"a"}
+              target="_blank"
+              href="https://www.instagram.com/restaurant.fermacuorigini/#"
+              sx={{ fontSize: "16px" }}
+              variant="link"
+            >
+              restaurant.fermacuorigini
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  </SectionDividerBox>
+);
