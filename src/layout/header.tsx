@@ -14,6 +14,7 @@ const Header = () => {
   return (
     <Box
       component={"header"}
+      minWidth={"475px"}
       display={"flex"}
       justifyContent={"center"}
       height={"84px"}

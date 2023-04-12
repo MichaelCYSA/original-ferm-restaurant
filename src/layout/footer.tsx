@@ -11,6 +11,7 @@ const Footer = () => {
       display={"flex"}
       justifyContent={"center"}
       mt={10}
+      minWidth={"475px"}
     >
       <Container>
         <Box
