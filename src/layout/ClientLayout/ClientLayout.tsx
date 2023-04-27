@@ -4,7 +4,7 @@ import Footer from "./footer";
 import Header from "./header";
 import Container from "./components/container";
 
-const MainLayout = ({ children }: { children: JSX.Element }) => {
+const ClientLayout = ({ children }: { children: JSX.Element }) => {
   return (
     <Box width={1}>
       <Header />
@@ -16,4 +16,4 @@ const MainLayout = ({ children }: { children: JSX.Element }) => {
   );
 };
 
-export default MainLayout;
+export default ClientLayout;

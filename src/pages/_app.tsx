@@ -1,21 +1,40 @@
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 
-import { LanguageContextWrapper } from '@/lang/languageContext';
-import MainLayout from '@/layout';
-import theme from '@/theme';
-import { ThemeProvider } from '@mui/material/styles';
+import { LanguageContextWrapper } from "@/lang/languageContext";
+import ClientLayout from "@/layout/ClientLayout";
+import AdminLayout from "@/layout/AdminLayout";
+import theme from "@/theme";
+import { ThemeProvider } from "@mui/material/styles";
+import { useRouter } from "next/router";
+import { Provider } from "react-redux";
+import { store } from "@/store";
 
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
+const Layuot = ({ children }: { children: JSX.Element }) => {
+  const { pathname } = useRouter();
 
+  if (pathname.includes("admin")) {
+    return <AdminLayout>{children}</AdminLayout>;
+  }
+  if (pathname.includes("auth")) {
+    return <>{children}</>;
+  }
+  return <ClientLayout>{children}</ClientLayout>;
+};
+
+function App({ Component, pageProps }: AppProps) {
   return (
-    <LanguageContextWrapper>
-      <ThemeProvider theme={theme}>
-        <MainLayout>
-          <Component {...pageProps} />
-        </MainLayout>
-      </ThemeProvider>
-    </LanguageContextWrapper>
-  )
+    <Provider store={store}>
+      <LanguageContextWrapper>
+        <ThemeProvider theme={theme}>
+          <Layuot>
+            <Component {...pageProps} />
+          </Layuot>
+        </ThemeProvider>
+      </LanguageContextWrapper>
+    </Provider>
+  );
 }
+
+export default App;
