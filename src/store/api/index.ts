@@ -1,14 +1,14 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import config from 'config_dev'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import config from 'config_dev';
 
-export const apiSercice = createApi({
+export const apiService = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({ baseUrl: config.BASE_URL }),
   endpoints: (builder) => ({
     healthCheck: builder.query({
-      query: (name) => `healch-check`,
+      query: (name) => `health-check`,
     }),
   }),
 });
 
-export const { useHealthCheckQuery } = apiSercice;
+export const { useHealthCheckQuery } = apiService;

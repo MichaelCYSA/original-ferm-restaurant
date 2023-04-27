@@ -1,9 +1,12 @@
-import { Box, TextField, Button } from "@mui/material";
-import { useState, ChangeEventHandler } from "react";
-import { useGetProductsQuery } from "@/store/api/product";
+import { useAuth } from '@/hooks/useAuth';
+import { ILoginData, ILoginResponse, useLoginMutation } from '@/store/api/auth';
+import { Box, Button, TextField } from '@mui/material';
+import { useRouter } from 'next/router';
+import { ChangeEventHandler, useState } from 'react';
+import { useEffect } from 'react';
 
 const Auth = () => {
-  const [data, setData] = useState({
+  const [data, setData] = useState<ILoginData>({
     password: "",
     email: "",
   });
@@ -12,12 +15,22 @@ const Auth = () => {
     (
       name: string
     ): ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement> =>
-    (e) =>
-      setData((prev) => ({ ...prev, [name]: e.target.value }));
-      
-  const { data: p, error } = useGetProductsQuery({})
+      (e) =>
+        setData((prev) => ({ ...prev, [name]: e.target.value }));
 
-  console.log({p, error})
+  const [login] = useLoginMutation()
+  const { token, setAccess } = useAuth()
+  const router = useRouter()
+
+  const handleLogin = () => login({ data }).then(({ data }: { data: ILoginResponse }) => setAccess(data.token))
+
+
+  useEffect(() => {
+    if (token) {
+      router.push('/admin')
+    }
+  }, [])
+
   return (
     <Box
       minWidth={"375px"}
@@ -45,7 +58,7 @@ const Auth = () => {
           type={"password"}
           fullWidth
         />
-        <Button variant="contained">Login</Button>
+        <Button onClick={handleLogin} variant="contained">Login</Button>
       </Box>
     </Box>
   );

@@ -1,6 +1,6 @@
-import { apiSercice } from "./index";
+import { apiService } from '.';
 
-const productsApi = apiSercice.injectEndpoints({
+const productsApi = apiService.injectEndpoints({
   endpoints: (build) => ({
     getProducts: build.query({
       query: ({}) => "/product",
