@@ -1,6 +1,6 @@
 import BurgerMenu from "@/components/burgerMenu";
 import { headerLinks } from "@/constants/links";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
 
 import Cart from "./components/cart";
@@ -10,6 +10,9 @@ import Container from "./components/container";
 
 const Header = () => {
   const handleScroll = (id: string) => () => scrollToElementById(id);
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box
@@ -27,7 +30,7 @@ const Header = () => {
           height={"84px"}
           alignItems={"center"}
         >
-          <Box display={{ md: "none" }}>
+          <Box width={"40px"} display={{ md: "none" }}>
             <BurgerMenu />
           </Box>
           <Image
@@ -36,18 +39,23 @@ const Header = () => {
             height={42}
             alt={"Ferma cu Origin"}
           />
-          <Box display={{ xs: "none", md: "flex" }} gap={3}>
-            {headerLinks.map((item) => (
-              <Typography
-                onClick={handleScroll(item.link)}
-                variant="link"
-                key={item.name}
-              >
-                {item.name}
-              </Typography>
-            ))}
-            <LanguageSelect />
-            <Cart />
+          {!isMobile && (
+            <Box display={{ xs: "none", md: "flex" }} gap={3}>
+              {headerLinks.map((item) => (
+                <Typography
+                  onClick={handleScroll(item.link)}
+                  variant="link"
+                  key={item.name}
+                >
+                  {item.name}
+                </Typography>
+              ))}
+              <LanguageSelect />
+              <Cart />
+            </Box>
+          )}
+          <Box width={"40px"} display={{ xs: "flex", md: "none" }}>
+            {isMobile && <Cart />}
           </Box>
         </Box>
       </Container>
