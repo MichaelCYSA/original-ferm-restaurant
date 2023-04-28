@@ -1,5 +1,5 @@
 type StatusTypes = 0 | 1 | 2 | 3;
-type Products = {
+export type Products = {
   [field: string]: number;
 };
 
@@ -32,15 +32,15 @@ export interface IOrder {
 }
 
 export const orderDefaultValues: IOrder = {
-    [OrderFields.firstName]: '',
-    [OrderFields.lastName]: '',
-    [OrderFields.city]: '',
-    [OrderFields.district]: '',
-    [OrderFields.street]: '',
-    [OrderFields.home]: '',
-    [OrderFields.block]: '',
-    [OrderFields.apartment]: '',
-    [OrderFields.status]: 0,
-    [OrderFields.totalPrice]: 0,
-    [OrderFields.products]: {}
-  }
+  [OrderFields.firstName]: "",
+  [OrderFields.lastName]: "",
+  [OrderFields.city]: "",
+  [OrderFields.district]: "",
+  [OrderFields.street]: "",
+  [OrderFields.home]: "",
+  [OrderFields.block]: "",
+  [OrderFields.apartment]: "",
+  [OrderFields.status]: 0,
+  [OrderFields.totalPrice]: 0,
+  [OrderFields.products]: {},
+};

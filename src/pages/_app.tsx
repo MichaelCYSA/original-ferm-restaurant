@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import { Provider } from "react-redux";
 import { store } from "@/store";
 import { CartProvider } from "@/contexts/cartContext";
-
+import Notifications from "@/components/Notifications/Notifications";
 import type { AppProps } from "next/app";
 
 const Layuot = ({ children }: { children: JSX.Element }) => {
@@ -28,13 +28,15 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <LanguageContextWrapper>
-        <CartProvider>
-          <ThemeProvider theme={theme}>
-            <Layuot>
-              <Component {...pageProps} />
-            </Layuot>
-          </ThemeProvider>
-        </CartProvider>
+        <Notifications>
+          <CartProvider>
+            <ThemeProvider theme={theme}>
+              <Layuot>
+                <Component {...pageProps} />
+              </Layuot>
+            </ThemeProvider>
+          </CartProvider>
+        </Notifications>
       </LanguageContextWrapper>
     </Provider>
   );
