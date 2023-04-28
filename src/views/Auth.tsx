@@ -1,9 +1,10 @@
-import { useAuth } from '@/hooks/useAuth';
-import { ILoginData, ILoginResponse, useLoginMutation } from '@/store/api/auth';
-import { Box, Button, TextField } from '@mui/material';
-import { useRouter } from 'next/router';
-import { ChangeEventHandler, useState } from 'react';
-import { useEffect } from 'react';
+import { useAuth } from "@/hooks/useAuth";
+import { ILoginData, useLoginMutation } from "@/store/api/auth";
+import { Box, TextField } from "@mui/material";
+import { useRouter } from "next/router";
+import { ChangeEventHandler, useState } from "react";
+import { useEffect } from "react";
+import LoadingButton from "@/components/LoadingButton/LoadingButton";
 
 const Auth = () => {
   const [data, setData] = useState<ILoginData>({
@@ -15,21 +16,21 @@ const Auth = () => {
     (
       name: string
     ): ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement> =>
-      (e) =>
-        setData((prev) => ({ ...prev, [name]: e.target.value }));
+    (e) =>
+      setData((prev) => ({ ...prev, [name]: e.target.value }));
 
-  const [login] = useLoginMutation()
-  const { token, setAccess } = useAuth()
-  const router = useRouter()
+  const [login, { isLoading }] = useLoginMutation();
+  const { token, setAccess } = useAuth();
+  const router = useRouter();
 
-  const handleLogin = () => login({ data }).then(({ data }: { data: ILoginResponse }) => setAccess(data.token))
-
+  const handleLogin = () =>
+    login({ data }).then(({ data }: any) => setAccess(data.token));
 
   useEffect(() => {
     if (token) {
-      router.push('/admin')
+      router.push("/admin");
     }
-  }, [])
+  }, []);
 
   return (
     <Box
@@ -38,7 +39,7 @@ const Auth = () => {
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
-      height={'100vh'}
+      height={"100vh"}
       p={3}
     >
       <Box display={"flex"} flexDirection={"column"} gap={3}>
@@ -58,7 +59,12 @@ const Auth = () => {
           type={"password"}
           fullWidth
         />
-        <Button onClick={handleLogin} variant="contained">Login</Button>
+        <LoadingButton
+          variant="contained"
+          onClick={handleLogin}
+          title="Login"
+          isLoading={isLoading}
+        />
       </Box>
     </Box>
   );

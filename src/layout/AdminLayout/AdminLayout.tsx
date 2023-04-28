@@ -18,6 +18,8 @@ import ListItemText from "@mui/material/ListItemText";
 import { drawerWidth } from "./constants/layoutConstants";
 import AdminAppBar from "./AdminAppBar";
 import { menuItems } from "./constants/layoutConstants";
+import { useAuth } from "@/hooks/useAuth";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   open?: boolean;
@@ -58,6 +60,8 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
     setOpen(false);
   };
 
+  const { logOut } = useAuth();
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -96,6 +100,14 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItem disablePadding onClick={logOut}>
+            <ListItemButton>
+              <ListItemIcon>
+                <LogoutIcon sx={{ color: theme.palette.customColor.main }} />
+              </ListItemIcon>
+              <ListItemText primary={"Log out"} />
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
       <Main open={open}>{children}</Main>

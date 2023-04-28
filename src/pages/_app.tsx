@@ -8,6 +8,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { useRouter } from "next/router";
 import { Provider } from "react-redux";
 import { store } from "@/store";
+import { CartProvider } from "@/contexts/cartContext";
 
 import type { AppProps } from "next/app";
 
@@ -27,11 +28,13 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <LanguageContextWrapper>
-        <ThemeProvider theme={theme}>
-          <Layuot>
-            <Component {...pageProps} />
-          </Layuot>
-        </ThemeProvider>
+        <CartProvider>
+          <ThemeProvider theme={theme}>
+            <Layuot>
+              <Component {...pageProps} />
+            </Layuot>
+          </ThemeProvider>
+        </CartProvider>
       </LanguageContextWrapper>
     </Provider>
   );
