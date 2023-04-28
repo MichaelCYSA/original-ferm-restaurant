@@ -1,4 +1,4 @@
-const AdminMainPage = ({ token }) => {
+const AdminMainPage = ({ token }: {token: string}) => {
    console.log({ token })
    return <></>
 }
