@@ -1,10 +1,10 @@
-import { useAuth } from "@/hooks/useAuth";
-import { ILoginData, useLoginMutation } from "@/store/api/auth";
-import { Box, TextField } from "@mui/material";
-import { useRouter } from "next/router";
-import { ChangeEventHandler, useState } from "react";
-import { useEffect } from "react";
-import LoadingButton from "@/components/LoadingButton/LoadingButton";
+import LoadingButton from '@/components/LoadingButton/LoadingButton';
+import { useAuth } from '@/hooks/useAuth';
+import { ILoginData, useLoginMutation } from '@/store/api/auth';
+import { Box, TextField } from '@mui/material';
+import { useRouter } from 'next/router';
+import { ChangeEventHandler, useState } from 'react';
+import { useEffect } from 'react';
 
 const Auth = () => {
   const [data, setData] = useState<ILoginData>({
@@ -16,8 +16,8 @@ const Auth = () => {
     (
       name: string
     ): ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement> =>
-    (e) =>
-      setData((prev) => ({ ...prev, [name]: e.target.value }));
+      (e) =>
+        setData((prev) => ({ ...prev, [name]: e.target.value }));
 
   const [login, { isLoading }] = useLoginMutation();
   const { token, setAccess } = useAuth();

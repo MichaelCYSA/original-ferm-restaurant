@@ -1,35 +1,29 @@
-import Menu from "@/components/menu";
-import ProductCard from "@/components/ProductCard";
-import SectionDividerBox from "@/components/SectionDividerBox";
-import Supplements from "@/components/supplements";
-import {
-  MenuSection,
-  Product,
-  products,
-  translatedProducts,
-} from "@/constants/products";
-import { Box, Typography } from "@mui/material";
-import ButtonScrollUp from "@/components/buttonScrollUp";
-import { sectionBankets, seactionContacts } from "@/constants/sections";
-import Image from "next/image";
-
-import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
-import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
-import QueryBuilderOutlinedIcon from "@mui/icons-material/QueryBuilderOutlined";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import ButtonScrollUp from '@/components/buttonScrollUp';
+import Menu from '@/components/menu';
+import ProductsSection from '@/components/ProductsSection/ProductsSection';
+import SectionDividerBox from '@/components/SectionDividerBox';
+import Supplements from '@/components/supplements';
+import { productCatagories, products } from '@/constants/products';
+import { seactionContacts, sectionBankets } from '@/constants/sections';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
+import QueryBuilderOutlinedIcon from '@mui/icons-material/QueryBuilderOutlined';
+import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 
 const MainView = () => {
   return (
     <Box pt={"55px"}>
       <Menu />
       <Box display={"flex"} flexDirection={"column"} gap={10} mt={4}>
-        {translatedProducts.map(
-          (section: MenuSection, sectionIndex: number) => (
+        {productCatagories.map(
+          (category: any, sectionIndex: number) => (
             <SectionDividerBox
-              sectionName={section.sectionName}
-              key={section.sectionName}
-              id={section.id}
+              sectionName={category.value}
+              key={category.value}
+              id={category.value}
             >
               <Box
                 display={"flex"}
@@ -42,21 +36,7 @@ const MainView = () => {
                   lg: "44px",
                 }}
               >
-                {section.products?.map((product: Product, index) => {
-                  return (
-                    <Box
-                      key={product.name + index}
-                      width={{
-                        xs: "calc((100% - 20px) / 2)",
-                        sm: "calc((100% - 44px) / 2)",
-                        md: "calc((100% - 160px) / 3)",
-                        lg: "calc((100% - 132px) / 4)",
-                      }}
-                    >
-                      <ProductCard item={product} />
-                    </Box>
-                  );
-                })}
+                <ProductsSection section={category.value} id={category.value} />
                 {products.length - 1 === sectionIndex && (
                   <Box
                     width={{
@@ -73,8 +53,8 @@ const MainView = () => {
             </SectionDividerBox>
           )
         )}
-        <Bankets />
-        <Contants />
+        <Banket />
+        <Contacts />
       </Box>
       <ButtonScrollUp />
     </Box>
@@ -83,7 +63,7 @@ const MainView = () => {
 
 export default MainView;
 
-const Bankets = () => (
+const Banket = () => (
   <SectionDividerBox
     sectionName={sectionBankets.sectionName}
     key={sectionBankets.sectionName}
@@ -120,7 +100,7 @@ const Bankets = () => (
   </SectionDividerBox>
 );
 
-const Contants = () => (
+const Contacts = () => (
   <SectionDividerBox
     sectionName={seactionContacts.sectionName}
     key={seactionContacts.sectionName}
@@ -142,12 +122,12 @@ const Contants = () => (
           />
         </Box>
         <Box width={1} display={"flex"} flexDirection={"column"} gap={"30px"}>
-          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+          <Box display={"flex"} gap={2} justifyContent={{ xs: 'center', md: 'flex-end' }}>
             <FmdGoodOutlinedIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
             <Typography variant="h3">Calea Ieşilor 11/2, Chișinău</Typography>
           </Box>
 
-          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+          <Box display={"flex"} gap={2} justifyContent={{ xs: 'center', md: 'flex-end' }}>
             <PhoneOutlinedIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
             <Typography
               component={"a"}
@@ -159,14 +139,14 @@ const Contants = () => (
             </Typography>
           </Box>
 
-          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+          <Box display={"flex"} gap={2} justifyContent={{ xs: 'center', md: 'flex-end' }}>
             <QueryBuilderOutlinedIcon
               sx={{ fontSize: "25px", color: "#9FCD57" }}
             />
             <Typography variant="h3">Lucram 10-22:00</Typography>
           </Box>
 
-          <Box display={"flex"} gap={2} justifyContent={{xs: 'center', md: 'flex-end'}}>
+          <Box display={"flex"} gap={2} justifyContent={{ xs: 'center', md: 'flex-end' }}>
             <FacebookIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
             <a
               target="_blank"

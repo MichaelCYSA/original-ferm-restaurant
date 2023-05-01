@@ -1,4 +1,4 @@
-import * as links from "./links";
+import * as links from './links';
 
 export interface Product {
   _id?: string;
@@ -2620,7 +2620,7 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "Bauturi non Alcoolice",
+    sectionName: "non_alchogol",
     id: "non_alchogol",
     products: [
       {
@@ -2675,7 +2675,7 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "Bauturi de casa",
+    sectionName: "milk_shakes_lemonads",
     id: "milk_shakes",
     products: [
       {
@@ -2723,7 +2723,7 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "Bauturi Fierbinte",
+    sectionName: "hot_drinks",
     id: "coffee",
     products: [
       {
@@ -2785,7 +2785,7 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "Bauturi Alcoolice",
+    sectionName: "alchogol_coctails",
     id: "alchogol_coctails",
     products: [
       {
@@ -2833,8 +2833,8 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "BERE LA STICLâ,LA HALBA",
-    id: "alchogol_coctails",
+    sectionName: "beer",
+    id: "beer",
     products: [
       {
         name: "Pale Ale",
@@ -2895,8 +2895,8 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "VINUL FAUTOR ,ASCONI ,BOSTAVAN ,CRICOVA",
-    id: "alchogol_coctails",
+    sectionName: "wines",
+    id: "wines",
     products: [
       {
         name: "Sauvignon Blanc Aligote",
@@ -3006,8 +3006,8 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "VIN SPUMANT ",
-    id: "alchogol_coctails",
+    sectionName: "champagne",
+    id: "champagne",
     products: [
       {
         name: "Lacrima Dulce",
@@ -3040,8 +3040,8 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
   {
-    sectionName: "Bauturi alcoolici Tare",
-    id: "alchogol_coctails",
+    sectionName: "strong_alchogol",
+    id: "strong_alchogol",
     products: [
       {
         name: "Jagermeister",
@@ -3179,3 +3179,1578 @@ export const translatedProducts: MenuSection[] = [
     ],
   },
 ];
+
+
+export const productCatagories = [
+  {
+      "label": "breakFast",
+      "value": "breakFast"
+  },
+  {
+      "label": "supe",
+      "value": "supe"
+  },
+  {
+      "label": "salads",
+      "value": "salads"
+  },
+  {
+      "label": "goldSnacks",
+      "value": "goldSnacks"
+  },
+  {
+      "label": "hostSnack",
+      "value": "hostSnack"
+  },
+  {
+      "label": "beerSnack",
+      "value": "beerSnack"
+  },
+  {
+      "label": "mainDishes",
+      "value": "mainDishes"
+  },
+  {
+      "label": "gaskets",
+      "value": "gaskets"
+  },
+  {
+      "label": "pizza",
+      "value": "pizza"
+  },
+  {
+      "label": "deserts",
+      "value": "deserts"
+  },
+  {
+      "label": "non_alchogol",
+      "value": "non_alchogol"
+  },
+  {
+      "label": "milk_shakes_lemonads",
+      "value": "milk_shakes_lemonads"
+  },
+  {
+      "label": "hot_drinks",
+      "value": "hot_drinks"
+  },
+  {
+      "label": "alchogol_coctails",
+      "value": "alchogol_coctails"
+  },
+  {
+      "label": "beer",
+      "value": "beer"
+  },
+  {
+      "label": "wines",
+      "value": "wines"
+  },
+  {
+      "label": "champagne",
+      "value": "champagne"
+  },
+  {
+      "label": "strong_alchogol",
+      "value": "strong_alchogol"
+  }
+]
+
+
+
+const migration = [
+  {
+    "name_ru": "Сырные шарики",
+    "name_ro": "Brinzoaice",
+    "description_ru": "Сырные шарики",
+    "description_ro": "200-50g",
+    "image": "brinzoaice.png",
+    "price": 60,
+    "productType": "breakFast"
+  },
+  {
+    "name_ru": "Омлет с салатом",
+    "name_ro": "Omleta cu salata",
+    "description_ru": "Омлет с салатом",
+    "description_ro": "200g",
+    "image": "omleta_cu_salata.png",
+    "price": 50,
+    "productType": "breakFast"
+  },
+  {
+    "name_ru": "Яйца с беконом",
+    "name_ro": "Ochiuri",
+    "description_ru": "Яйца с беконом",
+    "description_ro": "cu becon 2buc/50g",
+    "image": "ochiuri.png",
+    "price": 60,
+    "productType": "breakFast"
+  },
+  {
+    "name_ru": "Блины",
+    "name_ro": "Clatite",
+    "description_ru": "Блины",
+    "description_ro": "cu gem 250g",
+    "image": "clatite.png",
+    "price": 60,
+    "productType": "breakFast"
+  },
+  {
+    "name_ru": "Овсянка",
+    "name_ro": "Terci de ovaz",
+    "description_ru": "Овсянка",
+    "description_ro": "pe lapte,apa ,cu gem 300g",
+    "image": "terci_de_ovaz.png",
+    "price": 35,
+    "productType": "breakFast"
+  },
+  {
+    "name_ru": "Круассан",
+    "name_ro": "Croissant",
+    "description_ru": "Круассан",
+    "description_ro": "in sortiment 1 buc",
+    "image": "croissant.png",
+    "price": 35,
+    "productType": "breakFast"
+  },
+  {
+    "name_ru": "Красный борщ",
+    "name_ro": "Bors rosu",
+    "description_ru": "Красный борщ",
+    "description_ro": "cu carne de vita 350/50/50 g",
+    "image": "bors_rosu.png",
+    "price": 60,
+    "productType": "supe"
+  },
+  {
+    "name_ru": "Куриный бульон",
+    "name_ro": "Zeama de gaina",
+    "description_ru": "Куриный бульон",
+    "description_ro": "de casa 350/50 g",
+    "image": "zeama_de_gaina.png",
+    "price": 55,
+    "productType": "supe"
+  },
+  {
+    "name_ru": "Овощной суп",
+    "name_ro": "Soleanca",
+    "description_ru": "Овощной суп",
+    "description_ro": "350/50 g",
+    "image": "soleanca.png",
+    "price": 60,
+    "productType": "supe"
+  },
+  {
+    "name_ru": "Шпинатный суп",
+    "name_ro": "Supa de spanac",
+    "description_ru": "Шпинатный суп",
+    "description_ro": "250/30 g",
+    "image": "supa_de_spanac.png",
+    "price": 70,
+    "productType": "supe"
+  },
+  {
+    "name_ru": "Сливочный суп",
+    "name_ro": "Crem supa",
+    "description_ru": "Сливочный суп",
+    "description_ro": "de cascaval 380 /30g",
+    "image": "crem_supa.png",
+    "price": 55,
+    "productType": "supe"
+  },
+  {
+    "name_ru": "Салат Шопски",
+    "name_ro": "Salata Shopski",
+    "description_ru": "Салат Шопски",
+    "description_ro": "200 g",
+    "image": "salata_shopski.png",
+    "price": 70,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Салат Цезарь",
+    "name_ro": "Salata Caesar ",
+    "description_ru": "Салат Цезарь",
+    "description_ro": "cu carne de pui 320 g",
+    "image": "salata_caesar.png",
+    "price": 90,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Салат из капусты",
+    "name_ro": "Salata de varza ",
+    "description_ru": "Салат из капусты",
+    "description_ro": "200-50g",
+    "image": "salata_de_varza.png",
+    "price": 40,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Салат со сладкой капустой",
+    "name_ro": "Salata cu varza murata",
+    "description_ru": "Салат со сладкой капустой",
+    "description_ro": "200 g",
+    "image": "salata_cu_varza_murata.png",
+    "price": 40,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Салат Экзотика",
+    "name_ro": "Salata Exotic",
+    "description_ru": "Салат Экзотика",
+    "description_ro": "cu pui si cascaval 250g",
+    "image": "salata_exotic.png",
+    "price": 75,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Салат с моцареллой и перлами",
+    "name_ro": "Salata Mozzarella Perle",
+    "description_ru": "Салат с моцареллой и перлами",
+    "description_ro": "250 g",
+    "image": "salata_mozzarella_perle.png",
+    "price": 75,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Горячий салат",
+    "name_ro": "Salata calda",
+    "description_ru": "Горячий салат",
+    "description_ro": "cu carne de vita 320g",
+    "image": "salata_calda.png",
+    "price": 100,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Салат из овощей",
+    "name_ro": "Salata din legume",
+    "description_ru": "Салат из овощей",
+    "description_ro": "legume coapte",
+    "image": "salata_din_legume.png",
+    "price": 75,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Салат с тунцом",
+    "name_ro": "Salata cu ton",
+    "description_ru": "Салат с тунцом",
+    "description_ro": "ton",
+    "image": "salata_cu_ton.png",
+    "price": 95,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Смесь овощей",
+    "name_ro": "Mix de legume",
+    "description_ru": "Смесь овощей",
+    "description_ro": "Mix de legume",
+    "image": "mix_de_legume.png",
+    "price": 60,
+    "productType": "salads"
+  },
+  {
+    "name_ru": "Сельдь с вареным картофелем",
+    "name_ro": "Hering cu cartofi fierti",
+    "description_ru": "Сельдь с вареным картофелем",
+    "description_ro": "cu cartofi fierti 100/250 g",
+    "image": "hering_cu_cartofi_fierti.png",
+    "price": 70,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Жинжерица",
+    "name_ro": "Gingerica",
+    "description_ru": "Жинжерица",
+    "description_ro": "cu cartofi fierti 100/250/50 g",
+    "image": "gingerica.png",
+    "price": 70,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Овощная тарелка",
+    "name_ro": "Platou de legume",
+    "description_ru": "Овощная тарелка",
+    "description_ro": "proaspete 450 g",
+    "image": "platou_de_legume.png",
+    "price": 90,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Тарелка сыров",
+    "name_ro": "Platou de cascavaluri",
+    "description_ru": "Тарелка сыров",
+    "description_ro": "de la “Ferma Noastra” 300 g",
+    "image": "platou_de_cascavaluri.png",
+    "price": 120,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Тарелка со свиной саломой",
+    "name_ro": "Platou de Slanina",
+    "description_ru": "Тарелка со свиной саломой",
+    "description_ro": "380 g",
+    "image": "platou_de_slanina.png",
+    "price": 90,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Тарелка салями",
+    "name_ro": "Platou de salamuri",
+    "description_ru": "Тарелка салями",
+    "description_ro": "250 g",
+    "image": "platou_de_salamuri.png",
+    "price": 140,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Плато из маринадных овощей",
+    "name_ro": "Platou de muraturi",
+    "description_ru": "Плато из маринадных овощей",
+    "description_ro": "450g de muraturi",
+    "image": "platou_de_muraturi.png",
+    "price": 60,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Буррата с салатом",
+    "name_ro": "Burratta cu salata",
+    "description_ru": "Буррата с салатом",
+    "description_ro": "Burrata cu roșii cherysi și busuioc, 250g",
+    "image": "burratta_cu_salata.png",
+    "price": 99,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Брускетта с лососем",
+    "name_ro": "Bruschete",
+    "description_ru": "Брускетта с лососем",
+    "description_ro": "Bruschete cu somon, 2 bucăți",
+    "image": "bruschete.png",
+    "price": 85,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Брускетта с моцареллой",
+    "name_ro": "Bruschete",
+    "description_ru": "Брускетта с моцареллой",
+    "description_ro": "Bruschete cu mozzarella, 250g",
+    "image": "bruschete_mozzarella.png",
+    "price": 65,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Брускетта с говяжьим ростбифом",
+    "name_ro": "Bruschete",
+    "description_ru": "Брускетта с говяжьим ростбифом",
+    "description_ro": "Bruschete cu roșbif, 250g",
+    "image": "bruschete_rosbif.png",
+    "price": 70,
+    "productType": "goldSnacks"
+  },
+  {
+    "name_ru": "Буффало сыр",
+    "name_ro": "Cascaval Buffalo",
+    "description_ru": "Буффало сыр",
+    "description_ro": "Teleggio pane 125/50 g",
+    "image": "cascaval_buffalo.png",
+    "price": 140,
+    "productType": "hostSnack"
+  },
+  {
+    "name_ru": "Куриные крылышки",
+    "name_ro": "Aripioare de pui",
+    "description_ru": "Куриные крылышки",
+    "description_ro": "cu cartofi pai 150/130/50 g",
+    "image": "aripioare_de_pui.png",
+    "price": 85,
+    "productType": "hostSnack"
+  },
+  {
+    "name_ru": "Куриные наггетсы",
+    "name_ro": "Nughete de pui",
+    "description_ru": "Куриные наггетсы",
+    "description_ro": "cu cartofi pai 150/130/50 g",
+    "image": "nughete_de_pui.png",
+    "price": 85,
+    "productType": "hostSnack"
+  },
+  {
+    "name_ru": "Пироги ассортимент",
+    "name_ro": "Placinte in asortiment",
+    "description_ru": "Пироги ассортимент",
+    "description_ro": "200 g",
+    "image": "placinte_in_asortiment.png",
+    "price": 40,
+    "productType": "hostSnack"
+  },
+  {
+    "name_ru": "Нацос",
+    "name_ro": "Nacios",
+    "description_ru": "Нацос",
+    "description_ro": "50g/50g",
+    "image": "nacios.png",
+    "price": 40,
+    "productType": "beerSnack"
+  },
+  {
+    "name_ru": "Хрустящие гренки с чесноком",
+    "name_ro": "Crutoane cu usturoi",
+    "description_ru": "Хрустящие гренки с чесноком",
+    "description_ro": "250/50 g",
+    "image": "crutoane_cu_usturoi.png",
+    "price": 40,
+    "productType": "beerSnack"
+  },
+  {
+    "name_ru": "Жареные миндаль",
+    "name_ro": "Migdale prajite",
+    "description_ru": "Жареные миндаль",
+    "description_ro": "100 g",
+    "image": "migdale_prajite.png",
+    "price": 60,
+    "productType": "beerSnack"
+  },
+  {
+    "name_ru": "Крошка хлеба",
+    "name_ro": "Pietrosel",
+    "description_ru": "Крошка хлеба",
+    "description_ro": "130/50 g",
+    "image": "pietrosel.png",
+    "price": 65,
+    "productType": "beerSnack"
+  },
+  {
+    "name_ru": "Кольца лука",
+    "name_ro": "Ineluse",
+    "description_ru": "Кольца лука",
+    "description_ro": "ceapa+sos tartar 130/50 g",
+    "image": "ineluse.png",
+    "price": 60,
+    "productType": "beerSnack"
+  },
+  {
+    "name_ru": "Кольца кальмара",
+    "name_ro": "Ineluse",
+    "description_ru": "Кольца кальмара",
+    "description_ro": "de calmar+sos tartar 130/50 g",
+    "image": "ineluse_calmar.png",
+    "price": 70,
+    "productType": "beerSnack"
+  },
+  {
+    "name_ru": "Бастурма из говядины",
+    "name_ro": "Basturma de vita",
+    "description_ru": "Бастурма из говядины",
+    "description_ro": "50 g",
+    "image": "basturma_de_vita.png",
+    "price": 70,
+    "productType": "beerSnack"
+  },
+  {
+    "name_ru": "Свиной голень",
+    "name_ro": "Ciolan de proc",
+    "description_ru": "Свиной голень",
+    "description_ro": "Ciolan de proc",
+    "image": "ciolan_de_proc.png",
+    "price": 199,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Венгерский гуляш",
+    "name_ro": "Guleas Unguresc",
+    "description_ru": "Венгерский гуляш",
+    "description_ro": "Guleas Unguresc",
+    "image": "guleas_unguresc.png",
+    "price": 80,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Жареный лосось",
+    "name_ro": "File de somon",
+    "description_ru": "Жареный лосось",
+    "description_ro": "File de somon",
+    "image": "file_de_somon.png",
+    "price": 170,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Зайчатина тушеная",
+    "name_ro": "Tocanita de iepuras",
+    "description_ru": "Зайчатина тушеная",
+    "description_ro": "Tocanita de iepuras",
+    "image": "tocanita_de_iepuras.png",
+    "price": 95,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Макароны с говядиной",
+    "name_ro": "Paste cu carne",
+    "description_ru": "Макароны с говядиной",
+    "description_ro": "Paste cu carne",
+    "image": "paste_cu_carne.png",
+    "price": 90,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Макароны с лососем",
+    "name_ro": "Paste cu somon",
+    "description_ru": "Макароны с лососем",
+    "description_ro": "Paste cu somon",
+    "image": "paste_cu_somon.png",
+    "price": 110,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Куриная грудка",
+    "name_ro": "Piept de pui",
+    "description_ru": "Куриная грудка",
+    "description_ro": "Piept de pui",
+    "image": "piept_de_pui.png",
+    "price": 75,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Куриные шашлычки",
+    "name_ro": "Frigarui de pui",
+    "description_ru": "Куриные шашлычки",
+    "description_ro": "Frigarui de pui",
+    "image": "frigarui_de_pui.png",
+    "price": 95,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Свинные шашлычки",
+    "name_ro": "Frigarui de porc",
+    "description_ru": "Свинные шашлычки",
+    "description_ro": "Frigarui de porc",
+    "image": "frigarui_de_porc.png",
+    "price": 105,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Говяжьи шашлычки",
+    "name_ro": "Frigarui de vita",
+    "description_ru": "Говяжьи шашлычки",
+    "description_ro": "Frigarui de vita",
+    "image": "frigarui_de_vita.png",
+    "price": 155,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Домашние мичи",
+    "name_ro": "Mici de casa",
+    "description_ru": "Домашние мичи",
+    "description_ro": "Mici de casa",
+    "image": "mici_de_casa.png",
+    "price": 90,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Бифштекс",
+    "name_ro": "Steak",
+    "description_ru": "Бифштекс",
+    "description_ro": "Steak",
+    "image": "steak.png",
+    "price": 155,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Мясо бизона тушеное в вине",
+    "name_ro": "Carne de Bivol inabusit in vin",
+    "description_ru": "Мясо бизона тушеное в вине",
+    "description_ro": "Carne de bivol,Legume, Cartofi copti",
+    "image": "carne_de_bivol_inabusit_in_vin.png",
+    "price": 140,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Куриный шницель",
+    "name_ro": "Snitel",
+    "description_ru": "Куриный шницель",
+    "description_ro": "de pui 180/50 g",
+    "image": "snitel.png",
+    "price": 75,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Куриный бургер",
+    "name_ro": "Burger de pui",
+    "description_ru": "Куриный бургер",
+    "description_ro": "400g",
+    "image": "burger_de_pui.png",
+    "price": 90,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Говяжий бургер",
+    "name_ro": "Burger de vita",
+    "description_ru": "Говяжий бургер",
+    "description_ro": "400g",
+    "image": "burger_de_vita.png",
+    "price": 90,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Туриця на мангалі з картоплею",
+    "name_ro": "Carnita de curcan",
+    "description_ru": "Туриця на мангалі з картоплею",
+    "description_ro": "cu cartofi in oala 550 g",
+    "image": "carnita_de_curcan.png",
+    "price": 155,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Говяжьи ребрышки",
+    "name_ro": "Costita de vitel",
+    "description_ru": "Говяжьи ребрышки",
+    "description_ro": "100 g",
+    "image": "costita_de_vitel.png",
+    "price": 35,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Жареное мясо",
+    "name_ro": "Platou de carne gril",
+    "description_ru": "Жареное мясо",
+    "description_ro": "Platou de carne gril",
+    "image": "platou_de_carne_gril.png",
+    "price": 600,
+    "productType": "mainDishes"
+  },
+  {
+    "name_ru": "Жареная картошка",
+    "name_ro": "Cartofi copti",
+    "description_ru": "Жареная картошка",
+    "description_ro": "Cartofi copti",
+    "image": "cartofi_copti.png",
+    "price": 40,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Картофель фри с кетчупом",
+    "name_ro": "Cartofi pai + ketchup",
+    "description_ru": "Картофель фри с кетчупом",
+    "description_ro": "Cartofi pai + ketchup",
+    "image": "cartofi_pai_ketchup.png",
+    "price": 35,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Пюре из картофеля",
+    "name_ro": "Piure de cartofi",
+    "description_ru": "Пюре из картофеля",
+    "description_ro": "Piure de cartofi",
+    "image": "piure_de_cartofi.png",
+    "price": 30,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Домашняя жареная картошка",
+    "name_ro": "Cartofi prajiti ca acasa",
+    "description_ru": "Домашняя жареная картошка",
+    "description_ro": "Cartofi prajiti ca acasa",
+    "image": "cartofi_prajiti_ca_acasa.png",
+    "price": 50,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Полента",
+    "name_ro": "Mamaliga",
+    "description_ru": "Полента",
+    "description_ro": "Mamaliga",
+    "image": "mamaliga.png",
+    "price": 50,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Рис с овощами",
+    "name_ro": "Orez cu legume",
+    "description_ru": "Рис с овощами",
+    "description_ro": "Orez cu legume",
+    "image": "orez_cu_legume.png",
+    "price": 35,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Брокколи пюре",
+    "name_ro": "Piure de brocoli",
+    "description_ru": "Брокколи пюре",
+    "description_ro": "Piure de brocoli",
+    "image": "piure_de_brocoli.png",
+    "price": 45,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Паста",
+    "name_ro": "Pastari",
+    "description_ru": "Паста",
+    "description_ro": "Pastari",
+    "image": "pastari.png",
+    "price": 40,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Паста с маслом",
+    "name_ro": "Paste cu unt",
+    "description_ru": "Паста с маслом",
+    "description_ro": "Paste cu unt",
+    "image": "paste_cu_unt.png",
+    "price": 30,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Фасоль с овощами",
+    "name_ro": "Fasole cu legume",
+    "description_ru": "Фасоль с овощами",
+    "description_ro": "Fasole cu legume",
+    "image": "fasole_cu_legume.png",
+    "price": 50,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Тушеная капуста",
+    "name_ro": "Varza calita",
+    "description_ru": "Тушеная капуста",
+    "description_ro": "Varza calita",
+    "image": "varza_calita.png",
+    "price": 40,
+    "productType": "gaskets"
+  },
+  {
+    "name_ru": "Маргарита",
+    "name_ro": "Margherita",
+    "description_ru": "Маргарита",
+    "description_ro": "Sos de rosii, mozzarella",
+    "image": "margherita.png",
+    "price": 85,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Дьявола",
+    "name_ro": "Diavola",
+    "description_ru": "Дьявола",
+    "description_ro": "Sos de rosii, salam picant, mozzarella",
+    "image": "diavola.png",
+    "price": 95,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Тонно",
+    "name_ro": "Tonno",
+    "description_ru": "Тонно",
+    "description_ro": "Sos de rosii, rucola, cherry, Provola, mozzarella, ton",
+    "image": "tonno.png",
+    "price": 115,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Капричиоза",
+    "name_ro": "Capriciossa",
+    "description_ru": "Капричиоза",
+    "description_ro": "Ceafa de porc, vanata coapta, sos de rosii, ciuperci, branza decapra, mozzarella",
+    "image": "capriciossa.png",
+    "price": 110,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Полло",
+    "name_ro": "Pollo",
+    "description_ru": "Полло",
+    "description_ro": "Gogosari, ciuperci, piept de pui, mozzarella, sos de rosii.",
+    "image": "pollo.png",
+    "price": 110,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Пицца \"Прошутто и грибы\"",
+    "name_ro": "Prosciutto e funghi",
+    "description_ru": "Пицца \"Прошутто и грибы\"",
+    "description_ro": "Mozzarella, prosciutto, cotto, ciuperci, sos de rosii",
+    "image": "prosciutto_e_funghi.png",
+    "price": 98,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Пицца \"Четыре сыра\"",
+    "name_ro": "Quattro formaggi",
+    "description_ru": "Пицца \"Четыре сыра\"",
+    "description_ro": "Mozzarella, gorgonzola, provola edam, ricotta",
+    "image": "quattro_formaggi.png",
+    "price": 115,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Пицца \"Ферма с оригиналами\"",
+    "name_ro": "Ferma cu origini",
+    "description_ru": "Пицца \"Ферма с оригиналами\"",
+    "description_ro": "Sos de rosii, mozzarella, porumb, prosciutto, ciuperci, gogosari, masline",
+    "image": "ferma_cu_origini.png",
+    "price": 110,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Пицца \"Карбонара\"",
+    "name_ro": "Carbonara",
+    "description_ru": "Пицца \"Карбонара\"",
+    "description_ro": "Sos de rosii, mozzarella, bacon, ou",
+    "image": "carbonara.png",
+    "price": 98,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Леггера",
+    "name_ro": "Leggera",
+    "description_ru": "Леггера",
+    "description_ro": "Carne de vitel,piept de pui becon,sos de rosii, mozzarella,proschiutto ",
+    "image": "leggera.png",
+    "price": 115,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Пицца Прага",
+    "name_ro": "Pizza Praga",
+    "description_ru": "Пицца Прага",
+    "description_ro": "Sos de rosii,mozzarella,becon carnaciori vanatoresti de Praga,cascaval edam",
+    "image": "pizza_praga.png",
+    "price": 105,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Вегетарианская",
+    "name_ro": "Vegetariana",
+    "description_ru": "Вегетарианская",
+    "description_ro": "Sos de rosii, legume grill",
+    "image": "vegetariana.png",
+    "price": 85,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Фокачча",
+    "name_ro": "Focaccia",
+    "description_ru": "Фокачча",
+    "description_ro": "200 g",
+    "image": "focaccia.png",
+    "price": 25,
+    "productType": "pizza"
+  },
+  {
+    "name_ru": "Наполеон",
+    "name_ro": "Napoleon",
+    "description_ru": "Наполеон",
+    "description_ro": "180 g",
+    "image": "napoleon.png",
+    "price": 65,
+    "productType": "deserts"
+  },
+  {
+    "name_ru": "Медовик",
+    "name_ro": "Medovic",
+    "description_ru": "Медовик",
+    "description_ro": "140 g",
+    "image": "medovic.png",
+    "price": 65,
+    "productType": "deserts"
+  },
+  {
+    "name_ru": "Гушма луй Гугуца",
+    "name_ro": "Cusma lui Guguta",
+    "description_ru": "Гушма луй Гугуца",
+    "description_ro": "170 g",
+    "image": "cusma_lui_guguta.png",
+    "price": 65,
+    "productType": "deserts"
+  },
+  {
+    "name_ru": "Пирожное",
+    "name_ro": "Prajitura",
+    "description_ru": "Пирожное",
+    "description_ro": "Gustul copilariei 90g",
+    "image": "prajitura.png",
+    "price": 55,
+    "productType": "deserts"
+  },
+  {
+    "name_ru": "Сливы с орехами",
+    "name_ro": "Prune cu nuca",
+    "description_ru": "Сливы с орехами",
+    "description_ro": "n sirop de vincu crema de smantana 200 g",
+    "image": "prune_cu_nuca.png",
+    "price": 65,
+    "productType": "deserts"
+  },
+  {
+    "name_ru": "Фондан",
+    "name_ro": "Fondant",
+    "description_ru": "Фондан",
+    "description_ro": "de ciocolata 70/50 g",
+    "image": "fondant.png",
+    "price": 70,
+    "productType": "deserts"
+  },
+  {
+    "name_ru": "Настоящее мороженое",
+    "name_ro": "Inghetata adevarata",
+    "description_ru": "Настоящее мороженое",
+    "description_ro": "(Plombir/Ciocolata /Nocciola/ Fistic/Mure,Capsuna ,1 bila  50 g",
+    "image": "inghetata_adevarata.png",
+    "price": 15,
+    "productType": "deserts"
+  },
+  {
+    "name_ru": "Guizza",
+    "name_ro": "Guizza",
+    "description_ru": "Guizza",
+    "description_ro": "(apa plata/gazoasa) 500ml ",
+    "image": "guizza.png",
+    "price": 15,
+    "productType": "non_alchogol"
+  },
+  {
+    "name_ru": "Plose",
+    "name_ro": "Plose",
+    "description_ru": "Plose",
+    "description_ro": "(apa plata/gazata) 250/750ml",
+    "image": "plose.png",
+    "price": "25.41",
+    "productType": "non_alchogol"
+  },
+  {
+    "name_ru": "Coca Cola,Sprite,Fanta",
+    "name_ro": "Coca Cola,Sprite,Fanta",
+    "description_ru": "Coca Cola,Sprite,Fanta",
+    "description_ro": "300/500 ml",
+    "image": "coca_cola_sprite_fanta.png",
+    "price": "19.00",
+    "productType": "non_alchogol"
+  },
+  {
+    "name_ru": "Ceai rece",
+    "name_ro": "Ceai rece",
+    "description_ru": "Ceai rece",
+    "description_ro": "500 ml",
+    "image": "ceai_rece.png",
+    "price": 25,
+    "productType": "non_alchogol"
+  },
+  {
+    "name_ru": "Suc Jaffa",
+    "name_ro": "Suc Jaffa",
+    "description_ru": "Suc Jaffa",
+    "description_ro": "250/950 ml",
+    "image": "suc_jaffa.png",
+    "price": "70.68",
+    "productType": "non_alchogol"
+  },
+  {
+    "name_ru": "Suc Fresh",
+    "name_ro": "Suc Fresh",
+    "description_ru": "Suc Fresh",
+    "description_ro": "orange/grapefruit 250 ml",
+    "image": "suc_fresh.png",
+    "price": 45,
+    "productType": "non_alchogol"
+  },
+  {
+    "name_ru": "Borjomi",
+    "name_ro": "Borjomi",
+    "description_ru": "Borjomi",
+    "description_ro": "500 ml",
+    "image": "borjomi.png",
+    "price": 45,
+    "productType": "non_alchogol"
+  },
+  {
+    "name_ru": "Milkshake",
+    "name_ro": "Milkshake",
+    "description_ru": "Milkshake",
+    "description_ro": "350 ml  ",
+    "image": "milkshake.png",
+    "price": 45,
+    "productType": "milk_shakes_lemonads"
+  },
+  {
+    "name_ru": "Limonada clasica",
+    "name_ro": "Limonada clasica",
+    "description_ru": "Limonada clasica",
+    "description_ro": "350 ml/1L",
+    "image": "limonada_clasica.png",
+    "price": "69.70",
+    "productType": "milk_shakes_lemonads"
+  },
+  {
+    "name_ru": "Limonada de capsuna",
+    "name_ro": "Limonada de capsuna",
+    "description_ru": "Limonada de capsuna",
+    "description_ro": "350 ml/1L",
+    "image": "limonada_de_capsuna.png",
+    "price": "73.41",
+    "productType": "milk_shakes_lemonads"
+  },
+  {
+    "name_ru": "Ceai rece de casa",
+    "name_ro": "Ceai rece de casa",
+    "description_ru": "Ceai rece de casa",
+    "description_ro": "350 ml/1L",
+    "image": "ceai_rece_de_casa.png",
+    "price": "4.05",
+    "productType": "milk_shakes_lemonads"
+  },
+  {
+    "name_ru": "Pina Colada",
+    "name_ro": "Pina Colada",
+    "description_ru": "Pina Colada",
+    "description_ro": "250/950 ml",
+    "image": "pina_colada.png",
+    "price": "51.74",
+    "productType": "milk_shakes_lemonads"
+  },
+  {
+    "name_ru": "Frappe",
+    "name_ro": "Frappe",
+    "description_ru": "Frappe",
+    "description_ro": "350 ml",
+    "image": "frappe.png",
+    "price": 35,
+    "productType": "milk_shakes_lemonads"
+  },
+  {
+    "name_ru": "Espresso",
+    "name_ro": "Espresso",
+    "description_ru": "Espresso",
+    "description_ro": "30 ml ",
+    "image": "espresso.png",
+    "price": 20,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Americano",
+    "name_ro": "Americano",
+    "description_ru": "Americano",
+    "description_ro": "100 ml",
+    "image": "americano.png",
+    "price": 20,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Cappuccino",
+    "name_ro": "Cappuccino",
+    "description_ru": "Cappuccino",
+    "description_ro": "250ml",
+    "image": "cappuccino.png",
+    "price": 30,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Latte",
+    "name_ro": "Latte",
+    "description_ru": "Latte",
+    "description_ro": "300 ml",
+    "image": "latte.png",
+    "price": 30,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Mocaccino",
+    "name_ro": "Mocaccino",
+    "description_ru": "Mocaccino",
+    "description_ro": "",
+    "image": "mocaccino.png",
+    "price": 30,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Cacao",
+    "name_ro": "Cacao",
+    "description_ru": "Cacao",
+    "description_ro": "250 ml",
+    "image": "cacao.png",
+    "price": 30,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Ceai de catina",
+    "name_ro": "Ceai de catina",
+    "description_ru": "Ceai de catina",
+    "description_ro": "ghimbir si portocala ,450 ml",
+    "image": "ceai_de_catina.png",
+    "price": 50,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Ceai de Plante",
+    "name_ro": "Ceai de Plante",
+    "description_ru": "Ceai de Plante",
+    "description_ro": "450 ml",
+    "image": "ceai_de_plante.png",
+    "price": 45,
+    "productType": "hot_drinks"
+  },
+  {
+    "name_ru": "Aperol Spritz",
+    "name_ro": "Aperol Spritz",
+    "description_ru": "Aperol Spritz",
+    "description_ro": "350  ml",
+    "image": "aperol_spritz.png",
+    "price": 65,
+    "productType": "alchogol_coctails"
+  },
+  {
+    "name_ru": "Gin tonic",
+    "name_ro": "Gin tonic",
+    "description_ru": "Gin tonic",
+    "description_ro": "350 ml",
+    "image": "gin_tonic.png",
+    "price": 55,
+    "productType": "alchogol_coctails"
+  },
+  {
+    "name_ru": "Cuba Libre",
+    "name_ro": "Cuba Libre",
+    "description_ru": "Cuba Libre",
+    "description_ro": "350 ml",
+    "image": "cuba_libre.png",
+    "price": 60,
+    "productType": "alchogol_coctails"
+  },
+  {
+    "name_ru": "Green Mexican",
+    "name_ro": "Green Mexican",
+    "description_ru": "Green Mexican",
+    "description_ro": "60 ml",
+    "image": "green_mexican.png",
+    "price": 55,
+    "productType": "alchogol_coctails"
+  },
+  {
+    "name_ru": "Long Island Ice Tea",
+    "name_ro": "Long Island Ice Tea",
+    "description_ru": "Long Island Ice Tea",
+    "description_ro": "",
+    "image": "long_island_ice_tea.png",
+    "price": 90,
+    "productType": "alchogol_coctails"
+  },
+  {
+    "name_ru": "Glintwein",
+    "name_ro": "Glintwein",
+    "description_ru": "Glintwein",
+    "description_ro": "55 ml",
+    "image": "glintwein.png",
+    "price": 30,
+    "productType": "alchogol_coctails"
+  },
+  {
+    "name_ru": "Pale Ale",
+    "name_ro": "Pale Ale",
+    "description_ru": "Pale Ale",
+    "description_ro": "350  ml",
+    "image": "pale_ale.png",
+    "price": 45,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Efes pilsner",
+    "name_ro": "Efes pilsner",
+    "description_ru": "Efes pilsner",
+    "description_ro": "f/a ,c/a 500 ml",
+    "image": "efes_pilsner.png",
+    "price": 40,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Kozel",
+    "name_ro": "Kozel",
+    "description_ru": "Kozel",
+    "description_ro": "bruna / blonda 500 ml",
+    "image": "kozel.png",
+    "price": 40,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Corona Extra",
+    "name_ro": "Corona Extra",
+    "description_ru": "Corona Extra",
+    "description_ro": "355 ml",
+    "image": "corona_extra.png",
+    "price": 55,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Hoegaarden",
+    "name_ro": "Hoegaarden",
+    "description_ru": "Hoegaarden",
+    "description_ro": "330 ml",
+    "image": "hoegaarden.png",
+    "price": 50,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Franziskaner",
+    "name_ro": "Franziskaner",
+    "description_ru": "Franziskaner",
+    "description_ro": "Weissbier 500 ml",
+    "image": "franziskaner.png",
+    "price": 60,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Kronenbourg",
+    "name_ro": "Kronenbourg",
+    "description_ru": "Kronenbourg",
+    "description_ro": "460 ml",
+    "image": "kronenbourg.png",
+    "price": 45,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Kozel blonda  HALBA",
+    "name_ro": "Kozel blonda  HALBA",
+    "description_ru": "Kozel blonda  HALBA",
+    "description_ro": "500 ml",
+    "image": "kozel_blonda_halba.png",
+    "price": 35,
+    "productType": "beer"
+  },
+  {
+    "name_ru": "Sauvignon Blanc Aligote",
+    "name_ro": "Sauvignon Blanc Aligote",
+    "description_ru": "Sauvignon Blanc Aligote",
+    "description_ro": "(alb, sec) 0,75 ml",
+    "image": "sauvignon_blanc_aligote.png",
+    "price": 210,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Merlot Rara Neagra",
+    "name_ro": "Merlot Rara Neagra",
+    "description_ru": "Merlot Rara Neagra",
+    "description_ro": "(rosu, sec) 0,75 ml",
+    "image": "merlot_rara_neagra.png",
+    "price": 210,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Merlot Feteasca Nearga",
+    "name_ro": "Merlot Feteasca Nearga",
+    "description_ru": "Merlot Feteasca Nearga",
+    "description_ro": "(roz, sec)0,75 ml",
+    "image": "merlot_feteasca_nearga.png",
+    "price": 210,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Aurore Feteasca Neagra",
+    "name_ro": "Aurore Feteasca Neagra",
+    "description_ru": "Aurore Feteasca Neagra",
+    "description_ro": "0,75 ml",
+    "image": "aurore_feteasca_neagra.png",
+    "price": 350,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Aurore Pinot Grigio",
+    "name_ro": "Aurore Pinot Grigio",
+    "description_ru": "Aurore Pinot Grigio",
+    "description_ro": "0,75 ml",
+    "image": "aurore_pinot_grigio.png",
+    "price": 350,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Aurore Rara Neagra",
+    "name_ro": "Aurore Rara Neagra",
+    "description_ru": "Aurore Rara Neagra",
+    "description_ro": "0,75 ml",
+    "image": "aurore_rara_neagra.png",
+    "price": 350,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Uneori Cabernet Sauvignon",
+    "name_ro": "Uneori Cabernet Sauvignon",
+    "description_ru": "Uneori Cabernet Sauvignon",
+    "description_ro": "750 ml",
+    "image": "uneori_cabernet_sauvignon.png",
+    "price": 200,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Uneori Riesling",
+    "name_ro": "Uneori Riesling",
+    "description_ru": "Uneori Riesling",
+    "description_ro": "750 ml",
+    "image": "uneori_riesling.png",
+    "price": 200,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Uneori Muscat Rose",
+    "name_ro": "Uneori Muscat Rose",
+    "description_ru": "Uneori Muscat Rose",
+    "description_ro": "750 ml",
+    "image": "uneori_muscat_rose.png",
+    "price": 240,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Cabernet Sauvignon",
+    "name_ro": "Cabernet Sauvignon",
+    "description_ru": "Cabernet Sauvignon",
+    "description_ro": "150/750 ml",
+    "image": "cabernet_sauvignon.png",
+    "price": "10.25",
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Muscat Rose",
+    "name_ro": "Muscat Rose",
+    "description_ru": "Muscat Rose",
+    "description_ro": "150/750 ml",
+    "image": "muscat_rose.png",
+    "price": "7.76",
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Chardonnay",
+    "name_ro": "Chardonnay",
+    "description_ru": "Chardonnay",
+    "description_ro": "150/750 ml ml",
+    "image": "chardonnay.png",
+    "price": "86.38",
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Orasul Subteran Viorica",
+    "name_ro": "Orasul Subteran Viorica",
+    "description_ru": "Orasul Subteran Viorica",
+    "description_ro": "750 ml",
+    "image": "orasul_subteran_viorica.png",
+    "price": 200,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Orasul Subteran",
+    "name_ro": "Orasul Subteran",
+    "description_ru": "Orasul Subteran",
+    "description_ro": "Cabernet /Rose  750 ml",
+    "image": "orasul_subteran_rose.png",
+    "price": 200,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Orasul Subteran",
+    "name_ro": "Orasul Subteran",
+    "description_ru": "Orasul Subteran",
+    "description_ro": "Feteasca Neagra 750 ml",
+    "image": "orasul_subteran_neagra.png",
+    "price": 200,
+    "productType": "wines"
+  },
+  {
+    "name_ru": "Lacrima Dulce",
+    "name_ro": "Lacrima Dulce",
+    "description_ru": "Lacrima Dulce",
+    "description_ro": "750 ml",
+    "image": "lacrima_dulce.png",
+    "price": 170,
+    "productType": "champagne"
+  },
+  {
+    "name_ru": "Alb Brut",
+    "name_ro": "Alb Brut",
+    "description_ru": "Alb Brut",
+    "description_ro": "750 ml",
+    "image": "alb_brut.png",
+    "price": 210,
+    "productType": "champagne"
+  },
+  {
+    "name_ru": "Crisseco",
+    "name_ro": "Crisseco",
+    "description_ru": "Crisseco",
+    "description_ro": "150/ 750 ml",
+    "image": "crisseco.png",
+    "price": "82.62",
+    "productType": "champagne"
+  },
+  {
+    "name_ru": "Asti Martini",
+    "name_ro": "Asti Martini",
+    "description_ru": "Asti Martini",
+    "description_ro": "750 ml",
+    "image": "asti_martini.png",
+    "price": 295,
+    "productType": "champagne"
+  },
+  {
+    "name_ru": "Jagermeister",
+    "name_ro": "Jagermeister",
+    "description_ru": "Jagermeister",
+    "description_ro": "50 ml",
+    "image": "jagermeister.png",
+    "price": 50,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Bailey’s",
+    "name_ro": "Bailey’s",
+    "description_ru": "Bailey’s",
+    "description_ro": "50 ml",
+    "image": "bailey_s.png",
+    "price": 50,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Martini Rosso",
+    "name_ro": "Martini Rosso",
+    "description_ru": "Martini Rosso",
+    "description_ro": "50 ml",
+    "image": "martini_rosso.png",
+    "price": 35,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Martini Bianco",
+    "name_ro": "Martini Bianco",
+    "description_ru": "Martini Bianco",
+    "description_ro": "50 ml",
+    "image": "martini_bianco.png",
+    "price": 35,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Jose Cuervo",
+    "name_ro": "Jose Cuervo",
+    "description_ru": "Jose Cuervo",
+    "description_ro": "Reposado/ Silver 50 ml",
+    "image": "jose_cuervo.png",
+    "price": 50,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Tabacco",
+    "name_ro": "Tabacco",
+    "description_ru": "Tabacco",
+    "description_ro": "Silver Premium 50 ml",
+    "image": "tabacco.png",
+    "price": 40,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Bacardi",
+    "name_ro": "Bacardi",
+    "description_ru": "Bacardi",
+    "description_ro": "Oakheart 50 ml",
+    "image": "bacardi.png",
+    "price": 50,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Tuica de gutui,caise prune",
+    "name_ro": "Tuica de gutui,caise prune",
+    "description_ru": "Tuica de gutui,caise prune",
+    "description_ro": "50 ml",
+    "image": "tuica_de_gutui_caise_prune.png",
+    "price": 35,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Nemiroff",
+    "name_ro": "Nemiroff",
+    "description_ru": "Nemiroff",
+    "description_ro": "50 ml",
+    "image": "nemiroff.png",
+    "price": 25,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Finlandia",
+    "name_ro": "Finlandia",
+    "description_ru": "Finlandia",
+    "description_ro": "50 ml",
+    "image": "finlandia.png",
+    "price": 35,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Bardar 5 ani",
+    "name_ro": "Bardar 5 ani",
+    "description_ru": "Bardar 5 ani",
+    "description_ro": "50 ml",
+    "image": "bardar_5_ani.png",
+    "price": 30,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Bardar 7 ani",
+    "name_ro": "Bardar 7 ani",
+    "description_ru": "Bardar 7 ani",
+    "description_ro": "50 ml",
+    "image": "bardar_7_ani.png",
+    "price": 45,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Calarasi 5 ani",
+    "name_ro": "Calarasi 5 ani",
+    "description_ru": "Calarasi 5 ani",
+    "description_ro": "50 ml",
+    "image": "calarasi_5_ani.png",
+    "price": 30,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Calarasi 7 ani",
+    "name_ro": "Calarasi 7 ani",
+    "description_ru": "Calarasi 7 ani",
+    "description_ro": "50 ml",
+    "image": "calarasi_7_ani.png",
+    "price": 40,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Balti 7 ani",
+    "name_ro": "Balti 7 ani",
+    "description_ru": "Balti 7 ani",
+    "description_ro": "50 ml",
+    "image": "balti_7_ani.png",
+    "price": 40,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Speranta 9 ani",
+    "name_ro": "Speranta 9 ani",
+    "description_ru": "Speranta 9 ani",
+    "description_ro": "50 ml",
+    "image": "speranta_9_ani.png",
+    "price": 50,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Bucuria 10 anii",
+    "name_ro": "Bucuria 10 anii",
+    "description_ru": "Bucuria 10 anii",
+    "description_ro": "50 ml",
+    "image": "bucuria_10_anii.png",
+    "price": 55,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Jameson",
+    "name_ro": "Jameson",
+    "description_ru": "Jameson",
+    "description_ro": "50 ml",
+    "image": "jameson.png",
+    "price": 50,
+    "productType": "strong_alchogol"
+  },
+  {
+    "name_ru": "Jack Daniel’s",
+    "name_ro": "Jack Daniel’s",
+    "description_ru": "Jack Daniel’s",
+    "description_ro": "50 ml",
+    "image": "jack_daniel_s.png",
+    "price": 50,
+    "productType": "strong_alchogol"
+  }
+]

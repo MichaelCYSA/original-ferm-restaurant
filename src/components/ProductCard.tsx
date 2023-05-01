@@ -1,13 +1,23 @@
-import { Product } from "@/constants/products";
-import { Box, Button, Typography } from "@mui/material";
-import Image from "next/legacy/image";
-import { Translated } from "@/lang/languageContext";
-import { useCartContext } from "@/contexts/cartContext";
+import { useCartContext } from '@/contexts/cartContext';
+import { Translated, useLangContext } from '@/lang/languageContext';
+import { Box, Button, Typography } from '@mui/material';
+import Image from 'next/legacy/image';
 
-const ProductCard = ({ item }: { item: Product }) => {
+const ProductCard = ({ item }: { item: any }) => {
   const { addToCart } = useCartContext();
 
+  const { lang } = useLangContext()
   const handleAddProducts = () => addToCart(item);
+
+  const translatedProduct = (product: any, isDescription?: boolean) => {
+
+    if (lang === 'ro') {
+      const field = isDescription ? 'description_ro' : "name_ro"
+      return product?.[field]
+    }
+    const field = isDescription ? 'description_ru' : "name_ru"
+    return product?.[field]
+  }
 
   return (
     <Box
@@ -26,7 +36,7 @@ const ProductCard = ({ item }: { item: Product }) => {
         flexDirection={"column"}
       >
         <Image
-          src={`/product-photos/${item.img}`}
+          src={`/product-photos/${item.image}`}
           alt="salat"
           width={200}
           height={200}
@@ -44,11 +54,11 @@ const ProductCard = ({ item }: { item: Product }) => {
             boxOrient: "vertical",
           }}
         >
-          {Translated(item.name)}
+          {translatedProduct(item)}
         </Typography>
         <Box sx={{ height: 46 }}>
           <Typography mb={1} variant="h4">
-            {Translated(item.description)}
+            {translatedProduct(item.description, true)}
           </Typography>
         </Box>
         <Typography variant="h3" mt={"34px"}>
