@@ -234,5 +234,7 @@
     "max_lenght_20": "Maxim 20 de simboluri",
     "max_lenght_16": "Maxim 16 de simboluri",
     "max_lenght_10": "Maxim 10 de simboluri",
-    "you_don_t_have_selected_pdoructs": "Coșul tău este gol !"
+    "you_don_t_have_selected_pdoructs": "Coșul tău este gol !",
+    "total_price": "Pretul total",
+    "delivery": "Livrare"
 }

@@ -36,16 +36,18 @@ const Cart = ({
       )}
       {cart.length && (
         <Typography variant="h3">
-          Total price: {totalPrice} MDL + Delivery 40 MDL = {totalPrice + 40}{" "}
+          {Translated('total_price')}: {totalPrice} MDL + {Translated('delivery')} 40 MDL = {totalPrice + 40}
           MDL
         </Typography>
       )}
-      {!isForm && cart.length && (
+      {!isForm && cart.length ? (
         <Box>
           <Button onClick={redirectToOrdering} variant="contained">
             Confirm order
           </Button>
         </Box>
+      ) : (
+        <></>
       )}
     </Box>
   );
