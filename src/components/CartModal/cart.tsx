@@ -2,6 +2,7 @@ import { Box, Typography, Button } from "@mui/material";
 import CartItem from "./cartItem";
 import { useCartContext } from "@/contexts/cartContext";
 import { useRouter } from "next/router";
+import { Translated } from "@/lang/languageContext";
 
 const Cart = ({
   isForm,
@@ -27,16 +28,19 @@ const Cart = ({
         />
       ))}
       {!cart.length && (
-        <Box width={1}>
-          <Typography variant="h3">
-            You don`t have selected pdoructs !
+        <Box width={1} display={"flex"} justifyContent={"center"}>
+          <Typography variant="h3" textAlign={"center"}>
+            {Translated("you_don_t_have_selected_pdoructs")}
           </Typography>
         </Box>
       )}
-      <Typography variant="h3">
-        Total price: {totalPrice} MDL + Delivery 40 MDL = {totalPrice + 40} MDL
-      </Typography>
-      {!isForm && (
+      {cart.length && (
+        <Typography variant="h3">
+          Total price: {totalPrice} MDL + Delivery 40 MDL = {totalPrice + 40}{" "}
+          MDL
+        </Typography>
+      )}
+      {!isForm && cart.length && (
         <Box>
           <Button onClick={redirectToOrdering} variant="contained">
             Confirm order
