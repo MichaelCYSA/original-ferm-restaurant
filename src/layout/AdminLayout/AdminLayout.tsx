@@ -111,7 +111,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
           </ListItem>
         </List>
       </Drawer>
-      <Main sx={{ mt: 8 }} open={open}>
+      <Main sx={{ mt: 8, background: 'black' }} open={open}>
         <LayuotContainer>
           <>{children}</>
         </LayuotContainer>

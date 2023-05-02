@@ -8,7 +8,10 @@ const Notifications = ({ children }: { children: JSX.Element }) => {
   return (
     <>
       {children}
-      <ToastContainer position={isMobile ? "bottom-center" : "top-right"} />
+      <ToastContainer
+        style={{ bottom: isMobile ? "30px" : undefined }}
+        position={isMobile ? "bottom-center" : "top-right"}
+      />
     </>
   );
 };
