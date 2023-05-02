@@ -13,7 +13,7 @@ const langs: { [field: string]: { [field: string]: string } } = {
 type ChangeLangFn = (l: string) => void;
 
 type LanguageContext = {
-    lang: string;
+    lang: 'ru' | 'ro';
     handleSelectLanguage: ChangeLangFn
 }
 const LanguageContext = createContext({ lang: '', handleSelectLanguage: noop })

@@ -2,15 +2,15 @@ import Box from "@mui/material/Box";
 
 import Footer from "./footer";
 import Header from "./header";
-import Container from "./components/container";
+import LayuotContainer from "../../components/Containers/LayuotContainer";
 
 const ClientLayout = ({ children }: { children: JSX.Element }) => {
   return (
     <Box width={1}>
       <Header />
-      <Container>
+      <LayuotContainer>
         <main style={{ minHeight: "600px" }}>{children}</main>
-      </Container>
+      </LayuotContainer>
       <Footer />
     </Box>
   );

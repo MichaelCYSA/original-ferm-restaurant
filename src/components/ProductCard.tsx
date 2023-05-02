@@ -1,23 +1,32 @@
-import { useCartContext } from '@/contexts/cartContext';
-import { Translated, useLangContext } from '@/lang/languageContext';
-import { Box, Button, Typography } from '@mui/material';
-import Image from 'next/legacy/image';
+import { useCartContext } from "@/contexts/cartContext";
+import { Translated, useLangContext } from "@/lang/languageContext";
+import { Box, Button, Typography, IconButton, useTheme } from "@mui/material";
+import Image from "next/legacy/image";
+import { IProduct } from "@/constants/products";
+import EditIcon from "@mui/icons-material/Edit";
+import { useDeleteProductMutation } from "@/store/api/product";
+import DeleteIcon from "@mui/icons-material/Delete";
 
-const ProductCard = ({ item }: { item: any }) => {
+const ProductCard = ({
+  item,
+  isAuth,
+  handleEdit = (item: IProduct) => () => {},
+}: {
+  item: IProduct;
+  isAuth?: boolean;
+  handleEdit?: (item: IProduct) => () => void;
+}) => {
   const { addToCart } = useCartContext();
+  const [deleteProduct, { isLoading }] = useDeleteProductMutation();
+  const theme = useTheme();
 
-  const { lang } = useLangContext()
+  const { lang } = useLangContext();
+
   const handleAddProducts = () => addToCart(item);
 
-  const translatedProduct = (product: any, isDescription?: boolean) => {
-
-    if (lang === 'ro') {
-      const field = isDescription ? 'description_ro' : "name_ro"
-      return product?.[field]
-    }
-    const field = isDescription ? 'description_ru' : "name_ru"
-    return product?.[field]
-  }
+  const handleDelete = (id?: string) => () => {
+    deleteProduct({ id }).then(() => {});
+  };
 
   return (
     <Box
@@ -34,7 +43,34 @@ const ProductCard = ({ item }: { item: any }) => {
         maxWidth={"250px"}
         display={"flex"}
         flexDirection={"column"}
+        position={"relative"}
       >
+        {isAuth && (
+          <Box
+            display={"flex"}
+            gap={1}
+            sx={{ position: "absolute", right: "0px", top: "0px", zIndex: 1 }}
+          >
+            <IconButton
+              disabled={isLoading}
+              onClick={handleEdit(item)}
+              sx={{
+                background: theme.palette.customColor.main,
+              }}
+            >
+              <EditIcon sx={{ color: "white" }} />
+            </IconButton>
+            <IconButton
+              disabled={isLoading}
+              onClick={handleDelete(item._id)}
+              sx={{
+                background: theme.palette.customColor.main,
+              }}
+            >
+              <DeleteIcon sx={{ color: "red" }} />
+            </IconButton>
+          </Box>
+        )}
         <Image
           src={`/product-photos/${item.image}`}
           alt="salat"
@@ -54,31 +90,33 @@ const ProductCard = ({ item }: { item: any }) => {
             boxOrient: "vertical",
           }}
         >
-          {translatedProduct(item)}
+          {(item.name as any)?.[lang]}
         </Typography>
         <Box sx={{ height: 46 }}>
           <Typography mb={1} variant="h4">
-            {translatedProduct(item.description, true)}
+            {(item.description as any)?.[lang]}
           </Typography>
         </Box>
         <Typography variant="h3" mt={"34px"}>
           {item.price} MDL
         </Typography>
-        <Box display={"flex"} gap={"21px"} mt={2} alignItems={"center"}>
-          <Button
-            onClick={handleAddProducts}
-            variant="contained"
-            sx={{ width: "153px", height: 42 }}
-          >
-            {Translated("order")}
-          </Button>
-          <Image
-            src={"/shopping_cart.png"}
-            width={30}
-            height={30}
-            alt="shopping-cart"
-          />
-        </Box>
+        {!isAuth && (
+          <Box display={"flex"} gap={"21px"} mt={2} alignItems={"center"}>
+            <Button
+              onClick={handleAddProducts}
+              variant="contained"
+              sx={{ width: "153px", height: 42 }}
+            >
+              {Translated("order")}
+            </Button>
+            <Image
+              src={"/shopping_cart.png"}
+              width={30}
+              height={30}
+              alt="shopping-cart"
+            />
+          </Box>
+        )}
       </Box>
     </Box>
   );

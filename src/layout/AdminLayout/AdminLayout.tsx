@@ -20,6 +20,7 @@ import AdminAppBar from "./AdminAppBar";
 import { menuItems } from "./constants/layoutConstants";
 import { useAuth } from "@/hooks/useAuth";
 import LogoutIcon from "@mui/icons-material/Logout";
+import LayuotContainer from "@/components/Containers/LayuotContainer";
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   open?: boolean;
@@ -110,7 +111,11 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
           </ListItem>
         </List>
       </Drawer>
-      <Main open={open}>{children}</Main>
+      <Main sx={{ mt: 8 }} open={open}>
+        <LayuotContainer>
+          <>{children}</>
+        </LayuotContainer>
+      </Main>
     </Box>
   );
 };

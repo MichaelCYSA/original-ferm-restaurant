@@ -1,7 +1,7 @@
 import { headerLinks } from "@/constants/links";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import Container from "./components/container";
+import LayuotContainer from "../../components/Containers/LayuotContainer";
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
       mt={10}
       minWidth={"475px"}
     >
-      <Container>
+      <LayuotContainer>
         <Box
           display={"flex"}
           justifyContent={"space-between"}
@@ -76,7 +76,7 @@ const Footer = () => {
             </Box>
           </Box>
         </Box>
-      </Container>
+      </LayuotContainer>
     </Box>
   );
 };

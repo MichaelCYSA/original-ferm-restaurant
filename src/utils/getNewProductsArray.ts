@@ -1,10 +1,10 @@
-import { Product } from "@/constants/products";
+import { IProduct } from "@/constants/products";
 
 export const getNewProductsArray = (
-  products: Product[],
-  newProduct: Product,
+  products: IProduct[],
+  newProduct: IProduct,
   minus = false
-): Product[] => {
+): IProduct[] => {
   const index = products.findIndex(item => item._id === newProduct._id);
   const updatedProducts = [...products];
   if (index !== -1) {

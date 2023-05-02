@@ -1,25 +1,27 @@
-import { Product } from "@/constants/products";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { getNewProductsArray } from "@/utils/getNewProductsArray";
 import { saveToLocalStorage } from "@/utils/saveToLocalStorage";
+import { IProduct } from "@/constants/products";
 
 const cartStorageName = "cart_items";
 
 export type VoidFn<T> = (fn: T) => void;
 
 export interface IUseCartReturn {
-  addToCart: VoidFn<Product>;
+  addToCart: VoidFn<IProduct>;
   removeFromCart: VoidFn<string>;
-  minusProduct: VoidFn<Product>;
-  cart: Product[];
+  minusProduct: VoidFn<IProduct>;
+  cart: IProduct[];
   totalPrice: number;
 }
 
 export const useCart = (): IUseCartReturn => {
-  const [cart, setCart] = useState<Product[]>([]);
+
+  const [cart, setCart] = useState<IProduct[]>([]);
   const [updatedCart, setUpdatedCart] = useState(false);
 
-  const addToCart = (product: Product) => {
+
+  const addToCart = (product: IProduct) => {
     setCart((prevCart) => {
       const products = getNewProductsArray(prevCart, product);
       return products;
@@ -37,7 +39,7 @@ export const useCart = (): IUseCartReturn => {
 
   const memoizedGetNewProductsArray = useCallback(getNewProductsArray, []);
 
-  const minusProduct = (product: Product) => {
+  const minusProduct = (product: IProduct) => {
     if (Number(product.count) < 2) {
       removeFromCart(product._id);
     } else {

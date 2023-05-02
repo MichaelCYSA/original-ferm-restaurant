@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-const Container = ({ children }: { children: JSX.Element }) => (
+const LayuotContainer = ({ children }: { children: JSX.Element }) => (
   <Box
     maxWidth={"1126px"}
     minWidth={"475px"}
@@ -13,4 +13,4 @@ const Container = ({ children }: { children: JSX.Element }) => (
   </Box>
 );
 
-export default Container;
+export default LayuotContainer;

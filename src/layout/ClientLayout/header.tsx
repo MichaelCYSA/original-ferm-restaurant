@@ -6,7 +6,7 @@ import Image from "next/image";
 import Cart from "./components/cart";
 import LanguageSelect from "./components/languageSelect";
 import { scrollToElementById } from "@/utils/scrollToElementById";
-import Container from "./components/container";
+import LayuotContainer from "../../components/Containers/LayuotContainer";
 
 const Header = () => {
   const handleScroll = (id: string) => () => scrollToElementById(id);
@@ -23,7 +23,7 @@ const Header = () => {
       height={"84px"}
       sx={{ background: "#151515" }}
     >
-      <Container>
+      <LayuotContainer>
         <Box
           display={"flex"}
           justifyContent={"space-between"}
@@ -58,7 +58,7 @@ const Header = () => {
             {isMobile && <Cart />}
           </Box>
         </Box>
-      </Container>
+      </LayuotContainer>
     </Box>
   );
 };
