@@ -10,7 +10,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 const ProductCard = ({
   item,
   isAuth,
-  handleEdit = (item: IProduct) => () => {},
+  handleEdit = (item: IProduct) => () => {}
 }: {
   item: IProduct;
   isAuth?: boolean;

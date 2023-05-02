@@ -11,6 +11,7 @@ import {
   useCreateProductMutation,
 } from "@/store/api/product";
 import LoadingButton from "../LoadingButton/LoadingButton";
+import { validationProdcut } from "@/validation/product";
 
 const ProductCreateEditModal = ({
   handleClose,
@@ -21,12 +22,19 @@ const ProductCreateEditModal = ({
   handleClose: () => void;
   data?: IProduct;
 }) => {
-  const { handleSubmit, register, control, reset, setValue, watch } =
-    useForm<IProduct>({
-      defaultValues: data || {image: '342324ad'},
-    });
+  const {
+    handleSubmit,
+    register,
+    control,
+    reset,
+    setValue,
+    watch,
+    formState: { errors },
+  } = useForm<IProduct>({
+    defaultValues: data,
+  });
 
-  const useRequest = !data?._id
+  const useRequest: any = !data?._id
     ? useCreateProductMutation
     : useUpdateProductMutation;
 
@@ -42,6 +50,7 @@ const ProductCreateEditModal = ({
       reset();
     });
   };
+
   useEffect(() => {
     reset(data);
   }, [data]);
@@ -53,34 +62,52 @@ const ProductCreateEditModal = ({
           <ImageInput value={watch("image")} onChange={handleImage} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField label={"Name ro"} fullWidth {...register("name.ro")} />
+          <TextField
+            label={"Name ro"}
+            fullWidth
+            {...register("name.ro", validationProdcut.name)}
+            error={Boolean(errors["name"]?.ro)}
+            helperText={errors["name"]?.ro?.message}
+          />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField label={"Name ru"} fullWidth {...register("name.ru")} />
+          <TextField
+            label={"Name ru"}
+            fullWidth
+            {...register("name.ru", validationProdcut.name)}
+            error={Boolean(errors["name"]?.ru)}
+            helperText={errors["name"]?.ru?.message}
+          />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
             label={"Description ro"}
             fullWidth
-            {...register("description.ro")}
+            {...register("description.ro", validationProdcut.description)}
             multiline
             rows={5}
+            error={Boolean(errors["description"]?.ro)}
+            helperText={errors["description"]?.ro?.message}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
             label={"Description ru"}
             fullWidth
-            {...register("description.ru")}
+            {...register("description.ru", validationProdcut.description)}
             multiline
             rows={5}
+            error={Boolean(errors["description"]?.ru)}
+            helperText={errors["description"]?.ru?.message}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
             label={"Price"}
             fullWidth
-            {...register("price", { valueAsNumber: true })}
+            {...register("price", validationProdcut.price)}
+            error={Boolean(errors.price)}
+            helperText={errors.price?.message}
             type={"number"}
             inputProps={{
               step: 0.1,
@@ -93,10 +120,13 @@ const ProductCreateEditModal = ({
             label={"Product type"}
             name={"productType"}
             options={productCatagories}
+            error={errors.productType}
+            rules={validationProdcut.productType}
           />
         </Grid>
         <Grid item xs={12}>
           <LoadingButton
+            disabled={!!Object.keys(errors).length}
             onClick={handleSubmit(handleChanges)}
             variant="contained"
             isLoading={isLoading}

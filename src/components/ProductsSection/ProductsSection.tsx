@@ -16,7 +16,11 @@ const ProductsSection = ({
   isAuth?: boolean;
 }) => {
   const [editData, setEditData] = useState<IProduct | undefined>();
-  const { data, isLoading = true } = useGetProductsQuery({ type: section });
+  const {
+    data,
+    isLoading = true,
+    refetch,
+  } = useGetProductsQuery({ type: section });
 
   const theme = useTheme();
 
@@ -50,7 +54,11 @@ const ProductsSection = ({
               lg: "calc((100% - 132px) / 4)",
             }}
           >
-            <ProductCard isAuth={isAuth} item={product} handleEdit={handleEdit}/>
+            <ProductCard
+              isAuth={isAuth}
+              item={product}
+              handleEdit={handleEdit}
+            />
           </Box>
         );
       })}
