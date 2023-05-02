@@ -6,11 +6,13 @@ import { IProduct } from "@/constants/products";
 import EditIcon from "@mui/icons-material/Edit";
 import { useDeleteProductMutation } from "@/store/api/product";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { useTranslated } from "@/lang/languageContext";
+import { toast } from "react-toastify";
 
 const ProductCard = ({
   item,
   isAuth,
-  handleEdit = (item: IProduct) => () => {}
+  handleEdit = (item: IProduct) => () => {},
 }: {
   item: IProduct;
   isAuth?: boolean;
@@ -21,11 +23,16 @@ const ProductCard = ({
   const theme = useTheme();
 
   const { lang } = useLangContext();
+  const t = useTranslated();
 
   const handleAddProducts = () => addToCart(item);
 
   const handleDelete = (id?: string) => () => {
-    deleteProduct({ id }).then(() => {});
+    deleteProduct({ id }).then((res: any) => {
+      if (res.error) {
+        return toast.error(t("ocurred_an_error_try_again"));
+      }
+    });
   };
 
   return (

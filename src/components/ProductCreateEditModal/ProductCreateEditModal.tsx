@@ -12,6 +12,8 @@ import {
 } from "@/store/api/product";
 import LoadingButton from "../LoadingButton/LoadingButton";
 import { validationProdcut } from "@/validation/product";
+import { toast } from "react-toastify";
+import { useTranslated } from "@/lang/languageContext";
 
 const ProductCreateEditModal = ({
   handleClose,
@@ -39,13 +41,17 @@ const ProductCreateEditModal = ({
     : useUpdateProductMutation;
 
   const [productUpdateOrEdit, { isLoading }] = useRequest();
+  const t = useTranslated();
 
   const handleImage = (image: string) => {
     setValue("image", image);
   };
 
   const handleChanges = (data: IProduct) => {
-    productUpdateOrEdit({ data, id: data?._id }).then(() => {
+    productUpdateOrEdit({ data, id: data?._id }).then((res: any) => {
+      if (res.error) {
+        return toast.error(t("ocurred_an_error_try_again"));
+      }
       handleClose();
       reset();
     });

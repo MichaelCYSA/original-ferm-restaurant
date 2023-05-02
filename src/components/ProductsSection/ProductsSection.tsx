@@ -19,7 +19,6 @@ const ProductsSection = ({
   const {
     data,
     isLoading = true,
-    refetch,
   } = useGetProductsQuery({ type: section });
 
   const theme = useTheme();
