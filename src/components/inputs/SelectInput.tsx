@@ -1,6 +1,7 @@
-import { Controller, Control, FieldError } from "react-hook-form";
+import { Controller, Control } from "react-hook-form";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useId } from "react";
+import { Translated } from "@/lang/languageContext";
 
 export interface ISelectInput {
   label: string;
@@ -26,7 +27,7 @@ const SelectInput = ({
   return (
     <FormControl fullWidth>
       <InputLabel htmlFor={id} sx={{ color: "white" }}>
-        {label}
+        {Translated(label)}
       </InputLabel>
       <Controller
         rules={rules}

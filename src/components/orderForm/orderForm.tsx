@@ -10,17 +10,24 @@ import Cart from "../CartModal/cart";
 import { useCreateOrderMutation } from "@/store/api/orders";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { useNotify } from "@/hooks/useNotify";
+import { useTranslated } from "@/lang/languageContext";
 
 const OrderForm = ({ order }: { order?: IOrder }) => {
   const [isCreated, setIsCreated] = useState(false);
-  const { handleSubmit, reset, register, control } = useForm<IOrder>({
+  const {
+    handleSubmit,
+    reset,
+    register,
+    control,
+    formState: { errors },
+  } = useForm<IOrder>({
     defaultValues: order || orderDefaultValues,
   });
 
   const { totalPrice, cart } = useCartContext();
 
   const [createOrder, { isLoading }] = useCreateOrderMutation();
+  const t = useTranslated()
 
   const handleCreateOrder = (data: IOrder) => {
     const products: Products = {};
@@ -32,7 +39,7 @@ const OrderForm = ({ order }: { order?: IOrder }) => {
     createOrder({ data: { ...data, totalPrice, products } }).then(
       (res: any) => {
         if (res.error) {
-          return toast.error("ocurred_an_error_try_again");
+          return toast.error(t("ocurred_an_error_try_again"));
         }
         setIsCreated(true);
         reset({ ...orderDefaultValues });
@@ -63,6 +70,8 @@ const OrderForm = ({ order }: { order?: IOrder }) => {
                     label={field.label}
                     name={field.name}
                     options={field.menuItems}
+                    rules={field.rules}
+                    error={errors[field.name]}
                   />
                 </Grid>
               );
@@ -71,9 +80,11 @@ const OrderForm = ({ order }: { order?: IOrder }) => {
               <Grid item key={field.name} xs={12} md={6}>
                 <TextField
                   label={Translated(field.label)}
-                  {...register(field.name)}
+                  {...register(field.name, field.rules)}
                   fullWidth
                   variant="outlined"
+                  helperText={(errors as any)[field.name]?.message}
+                  error={Boolean((errors as any)[field.name])}
                 />
               </Grid>
             );
@@ -82,6 +93,7 @@ const OrderForm = ({ order }: { order?: IOrder }) => {
         <Cart isForm={true} />
         <Box>
           <LoadingButton
+            disabled={!!Object.keys(errors).length}
             onClick={handleSubmit(handleCreateOrder)}
             title="Create order"
             sx={{ width: "175px", height: "50px" }}

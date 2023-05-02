@@ -210,5 +210,22 @@
         "fondant": "Фондан",
         "fondantDescription": "шоколадный 70/50 г",
         "inghetataAdevarata": "Настоящее мороженое",
-        "inghetataAdevarataDescription": "(Пломбир/Шоколад/Фундук/Фисташки/Ежевика, Клубника, 1 шарик 50 г)"
+        "inghetataAdevarataDescription": "(Пломбир/Шоколад/Фундук/Фисташки/Ежевика, Клубника, 1 шарик 50 г)",
+        "ocurred_an_error_try_again": "Произошла ошибка, попробуйте заново !",
+        "product_added_to_cart": "Блюдо добавлено в корзину !",
+        "first_name": "Имя",
+        "last_name": "Фамилия",
+        "city": "Город",
+        "district": "Район",
+        "street": "Улица",
+        "home": "Дом",
+        "block": "Блок",
+        "apartment": "Nr. Квартиры",
+        "min_lenght_2": "Минимум 2 символа",
+        "max_lenght_6": "Максимум 6 символов",
+        "field_is_required": "* Обязательное поле",
+        "max_lenght_20": "Максимум 20 символов",
+        "max_lenght_16": "Максимум 16 символов",
+        "max_lenght_10": "Максимум 10 символов"
+
 }

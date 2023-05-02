@@ -7,6 +7,7 @@ import Cart from "./components/cart";
 import LanguageSelect from "./components/languageSelect";
 import { scrollToElementById } from "@/utils/scrollToElementById";
 import LayuotContainer from "../../components/Containers/LayuotContainer";
+import Link from "next/link";
 
 const Header = () => {
   const handleScroll = (id: string) => () => scrollToElementById(id);
@@ -33,12 +34,14 @@ const Header = () => {
           <Box width={"40px"} display={{ md: "none" }}>
             <BurgerMenu />
           </Box>
-          <Image
-            src={"/logo.png"}
-            width={240}
-            height={42}
-            alt={"Ferma cu Origin"}
-          />
+          <Link href={"/"}>
+            <Image
+              src={"/logo.png"}
+              width={240}
+              height={42}
+              alt={"Ferma cu Origin"}
+            />
+          </Link>
           {!isMobile && (
             <Box display={{ xs: "none", md: "flex" }} gap={3}>
               {headerLinks.map((item) => (

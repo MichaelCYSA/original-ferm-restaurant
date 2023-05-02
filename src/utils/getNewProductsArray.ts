@@ -3,7 +3,8 @@ import { IProduct } from "@/constants/products";
 export const getNewProductsArray = (
   products: IProduct[],
   newProduct: IProduct,
-  minus = false
+  minus = false,
+  notify = () => {}
 ): IProduct[] => {
   const index = products.findIndex(item => item._id === newProduct._id);
   const updatedProducts = [...products];
@@ -14,6 +15,7 @@ export const getNewProductsArray = (
     };
   } else {
     updatedProducts.push({ ...newProduct, count: 1 });
+    notify()
   }
   return updatedProducts;
 };

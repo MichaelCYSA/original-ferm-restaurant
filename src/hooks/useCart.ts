@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import { getNewProductsArray } from "@/utils/getNewProductsArray";
 import { saveToLocalStorage } from "@/utils/saveToLocalStorage";
 import { IProduct } from "@/constants/products";
+import { useTranslated } from "@/lang/languageContext";
+import { toast } from "react-toastify";
 
 const cartStorageName = "cart_items";
 
@@ -16,14 +18,16 @@ export interface IUseCartReturn {
 }
 
 export const useCart = (): IUseCartReturn => {
-
   const [cart, setCart] = useState<IProduct[]>([]);
   const [updatedCart, setUpdatedCart] = useState(false);
 
+  const t = useTranslated();
+
+  const notify = () => toast.success(t("product_added_to_cart"));
 
   const addToCart = (product: IProduct) => {
     setCart((prevCart) => {
-      const products = getNewProductsArray(prevCart, product);
+      const products = getNewProductsArray(prevCart, product, false, notify);
       return products;
     });
     setUpdatedCart(true);

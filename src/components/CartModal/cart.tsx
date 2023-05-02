@@ -2,10 +2,20 @@ import { Box, Typography, Button } from "@mui/material";
 import CartItem from "./cartItem";
 import { useCartContext } from "@/contexts/cartContext";
 import { useRouter } from "next/router";
-const Cart = ({ isForm }: { isForm?: boolean }) => {
+
+const Cart = ({
+  isForm,
+  handleClose = () => {},
+}: {
+  isForm?: boolean;
+  handleClose?: () => void;
+}) => {
   const { cart, addToCart, minusProduct, totalPrice } = useCartContext();
   const router = useRouter();
-  const redirectToOrdering = () => router.push("/order");
+  const redirectToOrdering = () => {
+    router.push("/order");
+    handleClose();
+  };
   return (
     <Box width={1} display={"flex"} flexDirection={"column"} gap={"20px"}>
       {cart.map((item, i) => (

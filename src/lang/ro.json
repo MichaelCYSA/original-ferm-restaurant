@@ -217,5 +217,21 @@
     "beer": "BERE LA STICLâ,LA HALBA",
     "wines": "VINUL FAUTOR ,ASCONI ,BOSTAVAN ,CRICOVA",
     "champagne": "VIN SPUMANT",
-    "strong_alchogol": "Bauturi alcoolici Tare"
+    "strong_alchogol": "Bauturi alcoolici Tare",
+    "ocurred_an_error_try_again": "O eroare a aparut. Va rugam incercati din nou!",
+    "product_added_to_cart": "Adăugat în coș!",
+    "first_name": "Penume",
+    "last_name": "Nume",
+    "city": "Oraș",
+    "district": "Raionul",
+    "street": "Stradă",
+    "home": "Casa",
+    "block": "Bloc",
+    "apartment": "Nr. Apartamente",
+    "min_lenght_2": "Minim 2 caractere",
+    "max_lenght_6": "Maxim 6 caractere",
+    "field_is_required": "* Câmp obligatoriu",
+    "max_lenght_20": "Maxim 20 de simboluri",
+    "max_lenght_16": "Maxim 16 de simboluri",
+    "max_lenght_10": "Maxim 10 de simboluri"
 }

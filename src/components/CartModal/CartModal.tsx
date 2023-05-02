@@ -7,10 +7,9 @@ interface ICartModal {
 }
 
 const CartModal = ({ handleClose, open }: ICartModal) => {
-   
   return (
     <FullScreenModalWrapper handleClose={handleClose} open={open}>
-      <Cart />
+      <Cart handleClose={handleClose} />
     </FullScreenModalWrapper>
   );
 };
