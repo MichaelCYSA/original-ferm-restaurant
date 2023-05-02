@@ -7,16 +7,16 @@ export const menuItems = [
   {
     icon: HomeIcon,
     title: "Home page",
-    link: "/",
+    link: "/admin",
   },
   {
     icon: RestaurantIcon,
     title: "Products",
-    link: "/products",
+    link: "/admin/products",
   },
   {
     icon: StorefrontIcon,
     title: "Orders",
-    link: "/orders",
+    link: "/admin/orders",
   },
 ];

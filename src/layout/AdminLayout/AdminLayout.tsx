@@ -21,6 +21,7 @@ import { menuItems } from "./constants/layoutConstants";
 import { useAuth } from "@/hooks/useAuth";
 import LogoutIcon from "@mui/icons-material/Logout";
 import LayuotContainer from "@/components/Containers/LayuotContainer";
+import { useRouter } from "next/router";
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   open?: boolean;
@@ -63,6 +64,9 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
 
   const { logOut } = useAuth();
 
+
+  const router = useRouter()
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -92,7 +96,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
         <Divider />
         <List>
           {menuItems.map((item) => (
-            <ListItem key={item.title} disablePadding>
+            <ListItem onClick={() => router.push(item.link)} key={item.title} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                   <item.icon sx={{ color: theme.palette.customColor.main }} />
