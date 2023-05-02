@@ -6,7 +6,7 @@ export interface ISelectInput {
   label: string;
   control: Control<any>;
   name: string;
-  rules: any;
+  rules?: any;
   error?: any;
   options: {
     label: string;

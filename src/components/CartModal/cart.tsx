@@ -12,7 +12,7 @@ const Cart = ({ isForm }: { isForm?: boolean }) => {
         <CartItem
           plus={addToCart}
           minus={minusProduct}
-          key={i + item.name}
+          key={item._id}
           item={item}
         />
       ))}

@@ -1,18 +1,20 @@
 import { Box, Typography, IconButton, useTheme } from "@mui/material";
-import { Product } from "@/constants/products";
+import { IProduct } from "@/constants/products";
 import Image from "next/image";
 import { Translated } from "@/lang/languageContext";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { VoidFn } from "@/hooks/useCart";
+import { useLangContext } from "@/lang/languageContext";
 
 interface ICartItem {
-  item: Product;
-  plus: VoidFn<Product>;
-  minus: VoidFn<Product>;
+  item: IProduct;
+  plus: VoidFn<IProduct>;
+  minus: VoidFn<IProduct>;
 }
 const CartItem = ({ item, minus, plus }: ICartItem) => {
   const theme = useTheme();
+  const { lang } = useLangContext()
 
   const handleMinus = () => minus(item);
   const handlePlus = () => plus(item);
@@ -30,13 +32,13 @@ const CartItem = ({ item, minus, plus }: ICartItem) => {
       <Image
         width={74}
         height={74}
-        src={`/product-photos/${item.img}` || ""}
-        alt={item.name}
+        src={`/product-photos/${item.image}` || ""}
+        alt={item.name?.ro}
       />
       <Box width={1}>
-        <Typography variant="h3">{Translated(item.name)}</Typography>
+        <Typography variant="h3">{(item.name as any)?.[lang]}</Typography>
         <Typography variant="h4" component={"p"}>
-          {Translated(item.description)}
+          {(item.description as any)?.[lang]}
         </Typography>
       </Box>
       <Box
