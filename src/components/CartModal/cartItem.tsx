@@ -11,8 +11,9 @@ interface ICartItem {
   item: IProduct;
   plus: VoidFn<IProduct>;
   minus: VoidFn<IProduct>;
+  redadOnly?: boolean
 }
-const CartItem = ({ item, minus, plus }: ICartItem) => {
+const CartItem = ({ item, minus, plus, redadOnly }: ICartItem) => {
   const theme = useTheme();
   const { lang } = useLangContext()
 
@@ -51,6 +52,7 @@ const CartItem = ({ item, minus, plus }: ICartItem) => {
         <IconButton
           sx={{ width: "25px", height: "25px" }}
           onClick={handleMinus}
+          disabled={redadOnly}
         >
           <RemoveIcon sx={{ color: theme.palette.customColor.main }} />
         </IconButton>
@@ -58,7 +60,7 @@ const CartItem = ({ item, minus, plus }: ICartItem) => {
           {item.count}
         </Typography>
         <IconButton
-          disabled={Number(item.count) > 20}
+          disabled={Number(item.count) > 20 || redadOnly}
           sx={{ width: "25px", height: "25px" }}
           onClick={handlePlus}
         >

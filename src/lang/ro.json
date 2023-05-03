@@ -236,5 +236,15 @@
     "max_lenght_10": "Maxim 10 de simboluri",
     "you_don_t_have_selected_pdoructs": "Coșul tău este gol !",
     "total_price": "Pretul total",
-    "delivery": "Livrare"
+    "delivery": "Livrare",
+    "full_name": "Nume",
+    "address": "Address",
+    "unconfirmed" :"Neconfirmat",
+    "in_progress": "În process",
+    "delivered": "Livrat",
+    "canceled": "Anulat",
+    "status": "Status",
+    "date_form": "Data din",
+    "date_to": "Data la"
+
 }

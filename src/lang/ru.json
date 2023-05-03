@@ -229,6 +229,15 @@
         "max_lenght_10": "Максимум 10 символов",
         "you_don_t_have_selected_pdoructs": "Ваша корзина пустая !",
         "total_price": "Сумма",
-        "delivery": "Доставка"
+        "delivery": "Доставка",
+        "full_name": "Имя",
+         "address": "Адрес",
+         "unconfirmed" :"Неподтвержденный",
+         "in_progress": "В процессе",
+         "delivered": "Доставлен",
+         "canceled": "Отменен",
+         "status": "Статус",
+         "date_form": "Дата от",
+         "date_to": "Дата до"
 
 }

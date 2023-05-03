@@ -9,6 +9,7 @@ const CartContext = createContext<IUseCartReturn>({
   minusProduct: noopFn,
   cart: [],
   totalPrice: 0,
+  clearCart: noopFn
 });
 
 export const CartProvider = ({ children }: { children: JSX.Element }) => {

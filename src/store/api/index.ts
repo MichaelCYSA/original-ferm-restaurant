@@ -3,7 +3,8 @@ import config from "config_dev";
 import nookies from "nookies";
 import { authCookieName } from "@/auth/auth";
 
-export const productTag = 'product'
+export const productTag = "product";
+export const ordersTag = "orders";
 
 export const apiService = createApi({
   reducerPath: "api",
@@ -19,7 +20,7 @@ export const apiService = createApi({
       return headers;
     },
   }),
-  tagTypes: [productTag],
+  tagTypes: [productTag, ordersTag],
   endpoints: (builder) => ({
     healthCheck: builder.query({
       query: () => `health-check`,

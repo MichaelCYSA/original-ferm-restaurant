@@ -7,9 +7,11 @@ import { Translated } from "@/lang/languageContext";
 const Cart = ({
   isForm,
   handleClose = () => {},
+  redadOnly 
 }: {
   isForm?: boolean;
   handleClose?: () => void;
+  redadOnly?: boolean;
 }) => {
   const { cart, addToCart, minusProduct, totalPrice } = useCartContext();
   const router = useRouter();
@@ -25,6 +27,7 @@ const Cart = ({
           minus={minusProduct}
           key={item._id}
           item={item}
+          redadOnly={redadOnly}
         />
       ))}
       {!cart.length && (

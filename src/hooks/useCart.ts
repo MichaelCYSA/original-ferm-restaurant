@@ -15,6 +15,7 @@ export interface IUseCartReturn {
   minusProduct: VoidFn<IProduct>;
   cart: IProduct[];
   totalPrice: number;
+  clearCart: () => void;
 }
 
 export const useCart = (): IUseCartReturn => {
@@ -33,6 +34,10 @@ export const useCart = (): IUseCartReturn => {
     setUpdatedCart(true);
   };
 
+  const clearCart = () => {
+    setCart([])
+    setUpdatedCart(true)
+  }
   const removeFromCart = (id?: string) => {
     setCart((prevCart) => {
       const products = prevCart.filter((item) => item._id !== id);
@@ -84,5 +89,6 @@ export const useCart = (): IUseCartReturn => {
     minusProduct,
     cart,
     totalPrice,
+    clearCart
   };
 };

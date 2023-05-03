@@ -7,12 +7,21 @@ import { orderFormFields } from "./orderFormFields";
 import InputSelect from "../inputs/SelectInput";
 import { useCartContext } from "@/contexts/cartContext";
 import Cart from "../CartModal/cart";
-import { useCreateOrderMutation } from "@/store/api/orders";
+import {
+  useCreateOrderMutation,
+  useUpdateOrderMutation,
+} from "@/store/api/orders";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useTranslated } from "@/lang/languageContext";
 
-const OrderForm = ({ order }: { order?: IOrder }) => {
+const OrderForm = ({
+  order,
+  closeModal,
+}: {
+  order?: IOrder;
+  closeModal?: () => void;
+}) => {
   const [isCreated, setIsCreated] = useState(false);
   const {
     handleSubmit,
@@ -24,27 +33,34 @@ const OrderForm = ({ order }: { order?: IOrder }) => {
     defaultValues: order || orderDefaultValues,
   });
 
-  const { totalPrice, cart } = useCartContext();
+  const { totalPrice, cart, clearCart } = useCartContext();
 
-  const [createOrder, { isLoading }] = useCreateOrderMutation();
-  const t = useTranslated()
+  const useRequest = !order ? useCreateOrderMutation : useUpdateOrderMutation;
+  const [requestFunction, { isLoading }] = useRequest();
+  const t = useTranslated();
 
   const handleCreateOrder = (data: IOrder) => {
-    const products: Products = {};
+    const orderedProducts: Products = {};
 
     cart.map((product: any) => {
-      product[product._id] = Number(product.count);
+      orderedProducts[product._id] = Number(product.count);
     });
+    console.log({ orderedProducts });
 
-    createOrder({ data: { ...data, totalPrice, products } }).then(
-      (res: any) => {
-        if (res.error) {
-          return toast.error(t("ocurred_an_error_try_again"));
-        }
-        setIsCreated(true);
-        reset({ ...orderDefaultValues });
+    requestFunction({
+      data: { ...data, totalPrice, orderedProducts },
+      id: order?._id,
+    }).then((res: any) => {
+      if (res.error) {
+        return toast.error(t("ocurred_an_error_try_again"));
       }
-    );
+      if (closeModal) {
+        return closeModal();
+      }
+      setIsCreated(true);
+      clearCart();
+      reset({ ...orderDefaultValues });
+    });
   };
 
   if (isCreated) {
@@ -90,12 +106,12 @@ const OrderForm = ({ order }: { order?: IOrder }) => {
             );
           })}
         </Grid>
-        <Cart isForm={true} />
+        {!order && <Cart isForm={true} />}
         <Box>
           <LoadingButton
             disabled={!!Object.keys(errors).length}
             onClick={handleSubmit(handleCreateOrder)}
-            title="Create order"
+            title={t(!order ? "create_order" : "update_order")}
             sx={{ width: "175px", height: "50px" }}
             isLoading={isLoading}
           />

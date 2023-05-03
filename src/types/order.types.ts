@@ -18,6 +18,7 @@ export enum OrderFields {
 }
 
 export interface IOrder {
+  _id?: string;
   [OrderFields.firstName]: string;
   [OrderFields.lastName]: string;
   [OrderFields.city]: string;
@@ -28,7 +29,7 @@ export interface IOrder {
   [OrderFields.apartment]: string;
   [OrderFields.status]: StatusTypes;
   [OrderFields.totalPrice]: number;
-  [OrderFields.products]: Products;
+  [OrderFields.products]: any;
 }
 
 export const orderDefaultValues: IOrder = {
