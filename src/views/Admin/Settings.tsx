@@ -35,7 +35,7 @@ const fields = [
         value: true,
         message: "field_is_required",
       },
-      
+
       validate: (value: string) =>
         value === repeatedNewPassword || "password_is_not_match",
     }),
@@ -77,6 +77,7 @@ const Settings = () => {
         <Typography variant="h3">{t('change_password')}</Typography>
         {fields.map((field) => (
           <TextField
+            key={field.name}
             variant={"outlined"}
             type={"password"}
             label={t(field.label)}
