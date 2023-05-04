@@ -1,7 +1,7 @@
 import { ButtonProps, Button, CircularProgress } from "@mui/material";
 
 export interface ILoadingButton extends ButtonProps {
-  title: string;
+  title?: string;
   isLoading: boolean;
   progressColor?: string;
 }

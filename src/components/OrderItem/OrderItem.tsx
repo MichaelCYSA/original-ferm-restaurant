@@ -129,6 +129,9 @@ const OrderItem = ({ order }: { order: IOrder }) => {
           <Typography variant="h3">
             {Translated("full_name")}: {order.first_name} {order.last_name}
           </Typography>
+          <Typography variant="h3" component={"a"} href={`tel:+373${order.phone}`}>
+            {Translated("phone")}: +373{order.phone}
+          </Typography>
           <Typography variant="h3">
             {Translated("total_price")}: {order.totalPrice} MDL
           </Typography>

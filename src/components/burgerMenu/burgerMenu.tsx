@@ -3,12 +3,16 @@ import { Typography } from "@mui/material";
 
 import style from "./burger.module.css";
 import { scrollToElementById } from "@/utils/scrollToElementById";
+import { useState } from "react";
 
 const BurgerMenu = () => {
+  const [open, setOpen] = useState(false);
+
   const handleScroll = (id: string) => () => scrollToElementById(id);
+  
   return (
-    <div className={style.menuToggle}>
-      <input type="checkbox" />
+    <div className={style.menuToggle} onClick={() => setOpen((prev) => !prev)}>
+      <input type="checkbox" checked={open} />
       <span></span>
       <span></span>
       <span></span>

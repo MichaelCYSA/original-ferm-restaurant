@@ -9,7 +9,7 @@ interface IEditOrderModal {
 const EditOrderModal = ({ open, handleClose, order }: IEditOrderModal) => {
   return (
     <FullScreenModalWrapper open={open} handleClose={handleClose}>
-      <OrderForm order={order} />
+      <OrderForm order={order} closeModal={handleClose}/>
     </FullScreenModalWrapper>
   );
 };

@@ -1,7 +1,7 @@
 import { sectionBankets, seactionContacts } from "./sections";
 export const headerLinks = [
   {
-    name: "Menu",
+    name: "menu",
     link: "menu",
   },
   {
@@ -9,30 +9,37 @@ export const headerLinks = [
     link: sectionBankets.sectionId,
   },
   {
-    name: "Livrare",
+    name: "delivery",
     link: seactionContacts.sectionId,
   },
   {
-    name: "Contacte",
+    name: "contacts",
     link: seactionContacts.sectionId,
   },
 ];
 
 export const mainContainer = "main";
-export const breakfast = "breakfast";
-export const soup = "soup";
+export const breakfast = "breakFast";
+export const soup = "supe";
 export const salads = "salads";
-export const goldSnacks = "gold_snacks";
+export const goldSnacks = "goldSnacks";
 export const pizza = "pizza";
-export const hostSnack = "host_snack";
-export const beerSnack = "beer_snack";
-export const mainDishes = "main_dishes";
+export const hostSnack = "hostSnack";
+export const beerSnack = "beerSnack";
+export const mainDishes = "mainDishes";
 export const gaskets = "gaskets";
-export const desserts = "desserts";
+export const desserts = "deserts";
 export const nonAlchogol = "non_alchogol";
-export const milkShakes = "milk_shakes";
-export const coffee = "coffee";
+export const milkShakes = "milk_shakes_lemonads";
+export const coffee = "hot_drinks";
 export const alchogolCoctails = "alchogol_coctails";
+
+export const beer = "alchogol_coctails";
+export const wines = "wines";
+export const champagne = "champagne";
+export const strong_alchogol = "strong_alchogol";
+
+
 
 export const menuLinks = [
   {
@@ -78,5 +85,41 @@ export const menuLinks = [
   {
     name: "deserts",
     link: desserts,
+  },
+  {
+    name: "deserts",
+    link: desserts,
+  },
+  {
+    name: nonAlchogol,
+    link: nonAlchogol,
+  },
+  {
+    name: milkShakes,
+    link: milkShakes,
+  },
+  {
+    name: coffee,
+    link: coffee,
+  },
+  {
+    name: alchogolCoctails,
+    link: alchogolCoctails,
+  },
+  {
+    name: beer,
+    link: beer,
+  },
+  {
+    name: wines,
+    link: wines,
+  },
+  {
+    name: champagne,
+    link: champagne,
+  },
+  {
+    name: strong_alchogol,
+    link: strong_alchogol,
   },
 ];

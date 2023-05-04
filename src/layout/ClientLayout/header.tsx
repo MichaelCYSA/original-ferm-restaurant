@@ -2,15 +2,25 @@ import BurgerMenu from "@/components/burgerMenu";
 import { headerLinks } from "@/constants/links";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import Cart from "./components/cart";
 import LanguageSelect from "./components/languageSelect";
 import { scrollToElementById } from "@/utils/scrollToElementById";
 import LayuotContainer from "../../components/Containers/LayuotContainer";
 import Link from "next/link";
+import { Translated } from "@/lang/languageContext";
 
 const Header = () => {
-  const handleScroll = (id: string) => () => scrollToElementById(id);
+  const router = useRouter();
+
+  const handleScroll = (id: string) => () => {
+    if (router.pathname != "/") {
+      router.push("/");
+    }
+    scrollToElementById(id);
+  };
+  
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -50,7 +60,7 @@ const Header = () => {
                   variant="link"
                   key={item.name}
                 >
-                  {item.name}
+                  {Translated(item.name)}
                 </Typography>
               ))}
               <LanguageSelect />

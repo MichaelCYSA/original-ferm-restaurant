@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 import { useId, ReactNode } from "react";
 import { Translated } from "@/lang/languageContext";
+import { MuiSelectStyles } from "./SelectInput";
 
 interface ISelect {
   label: string;
@@ -30,7 +31,7 @@ const CustomSelect = ({ label, options, onChange, value, disabled }: ISelect) =>
       <InputLabel htmlFor={id} sx={{ color: "white" }}>
         {Translated(label)}
       </InputLabel>
-      <Select disabled={disabled} id={id} label={Translated(label)} onChange={onChange} value={value}>
+      <Select sx={MuiSelectStyles} disabled={disabled} id={id} label={Translated(label)} onChange={onChange} value={value}>
         {options.map((option) => (
           <MenuItem key={option.value} value={option.value}>
             {Translated(option.label)}

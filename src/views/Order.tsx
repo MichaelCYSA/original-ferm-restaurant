@@ -12,15 +12,17 @@ const Order = () => {
 
   if (!cart.length) {
     return (
-      <Box
-        width={1}
-        display={"flex"}
-        justifyContent={"center"}
-        flexDirection={"column"}
-        gap={6}
-      >
-        <Typography variant="h3">{Translated("your_cart_is_empty")}</Typography>
-        <Button onClick={handleMainPage}>{Translated("return_to_main")}</Button>
+      <Box width={1} mt={20} display={"flex"} justifyContent={"center"}>
+        <Box display={"flex"} flexDirection={"column"} gap={6}>
+          <Typography variant="h3">
+            {Translated("your_cart_is_empty")}
+          </Typography>
+          <Box m={'0 auto'}>
+            <Button onClick={handleMainPage}>
+              {Translated("return_to_main")}
+            </Button>
+          </Box>
+        </Box>
       </Box>
     );
   }

@@ -43,8 +43,12 @@ export const orderFormFields = [
     label: "city",
     menuItems: [
       {
-        label: "chisinau",
-        value: "chisinau",
+        label: "Chișinău",
+        value: "Chișinău",
+      },
+      {
+        label: "Codru",
+        value: "Codru",
       },
     ],
     rules: {
@@ -62,10 +66,6 @@ export const orderFormFields = [
         message: "field_is_required",
         value: true,
       },
-      minLength: {
-        message: "min_lenght_2",
-        value: 2,
-      },
       maxLength: {
         message: "max_lenght_16",
         value: 16,
@@ -79,10 +79,6 @@ export const orderFormFields = [
       required: {
         message: "field_is_required",
         value: true,
-      },
-      minLength: {
-        message: "min_lenght_2",
-        value: 2,
       },
       maxLength: {
         message: "max_lenght_20",
@@ -98,10 +94,6 @@ export const orderFormFields = [
         message: "field_is_required",
         value: true,
       },
-      minLength: {
-        message: "min_lenght_2",
-        value: 2,
-      },
       maxLength: {
         message: "max_lenght_6",
         value: 6,
@@ -112,10 +104,6 @@ export const orderFormFields = [
     name: OrderFields.block,
     label: "block",
     rules: {
-      minLength: {
-        message: "min_lenght_2",
-        value: 2,
-      },
       maxLength: {
         message: "max_lenght_6",
         value: 6,
@@ -126,14 +114,24 @@ export const orderFormFields = [
     name: OrderFields.apartment,
     label: "apartment",
     rules: {
-      minLength: {
-        message: "min_lenght_2",
-        value: 2,
-      },
       maxLength: {
         message: "max_lenght_6",
         value: 6,
       },
+    },
+  },
+  {
+    name: OrderFields.phone,
+    label: "phone",
+    rules: {
+      required: {
+        message: "field_is_required",
+        value: true,
+      },
+      pattern: { 
+        message: "invalid_phone_number",
+        value: /^[1-9]\d{7}$/
+      }
     },
   },
 ];

@@ -42,7 +42,7 @@ const Auth = () => {
       height={"100vh"}
       p={3}
     >
-      <Box display={"flex"} flexDirection={"column"} gap={3}>
+      <Box display={"flex"} width={1} maxWidth={'450px'} flexDirection={"column"} gap={3}>
         <TextField
           onChange={handleInputChange("email")}
           value={data.email}

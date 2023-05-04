@@ -62,10 +62,10 @@ export const Translated = (key: string) => {
 
 export const useTranslated = () => {
   const { lang } = useLangContext();
-  const translate = (key: string) => {
+  const translate = (key?: string) => {
     const selectedLang = langs[lang];
 
-    if (!selectedLang) {
+    if (!selectedLang || !key) {
       return key;
     }
 

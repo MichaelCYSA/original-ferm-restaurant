@@ -37,7 +37,8 @@ const theme = createTheme({
             color: "#9FCD57",
           },
           "&:disabled": {
-            opacity: 0.85,
+            backgroundColor: "#B1BCA1",
+            color: "#FFFFFF"
           },
         },
       },

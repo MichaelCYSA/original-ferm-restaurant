@@ -14,6 +14,7 @@ import {
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useTranslated } from "@/lang/languageContext";
+import { useRouter } from "next/router";
 
 const OrderForm = ({
   order,
@@ -34,6 +35,7 @@ const OrderForm = ({
   });
 
   const { totalPrice, cart, clearCart } = useCartContext();
+  const router = useRouter();
 
   const useRequest = !order ? useCreateOrderMutation : useUpdateOrderMutation;
   const [requestFunction, { isLoading }] = useRequest();
@@ -48,7 +50,7 @@ const OrderForm = ({
     console.log({ orderedProducts });
 
     requestFunction({
-      data: { ...data, totalPrice, orderedProducts },
+      data: { ...data, totalPrice, products: orderedProducts },
       id: order?._id,
     }).then((res: any) => {
       if (res.error) {
@@ -64,14 +66,20 @@ const OrderForm = ({
   };
 
   if (isCreated) {
-    <FormContainer justifyContent={"center"}>
-      <>
-        <Typography variant="h3">
-          {Translated("your_order_was_creted")}
-        </Typography>
-        <Button>{Translated("return_to_main")}</Button>
-      </>
-    </FormContainer>;
+    return (
+      <FormContainer justifyContent={"center"}>
+        <Box display={"flex"} flexDirection={"column"} gap={6}>
+          <Typography variant="h3">
+            {Translated("your_order_was_creted")}
+          </Typography>
+          <Box m={"0 auto"}>
+            <Button onClick={() => router.push("/")}>
+              {Translated("return_to_main")}
+            </Button>
+          </Box>
+        </Box>
+      </FormContainer>
+    );
   }
   return (
     <FormContainer>
@@ -95,11 +103,19 @@ const OrderForm = ({
             return (
               <Grid item key={field.name} xs={12} md={6}>
                 <TextField
+                  InputProps={{
+                    startAdornment:
+                      field.name === "phone" ? (
+                        <Typography style={{ color: "white" }}>+373</Typography>
+                      ) : (
+                        ""
+                      ),
+                  }}
                   label={Translated(field.label)}
                   {...register(field.name, field.rules)}
                   fullWidth
                   variant="outlined"
-                  helperText={(errors as any)[field.name]?.message}
+                  helperText={t((errors as any)[field.name]?.message)}
                   error={Boolean((errors as any)[field.name])}
                 />
               </Grid>

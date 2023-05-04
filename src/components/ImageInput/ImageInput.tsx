@@ -4,6 +4,8 @@ import { useState } from "react";
 import config from "config_dev";
 import { Box, useTheme } from "@mui/material";
 import ChangeCircleIcon from "@mui/icons-material/ChangeCircle";
+import { toast } from "react-toastify";
+import { useTranslated } from "@/lang/languageContext";
 
 const ImageInput = ({
   value = "",
@@ -15,6 +17,7 @@ const ImageInput = ({
   const [fileInputKey, setFileInputKey] = useState(Date.now().toString());
   const id = useId();
   const theme = useTheme();
+  const t = useTranslated();
 
   const handleImageUpload = async (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -39,7 +42,7 @@ const ImageInput = ({
       const data = await response.json();
       onChange(data.data);
     } catch (error) {
-      console.error(error);
+      toast.error(t("ocurred_an_error_try_again"));
     }
   };
 

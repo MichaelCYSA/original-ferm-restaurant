@@ -37,12 +37,14 @@ const SelectInput = ({
           <Select
             error={Boolean(error?.[name])}
             id={id}
+            sx={MuiSelectStyles}
             label={label}
+            variant="outlined"
             {...field}
           >
             {options.map((option) => (
               <MenuItem key={option.value} value={option.value}>
-                {option.label}
+                {Translated(option.label)}
               </MenuItem>
             ))}
           </Select>
@@ -53,3 +55,19 @@ const SelectInput = ({
 };
 
 export default SelectInput;
+
+export const MuiSelectStyles = {
+  color: "white",
+  ".MuiOutlinedInput-notchedOutline": {
+    borderColor: "white",
+  },
+  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+    borderColor: "white",
+  },
+  "&:hover .MuiOutlinedInput-notchedOutline": {
+    borderColor: "white",
+  },
+  ".MuiSvgIcon-root ": {
+    fill: "white !important",
+  },
+};

@@ -1,6 +1,29 @@
-const AdminMainPage = ({ token }: {token: string}) => {
-   console.log({ token })
-   return <></>
-}
+import { Box, Typography } from "@mui/material";
+import Image from "next/image";
 
-export default AdminMainPage
+const AdminMainPage = ({ token }: { token: string }) => {
+
+  return (
+    <Box width={1} display={"flex"} justifyContent={"center"}>
+      <Box display={"flex"} flexDirection={"column"} mt={2}>
+        <Typography
+          maxWidth={400}
+          textAlign={"center"}
+          variant="h3"
+          fontSize={32}
+        >
+          Welcome to Ferma cu Origin Restaurant Admin CRM !
+        </Typography>
+        <Image
+          style={{ margin: "40px auto" }}
+          src={"/logo.png"}
+          width={240}
+          height={60}
+          alt="logo"
+        />
+      </Box>
+    </Box>
+  );
+};
+
+export default AdminMainPage;

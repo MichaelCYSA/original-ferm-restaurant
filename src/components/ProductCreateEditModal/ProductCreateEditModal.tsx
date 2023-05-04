@@ -69,51 +69,51 @@ const ProductCreateEditModal = ({
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            label={"Name ro"}
+            label={t("name_ro")}
             fullWidth
             {...register("name.ro", validationProdcut.name)}
             error={Boolean(errors["name"]?.ro)}
-            helperText={errors["name"]?.ro?.message}
+            helperText={t(errors["name"]?.ro?.message)}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            label={"Name ru"}
+            label={t("name_ru")}
             fullWidth
             {...register("name.ru", validationProdcut.name)}
             error={Boolean(errors["name"]?.ru)}
-            helperText={errors["name"]?.ru?.message}
+            helperText={t(errors["name"]?.ru?.message)}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            label={"Description ro"}
+            label={t("description_ro")}
             fullWidth
             {...register("description.ro", validationProdcut.description)}
             multiline
             rows={5}
             error={Boolean(errors["description"]?.ro)}
-            helperText={errors["description"]?.ro?.message}
+            helperText={t(errors["description"]?.ro?.message)}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            label={"Description ru"}
+            label={t("description_ru")}
             fullWidth
             {...register("description.ru", validationProdcut.description)}
             multiline
             rows={5}
             error={Boolean(errors["description"]?.ru)}
-            helperText={errors["description"]?.ru?.message}
+            helperText={t(errors["description"]?.ru?.message)}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            label={"Price"}
+            label={t("price")}
             fullWidth
             {...register("price", validationProdcut.price)}
             error={Boolean(errors.price)}
-            helperText={errors.price?.message}
+            helperText={t(errors.price?.message)}
             type={"number"}
             inputProps={{
               step: 0.1,
@@ -136,7 +136,7 @@ const ProductCreateEditModal = ({
             onClick={handleSubmit(handleChanges)}
             variant="contained"
             isLoading={isLoading}
-            title="Save"
+            title={t("save")}
           />
         </Grid>
       </Grid>

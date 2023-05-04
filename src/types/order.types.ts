@@ -15,6 +15,7 @@ export enum OrderFields {
   status = "status",
   totalPrice = "totalPrice",
   products = "products",
+  phone = "phone"
 }
 
 export interface IOrder {
@@ -29,6 +30,7 @@ export interface IOrder {
   [OrderFields.apartment]: string;
   [OrderFields.status]: StatusTypes;
   [OrderFields.totalPrice]: number;
+  [OrderFields.phone]: string;
   [OrderFields.products]: any;
 }
 
@@ -44,4 +46,5 @@ export const orderDefaultValues: IOrder = {
   [OrderFields.status]: 0,
   [OrderFields.totalPrice]: 0,
   [OrderFields.products]: {},
+  [OrderFields.phone]: ''
 };
