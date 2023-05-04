@@ -1,8 +1,22 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { useTranslated } from "@/lang/languageContext";
+import { useChangePasswordMutation } from "@/store/api/auth";
+import { toast } from "react-toastify";
+import LoadingButton from "@/components/LoadingButton/LoadingButton";
 
 const fields = [
+  {
+    label: "Email",
+    name: "email",
+    type: "email",
+    rules: () => ({
+      required: {
+        value: true,
+        message: "field_is_required",
+      },
+    }),
+  },
   {
     label: "old_password",
     name: "old_password",
@@ -23,8 +37,8 @@ const fields = [
       },
       minLength: {
         value: true,
-        message: 'max_lenght_8'
-      }
+        message: "max_lenght_8",
+      },
     }),
   },
   {
@@ -50,15 +64,23 @@ const Settings = () => {
     formState: { errors },
   } = useForm();
   const t = useTranslated();
+  const [changePasswordRequest, { isLoading }] = useChangePasswordMutation();
 
   const handleChangePassword = (data: any) => {
-    console.log(data);
-    reset({
-        repeated_new_password: '',
-        new_password: '',
-        old_password: ''
+    changePasswordRequest({ data }).then((res: any) => {
+      if (res.error) {
+        return toast.error(t("ocurred_an_error_try_again"));
+      }
+      reset({
+        email: "",
+        repeated_new_password: "",
+        new_password: "",
+        old_password: "",
+      });
+      return toast.success(t("password_was_changed"));
     });
   };
+
   return (
     <Box
       width={1}
@@ -74,12 +96,12 @@ const Settings = () => {
         flexDirection={"column"}
         gap={3}
       >
-        <Typography variant="h3">{t('change_password')}</Typography>
+        <Typography variant="h3">{t("change_password")}</Typography>
         {fields.map((field) => (
           <TextField
             key={field.name}
             variant={"outlined"}
-            type={"password"}
+            type={field.type || "password"}
             label={t(field.label)}
             {...register(
               field.name,
@@ -90,12 +112,11 @@ const Settings = () => {
           />
         ))}
 
-        <Button
-          variant="contained"
+        <LoadingButton
+          title={t("save")}
           onClick={handleSubmit(handleChangePassword)}
-        >
-          {t("save")}
-        </Button>
+          isLoading={isLoading}
+        />
       </Box>
     </Box>
   );
