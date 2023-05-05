@@ -61,7 +61,9 @@ const OrderForm = ({
       setIsCreated(true);
       clearCart();
       reset({ ...orderDefaultValues });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 1000)
     });
   };
 

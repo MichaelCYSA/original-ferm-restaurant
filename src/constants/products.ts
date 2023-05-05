@@ -259,6 +259,7 @@ export interface IProduct {
   productType: string;
   count?: number;
   _id?: string;
+  disabled?:boolean
 }
 
 const productsMig = [

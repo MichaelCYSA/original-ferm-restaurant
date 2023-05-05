@@ -17,7 +17,7 @@ const productsApi = apiService.injectEndpoints({
       invalidatesTags: [productTag],
     }),
     updateProduct: build.mutation({
-      query: ({ data, id }: { data: IProduct; id?: string }) => ({
+      query: ({ data, id }: { data: any; id?: string }) => ({
         url: `/product/${id}`,
         method: "PATCH",
         body: data,

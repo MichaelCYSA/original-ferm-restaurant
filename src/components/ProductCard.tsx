@@ -4,10 +4,15 @@ import { Box, Button, Typography, IconButton, useTheme } from "@mui/material";
 import Image from "next/legacy/image";
 import { IProduct } from "@/constants/products";
 import EditIcon from "@mui/icons-material/Edit";
-import { useDeleteProductMutation } from "@/store/api/product";
+import {
+  useDeleteProductMutation,
+  useUpdateProductMutation,
+} from "@/store/api/product";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useTranslated } from "@/lang/languageContext";
 import { toast } from "react-toastify";
+import BlockIcon from "@mui/icons-material/Block";
+import TurnRightIcon from "@mui/icons-material/TurnRight";
 
 const ProductCard = ({
   item,
@@ -20,6 +25,7 @@ const ProductCard = ({
 }) => {
   const { addToCart } = useCartContext();
   const [deleteProduct, { isLoading }] = useDeleteProductMutation();
+  const [updateProduct, { isLoading: isUpdating }] = useUpdateProductMutation();
   const theme = useTheme();
 
   const { lang } = useLangContext();
@@ -34,6 +40,15 @@ const ProductCard = ({
       }
     });
   };
+  const handleUpdate =
+    ({ id, disabled }: { id?: string; disabled: boolean }) =>
+    () => {
+      updateProduct({ id, data: { disabled } }).then((res: any) => {
+        if (res.error) {
+          return toast.error(t("ocurred_an_error_try_again"));
+        }
+      });
+    };
 
   return (
     <Box
@@ -59,7 +74,8 @@ const ProductCard = ({
             sx={{ position: "absolute", right: "0px", top: "0px", zIndex: 1 }}
           >
             <IconButton
-              disabled={isLoading}
+              size="small"
+              disabled={isLoading || isUpdating}
               onClick={handleEdit(item)}
               sx={{
                 background: theme.palette.customColor.main,
@@ -68,7 +84,22 @@ const ProductCard = ({
               <EditIcon sx={{ color: "white" }} />
             </IconButton>
             <IconButton
-              disabled={isLoading}
+              size="small"
+              disabled={isLoading || isUpdating}
+              onClick={handleUpdate({ id: item._id, disabled: !item.disabled })}
+              sx={{
+                background: theme.palette.customColor.main,
+              }}
+            >
+              {item.disabled ? (
+                <TurnRightIcon sx={{ color: 'white' }} />
+              ) : (
+                <BlockIcon sx={{ color: "red" }} />
+              )}
+            </IconButton>
+            <IconButton
+              size="small"
+              disabled={isLoading || isUpdating}
               onClick={handleDelete(item._id)}
               sx={{
                 background: theme.palette.customColor.main,
@@ -112,6 +143,7 @@ const ProductCard = ({
             <Button
               onClick={handleAddProducts}
               variant="contained"
+              disabled={Boolean(item.disabled)}
               sx={{ width: "153px", height: 42 }}
             >
               {Translated("order")}
