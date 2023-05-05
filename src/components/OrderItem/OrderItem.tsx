@@ -92,6 +92,8 @@ const OrderItem = ({ order }: { order: IOrder }) => {
         display={"flex"}
         justifyContent={"space-between"}
         alignItems={"center"}
+        flexDirection={{ xs: "column", md: "row" }}
+        gap={{ xs: 2, md: 0 }}
         mb={2}
       >
         <Typography variant="h3" color={OrderStatuesColors[order.status || 0]}>
@@ -129,7 +131,11 @@ const OrderItem = ({ order }: { order: IOrder }) => {
           <Typography variant="h3">
             {Translated("full_name")}: {order.first_name} {order.last_name}
           </Typography>
-          <Typography variant="h3" component={"a"} href={`tel:+373${order.phone}`}>
+          <Typography
+            variant="h3"
+            component={"a"}
+            href={`tel:+373${order.phone}`}
+          >
             {Translated("phone")}: +373{order.phone}
           </Typography>
           <Typography variant="h3">

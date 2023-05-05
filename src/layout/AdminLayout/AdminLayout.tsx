@@ -68,7 +68,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
   const router = useRouter()
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", background: 'black' }}>
       <CssBaseline />
       <AdminAppBar handleDrawerOpen={handleDrawerOpen} open={open} />
       <Drawer
@@ -115,7 +115,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
           </ListItem>
         </List>
       </Drawer>
-      <Main sx={{ mt: 8, background: 'black' }} open={open}>
+      <Main sx={{ mt: 8 }} open={open}>
         <LayuotContainer>
           <>{children}</>
         </LayuotContainer>
