@@ -52,8 +52,8 @@ const FullScreenModalWrapper = ({
         width={1}
         padding={"12px 24px 24px"}
         maxWidth={!isMobile ? "600px" : "100%"}
-        minHeight={!isMobile ? undefined : '100%'}
-        height={'auto'}
+        
+       
       >
         <Box
           width={1}
