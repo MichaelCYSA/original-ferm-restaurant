@@ -38,6 +38,9 @@ const FullScreenModalWrapper = ({
       onClose={handleClose}
       TransitionComponent={Transition}
       BackdropComponent={Backdrop}
+      sx={{
+        background: isMobile ? 'black': undefined
+      }}
       BackdropProps={{
         sx: {
           backgroundColor: "rgba(255, 255, 255, 0.5)",
