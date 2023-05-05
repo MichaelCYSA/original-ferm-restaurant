@@ -45,7 +45,7 @@ const ProductsSection = ({
       {data?.data?.map((product: IProduct, index: number) => {
         return (
           <Box
-            key={product._id}
+            key={`${product._id}-${index}`}
             width={{
               xs: "calc((100% - 20px) / 2)",
               sm: "calc((100% - 44px) / 2)",

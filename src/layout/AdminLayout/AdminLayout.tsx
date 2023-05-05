@@ -73,10 +73,10 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
         </DrawerHeader>
         <Divider />
         <List>
-          {menuItems.map((item) => (
+          {menuItems.map((item, index) => (
             <ListItem
               onClick={() => router.push(item.link)}
-              key={item.title}
+              key={`${item.title}-${index}`}
               disablePadding
             >
               <ListItemButton>

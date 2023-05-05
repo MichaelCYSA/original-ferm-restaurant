@@ -22,7 +22,7 @@ const MainView = () => {
         {productCatagories.map((category: any, sectionIndex: number) => (
           <ProductsContainer
             containerName={category.value}
-            key={category.value}
+            key={`${category.value}-${sectionIndex}`}
             containerId={category.value}
           >
             <>
@@ -31,9 +31,9 @@ const MainView = () => {
                 <Box
                   width={{
                     xs: "100%",
-                    sm: "100%",
-                    md: "calc(((100% - 80px) / 3) * 2)",
-                    lg: "calc(((100% - 88px) / 4) * 2)",
+                    // sm: "100%",
+                    // md: "calc(((100% - 80px) / 3) * 2)",
+                    // lg: "calc(((100% - 88px) / 4) * 2)",
                   }}
                 >
                   <Supplements />

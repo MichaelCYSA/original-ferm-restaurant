@@ -154,11 +154,11 @@ const OrderItem = ({ order }: { order: IOrder }) => {
       </Box>
       <Collapse in={details}>
         <Box mt={3} width={1} display={"flex"} flexDirection={"column"} gap={2}>
-          {order.products?.map((product: IProduct) => {
+          {order.products?.map((product: IProduct, index: number) => {
             return (
               <CartItem
                 item={product}
-                key={product._id}
+                key={`${product._id}-${index}`}
                 redadOnly
                 minus={() => {}}
                 plus={() => {}}

@@ -54,11 +54,11 @@ const Header = () => {
           </Link>
           {!isMobile && (
             <Box display={{ xs: "none", md: "flex" }} gap={3}>
-              {headerLinks.map((item) => (
+              {headerLinks.map((item, index) => (
                 <Typography
                   onClick={handleScroll(item.link)}
                   variant="link"
-                  key={item.name}
+                  key={`${item.name}-${index}`}
                 >
                   {Translated(item.name)}
                 </Typography>

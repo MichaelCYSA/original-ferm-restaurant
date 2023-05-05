@@ -42,8 +42,8 @@ const SelectInput = ({
             variant="outlined"
             {...field}
           >
-            {options.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
+            {options.map((option, index) => (
+              <MenuItem key={`${option.value}-${index}`} value={option.value}>
                 {Translated(option.label)}
               </MenuItem>
             ))}

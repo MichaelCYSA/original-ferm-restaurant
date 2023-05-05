@@ -32,8 +32,8 @@ const CustomSelect = ({ label, options, onChange, value, disabled }: ISelect) =>
         {Translated(label)}
       </InputLabel>
       <Select sx={MuiSelectStyles} disabled={disabled} id={id} label={Translated(label)} onChange={onChange} value={value}>
-        {options.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
+        {options.map((option, index) => (
+          <MenuItem key={`${option.value}-${index}`} value={option.value}>
             {Translated(option.label)}
           </MenuItem>
         ))}

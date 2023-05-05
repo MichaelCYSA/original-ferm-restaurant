@@ -94,9 +94,9 @@ const Settings = () => {
         gap={3}
       >
         <Typography variant="h3">{t("change_password")}</Typography>
-        {fields.map((field) => (
+        {fields.map((field, index) => (
           <TextField
-            key={field.name}
+            key={`${field.name}-${index}`}
             variant={"outlined"}
             type={field.type || "password"}
             label={t(field.label)}

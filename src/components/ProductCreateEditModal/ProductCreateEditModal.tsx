@@ -3,7 +3,7 @@ import { IProduct } from "@/constants/products";
 import { useForm } from "react-hook-form";
 import SelectInput from "../inputs/SelectInput";
 import { TextField, Grid } from "@mui/material";
-import { productCatagories } from "@/constants/products";
+import { productCatagories, suplimentar } from "@/constants/products";
 import { useEffect } from "react";
 import ImageInput from "../ImageInput/ImageInput";
 import {
@@ -125,7 +125,7 @@ const ProductCreateEditModal = ({
             control={control}
             label={"Product type"}
             name={"productType"}
-            options={productCatagories}
+            options={[...productCatagories, ...suplimentar]}
             error={errors.productType}
             rules={validationProdcut.productType}
           />

@@ -1,4 +1,3 @@
-import * as links from "./links";
 
 export interface Product {
   _id?: string;
@@ -232,8 +231,19 @@ export const productCatagories = [
   {
     label: "strong_alchogol",
     value: "strong_alchogol",
-  },
+  }
 ];
+
+export const suplimentar = [
+  {
+    label: "souces",
+    value: "souces",
+  },
+  {
+    label: "toppings",
+    value: "toppings",
+  }
+]
 
 export interface IProduct {
   image: string;

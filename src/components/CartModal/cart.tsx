@@ -21,11 +21,11 @@ const Cart = ({
   };
   return (
     <Box width={1} display={"flex"} flexDirection={"column"} gap={"20px"}>
-      {cart.map((item) => (
+      {cart.map((item, index) => (
         <CartItem
           plus={addToCart}
           minus={minusProduct}
-          key={item._id}
+          key={`${item._id}-${index}`}
           item={item}
           redadOnly={redadOnly}
         />

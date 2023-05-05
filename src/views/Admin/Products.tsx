@@ -4,6 +4,7 @@ import { productCatagories } from "@/constants/products";
 import ProductsSection from "@/components/ProductsSection/ProductsSection";
 import ProductCreateEditModal from "@/components/ProductCreateEditModal/ProductCreateEditModal";
 import { useState } from "react";
+import Supplements from "@/components/supplements";
 
 const Products = () => {
   return (
@@ -15,7 +16,7 @@ const Products = () => {
           {productCatagories.map((category: any, sectionIndex: number) => (
             <ProductsContainer
               containerName={category.value}
-              key={category.value}
+              key={`${category.value}-${sectionIndex}`}
               containerId={category.value}
             >
               <ProductsSection
@@ -25,6 +26,7 @@ const Products = () => {
               />
             </ProductsContainer>
           ))}
+         <Supplements isAuth/>
         </Box>
       </Box> 
   );

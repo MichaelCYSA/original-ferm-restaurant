@@ -18,10 +18,10 @@ const Menu = () => {
         Menu
       </Typography>
       <Box display={"flex"} gap={"16px"} flexWrap={"wrap"}>
-        {menuLinks.map((link) => (
+        {menuLinks.map((link, index) => (
           <Typography
             onClick={scrollToDiv(link.link)}
-            key={link.link}
+            key={`${link.link}-${index}`}
             sx={{
               fontSize: "18px",
               fontWeight: 400,

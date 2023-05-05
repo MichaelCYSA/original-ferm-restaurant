@@ -18,8 +18,8 @@ const BurgerMenu = () => {
       <span></span>
       <span></span>
       <ul className={style.menu}>
-        {headerLinks.map((link) => (
-          <a onClick={handleScroll(link.link)} key={link.name}>
+        {headerLinks.map((link, index) => (
+          <a onClick={handleScroll(link.link)} key={`${link.name}-${index}`}>
             <Typography
               variant="h2"
               sx={{

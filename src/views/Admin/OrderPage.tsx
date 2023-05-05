@@ -92,8 +92,8 @@ const OrderPage = () => {
       </Grid>
       {!isLoading &&
         reqState != "pending" &&
-        data?.data?.map((order: IOrder) => (
-          <OrderItem key={order._id} order={order} />
+        data?.data?.map((order: IOrder, index: number) => (
+          <OrderItem key={`${order._id}-${index}`} order={order} />
         ))}
       {isLoading ||
         (reqState === "pending" && (

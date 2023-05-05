@@ -47,8 +47,7 @@ const OrderForm = ({
     cart.map((product: any) => {
       orderedProducts[product._id] = Number(product.count);
     });
-    console.log({ orderedProducts });
-
+  
     requestFunction({
       data: { ...data, totalPrice, products: orderedProducts },
       id: order?._id,
@@ -62,6 +61,7 @@ const OrderForm = ({
       setIsCreated(true);
       clearCart();
       reset({ ...orderDefaultValues });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   };
 
@@ -85,10 +85,10 @@ const OrderForm = ({
     <FormContainer>
       <>
         <Grid container spacing={3}>
-          {orderFormFields.map((field) => {
+          {orderFormFields.map((field, index) => {
             if (field.type === "select") {
               return (
-                <Grid item key={field.name} xs={12} md={6}>
+                <Grid item key={`${field.name}-${index}`} xs={12} md={6}>
                   <InputSelect
                     control={control}
                     label={field.label}
