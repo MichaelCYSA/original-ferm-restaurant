@@ -52,8 +52,6 @@ const FullScreenModalWrapper = ({
         width={1}
         padding={"12px 24px 24px"}
         maxWidth={!isMobile ? "600px" : "100%"}
-        
-       
       >
         <Box
           width={1}
@@ -61,6 +59,7 @@ const FullScreenModalWrapper = ({
           justifyContent={"flex-end"}
           height={"40px"}
           alignItems={"center"}
+          sx={{ background: theme.palette.customColor.dark }}
           mb={4}
         >
           <IconButton
