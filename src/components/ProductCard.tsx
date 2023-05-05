@@ -72,6 +72,7 @@ const ProductCard = ({
             display={"flex"}
             gap={1}
             sx={{ position: "absolute", right: "0px", top: "0px", zIndex: 1 }}
+            flexWrap={'wrap'}
           >
             <IconButton
               size="small"

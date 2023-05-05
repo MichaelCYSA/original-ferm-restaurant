@@ -23,8 +23,9 @@ const Supplements = ({ isAuth }: { isAuth?: boolean }) => {
       borderRadius={"10px"}
       border={"1.5px solid #9FCD57"}
       display={"flex"}
+      flexDirection={{ xs: "column", md: "row" }}
       p={"20px"}
-      gap={2}
+      gap={{ xs: 4, md: 2 }}
       minHeight={"100%"}
       width={1}
     >
@@ -42,7 +43,7 @@ const Supplements = ({ isAuth }: { isAuth?: boolean }) => {
           />
         ))}
       </Box>
-      <Box width={"2px"} sx={{ background: "#9FCD57" }} minHeight={"90%"}/>
+      <Box width={"2px"} sx={{ background: "#9FCD57" }} minHeight={"90%"} />
       <Box display={"flex"} flexDirection={"column"} gap={"12px"} width={1}>
         <Box>
           <Typography variant="h1">{Translated("toppings")}</Typography>

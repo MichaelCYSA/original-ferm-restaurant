@@ -73,7 +73,7 @@ const SupplementsItem = ({
           width={1}
           justifyContent={"flex-end"}
           pb={1}
-          mt={-2.75}
+          mt={{xs: 2, md: -2.75}}
         >
           <IconButton
             size="small"
