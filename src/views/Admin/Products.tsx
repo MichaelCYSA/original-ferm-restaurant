@@ -7,13 +7,7 @@ import { useState } from "react";
 
 const Products = () => {
   return (
-    <Box
-      width={1}
-      display={"flex"}
-      justifyContent={"center"}
-      minHeight={'100vh'}
-    >
-      <Box display={"flex"} flexDirection={"column"} width={1} gap={4}>
+      <Box display={"flex"} flexDirection={"column"} width={1} gap={3}>
         <Box display={"flex"} justifyContent={"center"}>
           <CreateProudct />
         </Box>
@@ -32,8 +26,7 @@ const Products = () => {
             </ProductsContainer>
           ))}
         </Box>
-      </Box>
-    </Box>
+      </Box> 
   );
 };
 

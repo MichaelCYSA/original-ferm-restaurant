@@ -58,7 +58,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
             //boxSizing: "border-box",
           },
         }}
-      //  variant="persistent"
+        //  variant="persistent"
         anchor="left"
         open={open}
       >
@@ -99,7 +99,18 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
       </Drawer>
 
       <LayuotContainer>
-        <Box width={1} pt={8} pb={4}>{children}</Box>
+        <Box
+          width={1}
+          pt={10}
+          pb={6}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          pl={2}
+          pr={2}
+        >
+          {children}
+        </Box>
       </LayuotContainer>
     </Box>
   );

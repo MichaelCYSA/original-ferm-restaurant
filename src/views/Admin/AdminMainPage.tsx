@@ -4,7 +4,6 @@ import Image from "next/image";
 const AdminMainPage = ({ token }: { token: string }) => {
 
   return (
-    <Box width={1} display={"flex"} justifyContent={"center"}>
       <Box display={"flex"} flexDirection={"column"} mt={2}>
         <Typography
           maxWidth={400}
@@ -22,7 +21,6 @@ const AdminMainPage = ({ token }: { token: string }) => {
           alt="logo"
         />
       </Box>
-    </Box>
   );
 };
 

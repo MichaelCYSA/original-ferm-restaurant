@@ -43,12 +43,6 @@ const OrderPage = () => {
     setToDate(undefined);
   };
   return (
-    <Box
-      width={1}
-      display={"flex"}
-      justifyContent={"center"}
-      minHeight={"100vh"}
-    >
       <Box width={1} display={"flex"} flexDirection={"column"} gap={3}>
         <Grid container spacing={2}>
           <Grid item xs={3}>
@@ -113,7 +107,6 @@ const OrderPage = () => {
           onPageChange={(_: any, page: number) => setCurentPage(page)}
         />
       </Box>
-    </Box>
   );
 };
 

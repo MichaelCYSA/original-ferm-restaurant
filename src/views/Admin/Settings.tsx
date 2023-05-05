@@ -82,13 +82,6 @@ const Settings = () => {
   };
 
   return (
-    <Box
-      width={1}
-      display={"flex"}
-      height={"100vh"}
-      alignItems={"center"}
-      justifyContent={"center"}
-    >
       <Box
         width={1}
         maxWidth={400}
@@ -118,7 +111,6 @@ const Settings = () => {
           isLoading={isLoading}
         />
       </Box>
-    </Box>
   );
 };
 
