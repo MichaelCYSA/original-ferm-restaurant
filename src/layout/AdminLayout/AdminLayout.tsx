@@ -64,11 +64,10 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
 
   const { logOut } = useAuth();
 
-
-  const router = useRouter()
+  const router = useRouter();
 
   return (
-    <Box sx={{ display: "flex", background: 'black' }}>
+    <Box sx={{ display: "flex", background: "black" }}>
       <CssBaseline />
       <AdminAppBar handleDrawerOpen={handleDrawerOpen} open={open} />
       <Drawer
@@ -96,7 +95,11 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
         <Divider />
         <List>
           {menuItems.map((item) => (
-            <ListItem onClick={() => router.push(item.link)} key={item.title} disablePadding>
+            <ListItem
+              onClick={() => router.push(item.link)}
+              key={item.title}
+              disablePadding
+            >
               <ListItemButton>
                 <ListItemIcon>
                   <item.icon sx={{ color: theme.palette.customColor.main }} />
@@ -115,10 +118,8 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
           </ListItem>
         </List>
       </Drawer>
-      <Main sx={{ mt: 8 }} open={open}>
-        <LayuotContainer>
-          <>{children}</>
-        </LayuotContainer>
+      <Main sx={{ mt: 8, maxWidth: "1126px", background: "black"  }} open={open}>
+        {children}
       </Main>
     </Box>
   );
