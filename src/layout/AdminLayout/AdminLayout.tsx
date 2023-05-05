@@ -99,7 +99,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
       </Drawer>
 
       <LayuotContainer>
-        <>{children}</>
+        <Box width={1} pt={8} pb={4}>{children}</Box>
       </LayuotContainer>
     </Box>
   );

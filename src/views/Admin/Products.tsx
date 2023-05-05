@@ -7,24 +7,31 @@ import { useState } from "react";
 
 const Products = () => {
   return (
-    <Box display={"flex"} flexDirection={"column"} width={1} gap={4}>
-      <Box display={"flex"} justifyContent={"center"}>
-        <CreateProudct />
-      </Box>
-      <Box display={"flex"} flexDirection={"column"} gap={4} mt={4}>
-        {productCatagories.map((category: any, sectionIndex: number) => (
-          <ProductsContainer
-            containerName={category.value}
-            key={category.value}
-            containerId={category.value}
-          >
-            <ProductsSection
-              isAuth
-              section={category.value}
-              id={category.value}
-            />
-          </ProductsContainer>
-        ))}
+    <Box
+      width={1}
+      display={"flex"}
+      justifyContent={"center"}
+      minHeight={'100vh'}
+    >
+      <Box display={"flex"} flexDirection={"column"} width={1} gap={4}>
+        <Box display={"flex"} justifyContent={"center"}>
+          <CreateProudct />
+        </Box>
+        <Box display={"flex"} flexDirection={"column"} gap={4} mt={4}>
+          {productCatagories.map((category: any, sectionIndex: number) => (
+            <ProductsContainer
+              containerName={category.value}
+              key={category.value}
+              containerId={category.value}
+            >
+              <ProductsSection
+                isAuth
+                section={category.value}
+                id={category.value}
+              />
+            </ProductsContainer>
+          ))}
+        </Box>
       </Box>
     </Box>
   );

@@ -28,7 +28,7 @@ const OrderPage = () => {
     skip: currentPage * limit - limit,
     status,
     fromDate,
-    toDate
+    toDate,
   });
 
   const pages = useMemo(() => Math.ceil(data?.count / limit) ?? 0, [data]);
@@ -43,69 +43,76 @@ const OrderPage = () => {
     setToDate(undefined);
   };
   return (
-    <Box width={1} display={"flex"} flexDirection={"column"} gap={3}>
-      <Grid container spacing={2}>
-        <Grid item xs={3}>
-          <CustomSelect
-            label="status"
-            value={status}
-            onChange={handleChangeStatus}
-            options={orderOption}
-          />
+    <Box
+      width={1}
+      display={"flex"}
+      justifyContent={"center"}
+      minHeight={"100vh"}
+    >
+      <Box width={1} display={"flex"} flexDirection={"column"} gap={3}>
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <CustomSelect
+              label="status"
+              value={status}
+              onChange={handleChangeStatus}
+              options={orderOption}
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type={"date"}
+              label={Translated("date_form")}
+              InputLabelProps={{
+                shrink: true,
+              }}
+              value={fromDate}
+              onChange={(e: any) => setFromDate(e.target.value)}
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type={"date"}
+              InputLabelProps={{
+                shrink: true,
+              }}
+              label={Translated("date_to")}
+              value={toDate}
+              onChange={(e: any) => setToDate(e.target.value)}
+            />
+          </Grid>
+          <Grid item xs={3} display={"flex"} alignItems={"center"}>
+            <Button onClick={clearFilter} variant="contained">
+              {Translated("clear")}
+            </Button>
+          </Grid>
         </Grid>
-        <Grid item xs={3}>
-          <TextField
-            fullWidth
-            variant="outlined"
-            type={"date"}
-            label={Translated("date_form")}
-            InputLabelProps={{
-              shrink: true,
-            }}
-            value={fromDate}
-            onChange={(e: any) => setFromDate(e.target.value)}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <TextField
-            fullWidth
-            variant="outlined"
-            type={"date"}
-            InputLabelProps={{
-              shrink: true,
-            }}
-            label={Translated("date_to")}
-            value={toDate}
-            onChange={(e: any) => setToDate(e.target.value)}
-          />
-        </Grid>
-        <Grid item xs={3} display={"flex"} alignItems={"center"}>
-          <Button onClick={clearFilter} variant="contained">
-            {Translated("clear")}
-          </Button>
-        </Grid>
-      </Grid>
-      {!isLoading &&
-        data?.data?.map((order: IOrder) => (
-          <OrderItem key={order._id} order={order} />
-        ))}
-      {isLoading && (
-        <Box
-          minHeight={"400px"}
-          width={1}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <CircularProgress sx={{ color: theme.palette.customColor.main }} />
-        </Box>
-      )}
+        {!isLoading &&
+          data?.data?.map((order: IOrder) => (
+            <OrderItem key={order._id} order={order} />
+          ))}
+        {isLoading && (
+          <Box
+            minHeight={"400px"}
+            width={1}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <CircularProgress sx={{ color: theme.palette.customColor.main }} />
+          </Box>
+        )}
 
-      <CustomPagination
-        currentPage={currentPage}
-        pages={pages}
-        onPageChange={(_: any, page: number) => setCurentPage(page)}
-      />
+        <CustomPagination
+          currentPage={currentPage}
+          pages={pages}
+          onPageChange={(_: any, page: number) => setCurentPage(page)}
+        />
+      </Box>
     </Box>
   );
 };
