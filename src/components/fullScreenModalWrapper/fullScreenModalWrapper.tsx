@@ -38,14 +38,11 @@ const FullScreenModalWrapper = ({
       onClose={handleClose}
       TransitionComponent={Transition}
       BackdropComponent={Backdrop}
-      sx={{
-        background: isMobile ? 'black': undefined
-      }}
       BackdropProps={{
         sx: {
           backgroundColor: "rgba(255, 255, 255, 0.5)",
           backdropFilter: "blur(5px)",
-          width: "100%",
+          width: "100%"
         },
         timeout: 100,
       }}
@@ -55,6 +52,7 @@ const FullScreenModalWrapper = ({
         width={1}
         padding={"12px 24px 24px"}
         maxWidth={!isMobile ? "600px" : "100%"}
+        height={isMobile ? '100%': 'auto'}
       >
         <Box
           width={1}
