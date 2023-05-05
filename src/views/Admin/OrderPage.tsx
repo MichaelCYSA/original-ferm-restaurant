@@ -23,7 +23,11 @@ const OrderPage = () => {
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
 
-  const { data, isLoading } = useGetOrdersQuery({
+  const {
+    data,
+    isLoading,
+    status: reqState,
+  } = useGetOrdersQuery({
     take: limit,
     skip: currentPage * limit - limit,
     status,
@@ -42,54 +46,57 @@ const OrderPage = () => {
     setFromDate(undefined);
     setToDate(undefined);
   };
+
   return (
-      <Box width={1} display={"flex"} flexDirection={"column"} gap={3}>
-        <Grid container spacing={2}>
-          <Grid item xs={3}>
-            <CustomSelect
-              label="status"
-              value={status}
-              onChange={handleChangeStatus}
-              options={orderOption}
-            />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type={"date"}
-              label={Translated("date_form")}
-              InputLabelProps={{
-                shrink: true,
-              }}
-              value={fromDate}
-              onChange={(e: any) => setFromDate(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type={"date"}
-              InputLabelProps={{
-                shrink: true,
-              }}
-              label={Translated("date_to")}
-              value={toDate}
-              onChange={(e: any) => setToDate(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={3} display={"flex"} alignItems={"center"}>
-            <Button onClick={clearFilter} variant="contained">
-              {Translated("clear")}
-            </Button>
-          </Grid>
+    <Box width={1} display={"flex"} flexDirection={"column"} gap={3}>
+      <Grid container spacing={2}>
+        <Grid item xs={6} md={3}>
+          <CustomSelect
+            label="status"
+            value={status}
+            onChange={handleChangeStatus}
+            options={orderOption}
+          />
         </Grid>
-        {!isLoading &&
-          data?.data?.map((order: IOrder) => (
-            <OrderItem key={order._id} order={order} />
-          ))}
-        {isLoading && (
+        <Grid item xs={6} md={3}>
+          <TextField
+            fullWidth
+            variant="outlined"
+            type={"date"}
+            label={Translated("date_form")}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            value={fromDate}
+            onChange={(e: any) => setFromDate(e.target.value)}
+          />
+        </Grid>
+        <Grid item xs={6} md={3}>
+          <TextField
+            fullWidth
+            variant="outlined"
+            type={"date"}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            label={Translated("date_to")}
+            value={toDate}
+            onChange={(e: any) => setToDate(e.target.value)}
+          />
+        </Grid>
+        <Grid item xs={6} md={3} display={"flex"} alignItems={"center"}>
+          <Button onClick={clearFilter} variant="contained">
+            {Translated("clear")}
+          </Button>
+        </Grid>
+      </Grid>
+      {!isLoading &&
+        reqState != "pending" &&
+        data?.data?.map((order: IOrder) => (
+          <OrderItem key={order._id} order={order} />
+        ))}
+      {isLoading ||
+        (reqState === "pending" && (
           <Box
             minHeight={"400px"}
             width={1}
@@ -99,14 +106,14 @@ const OrderPage = () => {
           >
             <CircularProgress sx={{ color: theme.palette.customColor.main }} />
           </Box>
-        )}
+        ))}
 
-        <CustomPagination
-          currentPage={currentPage}
-          pages={pages}
-          onPageChange={(_: any, page: number) => setCurentPage(page)}
-        />
-      </Box>
+      <CustomPagination
+        currentPage={currentPage}
+        pages={pages}
+        onPageChange={(_: any, page: number) => setCurentPage(page)}
+      />
+    </Box>
   );
 };
 

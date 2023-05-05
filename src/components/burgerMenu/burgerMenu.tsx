@@ -4,12 +4,13 @@ import { Typography } from "@mui/material";
 import style from "./burger.module.css";
 import { scrollToElementById } from "@/utils/scrollToElementById";
 import { useState } from "react";
+import { Translated } from "@/lang/languageContext";
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
 
   const handleScroll = (id: string) => () => scrollToElementById(id);
-  
+
   return (
     <div className={style.menuToggle} onClick={() => setOpen((prev) => !prev)}>
       <input type="checkbox" checked={open} />
@@ -27,7 +28,7 @@ const BurgerMenu = () => {
                 "&:hover": { color: "#9FCD57" },
               }}
             >
-              {link.name}
+              {Translated(link.name)}
             </Typography>
           </a>
         ))}
