@@ -98,20 +98,20 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
         </List>
       </Drawer>
 
-      <LayuotContainer>
-        <Box
-          width={1}
-          pt={10}
-          pb={6}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          pl={2}
-          pr={2}
-        >
-          {children}
-        </Box>
-      </LayuotContainer>
+      <Box
+        width={1}
+        pt={10}
+        pb={6}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        pl={2}
+        pr={2}
+        maxWidth={"1126px"}
+        m={"0 auto"}
+      >
+        {children}
+      </Box>
     </Box>
   );
 };

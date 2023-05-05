@@ -122,7 +122,7 @@ const OrderItem = ({ order }: { order: IOrder }) => {
           </IconButton>
         </Box>
       </Box>
-      <Box display={"flex"} gap={2}>
+      <Box display={"flex"} flexWrap={{xs: 'wrap', md: 'nowrap'}} gap={2}>
         <Box width={1}>
           <Typography variant="h3">
             {Translated("address")}: {order.city} {order.district}{" "}
