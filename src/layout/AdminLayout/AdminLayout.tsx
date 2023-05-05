@@ -2,7 +2,6 @@ import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
 
 import List from "@mui/material/List";
 
@@ -67,8 +66,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
   const router = useRouter();
 
   return (
-    <Box sx={{ display: "flex", background: "black" }}>
-      <CssBaseline />
+    <Box sx={{ display: "flex" }} width={1}>
       <AdminAppBar handleDrawerOpen={handleDrawerOpen} open={open} />
       <Drawer
         sx={{
@@ -76,7 +74,7 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
           flexShrink: 0,
           "& .MuiDrawer-paper": {
             width: drawerWidth,
-            boxSizing: "border-box",
+            //boxSizing: "border-box",
           },
         }}
         variant="persistent"
@@ -118,9 +116,10 @@ const AdminLayout = ({ children }: { children: JSX.Element }) => {
           </ListItem>
         </List>
       </Drawer>
-      <Main sx={{ mt: 8, maxWidth: "1126px", background: "black"  }} open={open}>
-        {children}
-      </Main>
+
+      <LayuotContainer>
+        <>{children}</>
+      </LayuotContainer>
     </Box>
   );
 };
