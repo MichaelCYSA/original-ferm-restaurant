@@ -35,6 +35,10 @@ const fields = [
         value: true,
         message: "field_is_required",
       },
+      pattern: {
+        value: /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+={[}\]|\\:;"'<,>.?/])(?=.*[a-z]).{8,}$/,
+        message: 'password_is_weak'
+      },
       minLength: {
         value: true,
         message: "max_lenght_8",
@@ -44,14 +48,14 @@ const fields = [
   {
     label: "repeated_new_password",
     name: "repeated_new_password",
-    rules: (repeatedNewPassword?: string) => ({
+    rules: (newPassword?: string) => ({
       required: {
         value: true,
         message: "field_is_required",
       },
 
       validate: (value: string) =>
-        value === repeatedNewPassword || "password_is_not_match",
+        value === newPassword || "password_is_not_match",
     }),
   },
 ];
@@ -98,7 +102,7 @@ const Settings = () => {
             label={t(field.label)}
             {...register(
               field.name,
-              field.rules(watch("repeated_new_password"))
+              field.rules(watch("new_password"))
             )}
             error={Boolean(errors[field.name])}
             helperText={t((errors[field.name] as any)?.message)}

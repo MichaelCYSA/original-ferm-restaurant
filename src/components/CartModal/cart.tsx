@@ -7,7 +7,7 @@ import { Translated } from "@/lang/languageContext";
 const Cart = ({
   isForm,
   handleClose = () => {},
-  redadOnly 
+  redadOnly,
 }: {
   isForm?: boolean;
   handleClose?: () => void;
@@ -21,7 +21,7 @@ const Cart = ({
   };
   return (
     <Box width={1} display={"flex"} flexDirection={"column"} gap={"20px"}>
-      {cart.map((item, i) => (
+      {cart.map((item) => (
         <CartItem
           plus={addToCart}
           minus={minusProduct}
@@ -30,23 +30,28 @@ const Cart = ({
           redadOnly={redadOnly}
         />
       ))}
-      {!cart.length && (
+      {!cart.length ? (
         <Box width={1} display={"flex"} justifyContent={"center"}>
           <Typography variant="h3" textAlign={"center"}>
             {Translated("you_don_t_have_selected_pdoructs")}
           </Typography>
         </Box>
+      ) : (
+        <></>
       )}
-      {cart.length && (
+      {cart.length ? (
         <Typography variant="h3">
-          {Translated('total_price')}: {totalPrice} MDL + {Translated('delivery')} 40 MDL = {totalPrice + 40}
+          {Translated("total_price")}: {totalPrice} MDL +{" "}
+          {Translated("delivery")} 40 MDL = {totalPrice + 40}
           MDL
         </Typography>
+      ) : (
+        <></>
       )}
       {!isForm && cart.length ? (
         <Box>
           <Button onClick={redirectToOrdering} variant="contained">
-            Confirm order
+            {Translated("order")}
           </Button>
         </Box>
       ) : (

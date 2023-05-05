@@ -1,8 +1,8 @@
 export const validationProdcut = {
   description: {
-    maxLenght: {
-      message: "max_120_characters",
-      value: 120,
+    maxLength: {
+      message: "max_80_characters",
+      value: 80,
     },
     required: {
       message: "field_is_required",
@@ -10,9 +10,9 @@ export const validationProdcut = {
     },
   },
   name: {
-    maxLenght: {
-      message: "max_50_characters",
-      value: 50,
+    maxLength: {
+      message: "max_40_characters",
+      value: 40,
     },
     required: {
       message: "field_is_required",

@@ -227,6 +227,8 @@
   "max_lenght_20": "Максимум 20 символов",
   "max_lenght_16": "Максимум 16 символов",
   "max_lenght_10": "Максимум 10 символов",
+  "max_80_characters": "Максимум 80 символов",
+  "max_40_characters": "Максимум 40 символов",
   "you_don_t_have_selected_pdoructs": "Ваша корзина пустая !",
   "total_price": "Сумма",
   "delivery": "Доставка",
@@ -269,5 +271,6 @@
   "change_password": "Сменить пароль",
   "new_password": "Новый пароль",
   "old_password": "Старый пароль",
-  "password_is_not_match": "Пароли не совпадают"
+  "password_is_not_match": "Пароли не совпадают",
+  "password_is_weak": "Минимум 8 символов , мин большая и маленькая буква ,цифры и спецсимволы"
 }
