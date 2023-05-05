@@ -52,7 +52,6 @@ const FullScreenModalWrapper = ({
         width={1}
         padding={"12px 24px 24px"}
         maxWidth={!isMobile ? "600px" : "100%"}
-        height={isMobile ? '100%': 'auto'}
       >
         <Box
           width={1}
@@ -71,7 +70,7 @@ const FullScreenModalWrapper = ({
             <CloseIcon sx={{ color: theme.palette.customColor.main }} />
           </IconButton>
         </Box>
-        <Box width={1}>{children}</Box>
+        <Box width={1} minHeight={isMobile ? "100vh": 'auto'}>{children}</Box>
       </Box>
     </Dialog>
   );
