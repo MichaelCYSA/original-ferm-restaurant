@@ -12,6 +12,8 @@ const Notifications = ({ children }: { children: JSX.Element }) => {
       <ToastContainer
         style={{
           bottom: isMobile ? "30px" : undefined,
+          left: isMobile ? "50%" : undefined,
+          transform: isMobile ? "translateX(-50%)" : undefined,
           //display: isMobile ? "flex" : undefined,
           //justifyContent: isMobile ? "center" : undefined,
         }}
