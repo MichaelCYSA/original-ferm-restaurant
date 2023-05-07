@@ -86,7 +86,7 @@ const Menu = () => {
       </Box>
       {menuLinks.length > defaultLinksCount && (
         <Box display="flex" justifyContent="center">
-          <Button onClick={toggleShowMore}>
+          <Button sx={{ height: 30 }} onClick={toggleShowMore}>
             {showMore ? <ExpandLessIcon style={{ color: 'white' }} /> : <ExpandMoreIcon style={{ color: 'white' }} />}
           </Button>
         </Box>
