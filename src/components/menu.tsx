@@ -6,6 +6,8 @@
 import { menuLinks } from '@/constants/links';
 import { Translated } from '@/lang/languageContext';
 import { scrollToElementById } from '@/utils/scrollToElementById';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Button, Typography } from '@mui/material';
 import { useState } from 'react';
 
@@ -85,7 +87,7 @@ const Menu = () => {
       {menuLinks.length > defaultLinksCount && (
         <Box display="flex" justifyContent="center">
           <Button onClick={toggleShowMore}>
-            {showMore ? "Скрыть" : "Еще"}
+            {showMore ? <ExpandLessIcon style={{ color: 'white' }} /> : <ExpandMoreIcon style={{ color: 'white' }} />}
           </Button>
         </Box>
       )}
