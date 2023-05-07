@@ -1,4 +1,5 @@
-import { sectionBankets, seactionContacts } from "./sections";
+import { seactionContacts, sectionBankets } from './sections';
+
 export const headerLinks = [
   {
     name: "menu",
@@ -34,7 +35,7 @@ export const milkShakes = "milk_shakes_lemonads";
 export const coffee = "hot_drinks";
 export const alchogolCoctails = "alchogol_coctails";
 
-export const beer = "alchogol_coctails";
+export const beer = "beer";
 export const wines = "wines";
 export const champagne = "champagne";
 export const strong_alchogol = "strong_alchogol";
