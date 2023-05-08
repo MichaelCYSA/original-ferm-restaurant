@@ -1,13 +1,8 @@
-import {
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  SelectChangeEvent,
-} from "@mui/material";
-import { useId, ReactNode } from "react";
-import { Translated } from "@/lang/languageContext";
-import { MuiSelectStyles } from "./SelectInput";
+import { Translated } from '@/lang/languageContext';
+import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
+import { ReactNode, useId } from 'react';
+
+import { MuiSelectStyles } from './SelectInput';
 
 interface ISelect {
   label: string;
@@ -16,10 +11,10 @@ interface ISelect {
     value: string | number;
   }[];
   onChange: (
-    event: SelectChangeEvent<string | number | undefined>,
+    event: SelectChangeEvent<string | number | undefined | null>,
     child: ReactNode
   ) => void;
-  value?: string | number;
+  value?: string | number | null;
   disabled?: boolean
 }
 

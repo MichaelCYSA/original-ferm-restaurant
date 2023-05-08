@@ -1,27 +1,19 @@
-import {
-  Box,
-  CircularProgress,
-  useTheme,
-  Grid,
-  SelectChangeEvent,
-  TextField,
-  Button,
-} from "@mui/material";
-import { useGetOrdersQuery } from "@/store/api/orders";
-import { useMemo, useState } from "react";
-import OrderItem, { orderOption } from "@/components/OrderItem/OrderItem";
-import { IOrder } from "@/types/order.types";
-import CustomPagination from "@/components/CustomPagination/CustomPagination";
-import CustomSelect from "@/components/inputs/CustomSelect";
-import { Translated } from "@/lang/languageContext";
+import CustomPagination from '@/components/CustomPagination/CustomPagination';
+import CustomSelect from '@/components/inputs/CustomSelect';
+import OrderItem, { orderOption } from '@/components/OrderItem/OrderItem';
+import { Translated } from '@/lang/languageContext';
+import { useGetOrdersQuery } from '@/store/api/orders';
+import { IOrder } from '@/types/order.types';
+import { Box, Button, CircularProgress, Grid, SelectChangeEvent, TextField, useTheme } from '@mui/material';
+import { useMemo, useState } from 'react';
 
 const limit = 10;
 
 const OrderPage = () => {
-  const [currentPage, setCurentPage] = useState(1);
-  const [status, setStatus] = useState();
-  const [fromDate, setFromDate] = useState();
-  const [toDate, setToDate] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [status, setStatus] = useState<number | string>('');
+  const [fromDate, setFromDate] = useState('');
+  const [toDate, setToDate] = useState('');
 
   const {
     data,
@@ -36,15 +28,17 @@ const OrderPage = () => {
   });
 
   const pages = useMemo(() => Math.ceil(data?.count / limit) ?? 0, [data]);
+
   const theme = useTheme();
+
   const handleChangeStatus = (
-    e: SelectChangeEvent<string | number | undefined>
+    e: SelectChangeEvent<string | number | undefined | null>
   ) => setStatus(e.target.value as any);
 
   const clearFilter = () => {
-    setStatus(undefined);
-    setFromDate(undefined);
-    setToDate(undefined);
+    setStatus('');
+    setFromDate('');
+    setToDate('');
   };
 
   return (
@@ -111,7 +105,7 @@ const OrderPage = () => {
       <CustomPagination
         currentPage={currentPage}
         pages={pages}
-        onPageChange={(_: any, page: number) => setCurentPage(page)}
+        onPageChange={(_: any, page: number) => setCurrentPage(page)}
       />
     </Box>
   );

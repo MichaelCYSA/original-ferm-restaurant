@@ -274,5 +274,12 @@
     "password_is_not_match": "Parola nepotrivită",
     "password_is_weak": "Cel puțin 8 caractere, minuscule și mici, cifre și caractere speciale",
     "souces": "Sosuri",
-    "toppings": "Toppinguri"
+    "toppings": "Toppinguri",
+    "order_time": "Ora comenzii",
+    "time_is_over": "Timpul a expirat",
+    "left_time":"Timp rămas",
+    "minutes": "minute",
+    "are_you_sure_you_want_to_delete": "Ești sigur că vrei să ștergi ?",
+    "yes": "Da",
+    "no": "Nu"
 }

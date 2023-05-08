@@ -1,23 +1,20 @@
-import { useCartContext } from "@/contexts/cartContext";
-import { Translated, useLangContext } from "@/lang/languageContext";
-import { Box, Button, Typography, IconButton, useTheme } from "@mui/material";
-import Image from "next/legacy/image";
-import { IProduct } from "@/constants/products";
-import EditIcon from "@mui/icons-material/Edit";
-import {
-  useDeleteProductMutation,
-  useUpdateProductMutation,
-} from "@/store/api/product";
-import DeleteIcon from "@mui/icons-material/Delete";
-import { useTranslated } from "@/lang/languageContext";
-import { toast } from "react-toastify";
-import BlockIcon from "@mui/icons-material/Block";
-import TurnRightIcon from "@mui/icons-material/TurnRight";
+import { IProduct } from '@/constants/products';
+import { useCartContext } from '@/contexts/cartContext';
+import { Translated, useLangContext, useTranslated } from '@/lang/languageContext';
+import { useDeleteProductMutation, useUpdateProductMutation } from '@/store/api/product';
+import BlockIcon from '@mui/icons-material/Block';
+import EditIcon from '@mui/icons-material/Edit';
+import TurnRightIcon from '@mui/icons-material/TurnRight';
+import { Box, Button, IconButton, Typography, useTheme } from '@mui/material';
+import Image from 'next/legacy/image';
+import { toast } from 'react-toastify';
+
+import DeleteModal from './DeleteModal/DeleteModal';
 
 const ProductCard = ({
   item,
   isAuth,
-  handleEdit = (item: IProduct) => () => {},
+  handleEdit = (item: IProduct) => () => { },
 }: {
   item: IProduct;
   isAuth?: boolean;
@@ -42,13 +39,13 @@ const ProductCard = ({
   };
   const handleUpdate =
     ({ id, disabled }: { id?: string; disabled: boolean }) =>
-    () => {
-      updateProduct({ id, data: { disabled } }).then((res: any) => {
-        if (res.error) {
-          return toast.error(t("ocurred_an_error_try_again"));
-        }
-      });
-    };
+      () => {
+        updateProduct({ id, data: { disabled } }).then((res: any) => {
+          if (res.error) {
+            return toast.error(t("ocurred_an_error_try_again"));
+          }
+        });
+      };
 
   return (
     <Box
@@ -98,16 +95,7 @@ const ProductCard = ({
                 <BlockIcon sx={{ color: "red" }} />
               )}
             </IconButton>
-            <IconButton
-              size="small"
-              disabled={isLoading || isUpdating}
-              onClick={handleDelete(item._id)}
-              sx={{
-                background: theme.palette.customColor.main,
-              }}
-            >
-              <DeleteIcon sx={{ color: "red" }} />
-            </IconButton>
+            <DeleteModal isLoading={isLoading || isUpdating} deleteFn={handleDelete(item._id)} />
           </Box>
         )}
         <Image

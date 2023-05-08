@@ -1,24 +1,18 @@
-import {
-  Box,
-  Typography,
-  useTheme,
-  IconButton,
-  SelectChangeEvent,
-  Collapse,
-} from "@mui/material";
+import { IProduct } from '@/constants/products';
+import { Translated } from '@/lang/languageContext';
+import { useDeleteOrderMutation, useUpdateOrderMutation } from '@/store/api/orders';
+import { IOrder } from '@/types/order.types';
+import EditIcon from '@mui/icons-material/Edit';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import { Box, Collapse, IconButton, SelectChangeEvent, Typography, useTheme } from '@mui/material';
+import moment from 'moment';
+import { useEffect, useState } from 'react';
 
-import { IOrder } from "@/types/order.types";
-import { Translated } from "@/lang/languageContext";
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
-import { useUpdateOrderMutation } from "@/store/api/orders";
-import { useState, useEffect } from "react";
-import CustomSelect from "../inputs/CustomSelect";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import CartItem from "../CartModal/cartItem";
-import { IProduct } from "@/constants/products";
-import { useDeleteOrderMutation } from "@/store/api/orders";
-import EditOrderModal from "../EditOrderModal/EditOrderModal";
+import CartItem from '../CartModal/cartItem';
+import DeleteModal from '../DeleteModal/DeleteModal';
+import EditOrderModal from '../EditOrderModal/EditOrderModal';
+import CustomSelect from '../inputs/CustomSelect';
+import OrderTimer from './OrderTimer';
 
 export const OrderStatues = {
   0: "unconfirmed",
@@ -62,11 +56,11 @@ const OrderItem = ({ order }: { order: IOrder }) => {
   const handleUpdate = () => {
     updatedMutation({ id: order._id, data: { status } });
   };
-  const hadleDelete = () => {
+  const handleDelete = () => {
     deleteOrder({ id: order._id });
   };
   const handleChangeStatus = (
-    e: SelectChangeEvent<string | number | undefined>
+    e: SelectChangeEvent<string | number | undefined | null>
   ) => setStatus(e.target.value as any);
 
   const toggleDetails = () => setDetails((prev) => !prev);
@@ -113,17 +107,15 @@ const OrderItem = ({ order }: { order: IOrder }) => {
           >
             <EditIcon />
           </IconButton>
-          <IconButton
-            disabled={isDeleting}
-            onClick={hadleDelete}
-            sx={{ background: theme.palette.customColor.main }}
-          >
-            <DeleteIcon sx={{ color: "red" }} />
-          </IconButton>
+          <DeleteModal isLoading={isDeleting} deleteFn={handleDelete} />
         </Box>
       </Box>
-      <Box display={"flex"} flexWrap={{xs: 'wrap', md: 'nowrap'}} gap={2}>
+      <Box display={"flex"} flexWrap={{ xs: 'wrap', md: 'nowrap' }} gap={2}>
         <Box width={1}>
+          <Typography variant="h3">
+            {Translated("order_time")}: {moment(order.createdAt).format('HH:mm')}
+          </Typography>
+          <OrderTimer order={order} />
           <Typography variant="h3">
             {Translated("address")}: {order.city} {order.district}{" "}
             {order.street} {order.home} {order.block} {order.apartment}
@@ -160,8 +152,8 @@ const OrderItem = ({ order }: { order: IOrder }) => {
                 item={product}
                 key={`${product._id}-${index}`}
                 redadOnly
-                minus={() => {}}
-                plus={() => {}}
+                minus={() => { }}
+                plus={() => { }}
               />
             );
           })}

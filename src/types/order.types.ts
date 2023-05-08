@@ -32,6 +32,7 @@ export interface IOrder {
   [OrderFields.totalPrice]: number;
   [OrderFields.phone]: string;
   [OrderFields.products]: any;
+  createdAt?: string; 
 }
 
 export const orderDefaultValues: IOrder = {

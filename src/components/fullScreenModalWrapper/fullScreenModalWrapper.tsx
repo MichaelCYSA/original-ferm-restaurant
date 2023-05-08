@@ -1,12 +1,12 @@
-import * as React from "react";
-import Dialog from "@mui/material/Dialog";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
-import Box from "@mui/material/Box";
-import Slide from "@mui/material/Slide";
-import Backdrop from "@mui/material/Backdrop";
-import { TransitionProps } from "@mui/material/transitions";
-import { useMediaQuery, useTheme } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+import { useMediaQuery, useTheme } from '@mui/material';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Dialog from '@mui/material/Dialog';
+import IconButton from '@mui/material/IconButton';
+import Slide from '@mui/material/Slide';
+import { TransitionProps } from '@mui/material/transitions';
+import * as React from 'react';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -21,19 +21,22 @@ interface IFullScreenModalWrapper {
   handleClose: () => void;
   open: boolean;
   children: React.ReactElement;
+  disableFullScreen?: boolean
 }
 
 const FullScreenModalWrapper = ({
   handleClose,
   open,
   children,
+  disableFullScreen
 }: IFullScreenModalWrapper) => {
+
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Dialog
-      fullScreen={isMobile}
+      fullScreen={!disableFullScreen && isMobile}
       open={open}
       onClose={handleClose}
       TransitionComponent={Transition}
@@ -70,7 +73,7 @@ const FullScreenModalWrapper = ({
             <CloseIcon sx={{ color: theme.palette.customColor.main }} />
           </IconButton>
         </Box>
-        <Box width={1} minHeight={isMobile ? "100vh": 'auto'}>{children}</Box>
+        <Box width={1} minHeight={isMobile && !disableFullScreen ? "100vh" : 'auto'}>{children}</Box>
       </Box>
     </Dialog>
   );

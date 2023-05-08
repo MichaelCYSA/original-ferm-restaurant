@@ -234,6 +234,29 @@ export const productCatagories = [
   }
 ];
 
+export const productCategoriesCookTime = {
+    "breakFast": 600000,
+    "supe": 600000,
+    "salads": 600000,
+    "goldSnacks": 600000,
+    "hostSnack": 600000,
+    "beerSnack": 600000,
+    "mainDishes": 1200000,
+    "gaskets": 600000,
+    "pizza": 1200000,
+    "deserts": 600000,
+    "non_alchogol": 0,
+    "milk_shakes_lemonads": 0,
+    "hot_drinks": 0,
+    "alchogol_coctails": 0,
+    "beer": 0,
+    "wines": 0,
+    "champagne": 0,
+    "strong_alchogol": 0,
+    "souces": 0,
+    "toppings": 0
+  }
+
 export const suplimentar = [
   {
     label: "souces",
