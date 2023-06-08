@@ -1,4 +1,0 @@
-{
-    "BASE_URL": "https://original-ferm-backend.vercel.app/api",
-    "PRODUCT_IMG_HOST": "/product-photos"
-}

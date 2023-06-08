@@ -17,7 +17,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "config_prod": ["./config/production.json"],
-      "config_dev": ["./config/development.json"]
+      "config_dev": ["./config/development.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
