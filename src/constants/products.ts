@@ -287,278 +287,244 @@ export interface IProduct {
 
 const productsMig = [
   {
-    image: "brinzoaice.png",
+    image: "Brînzoaice (180_50) 75 MDL.webp",
     name: {
       ru: "Сырные шарики",
       ro: "Brinzoaice",
     },
     description: {
-      ru: "Сырные шарики, 200-50 г",
-      ro: "200-50g",
+      ru: "180/50 г",
+      ro: "180/50g",
     },
-    price: 60,
+    price: 75,
     productType: "breakFast",
   },
   {
-    image: "omleta_cu_salata.png",
+    image: "omletă_cu_legume.webp",
     name: {
-      ru: "Омлет с салатом",
-      ro: "Omleta cu salata",
+      ru: "Омлет с овощами",
+      ro: "Omleta cu legume",
     },
     description: {
-      ru: "Омлет с салатом, 200 г",
-      ro: "200g",
+      ru: "200/250 г",
+      ro: "200/250 g",
     },
-    price: 50,
+    price: 75,
     productType: "breakFast",
   },
   {
-    image: "ochiuri.png",
+    image: "mic_dejun_piure_de_cartofi_ouă_bacon.webp",
     name: {
-      ru: "Яйца с беконом",
-      ro: "Ochiuri",
+      ru: "Mic dejun",
+      ro: "Завтрак",
     },
     description: {
-      ru: "Яйца с беконом, 2 шт/50 г",
-      ro: "cu becon 2buc/50g",
+      ru: "картофельное пюре, яйца, бекон 150/100/50г",
+      ro: "piure de cartofi, ouă de găină, bacon 150/100/50g",
     },
-    price: 60,
+    price: 90,
     productType: "breakFast",
   },
   {
-    image: "clatite.png",
+    image: "clătite_cu_brînză_de_vaci.webp",
     name: {
-      ru: "Блины",
-      ro: "Clatite",
+      ru: "Блинчики с творогом",
+      ro: "Clatite cu brinza",
     },
     description: {
-      ru: "Блины с джемом, 250 г",
-      ro: "cu gem 250g",
+      ru: "250/50 г",
+      ro: "250g/50g",
     },
-    price: 60,
+    price: 75,
     productType: "breakFast",
   },
+
+  // {
+  //   image: "terci_de_ovaz.png",
+  //   name: {
+  //     ru: "Овсянка",
+  //     ro: "Terci de ovaz",
+  //   },
+  //   description: {
+  //     ru: "Овсянка с молоком и водой, с джемом, 300 г",
+  //     ro: "pe lapte,apa ,cu gem 300g",
+  //   },
+  //   price: 35,
+  //   productType: "breakFast",
+  // },
+  // {
+  //   image: "croissant.png",
+  //   name: {
+  //     ru: "Круассан",
+  //     ro: "Croissant",
+  //   },
+  //   description: {
+  //     ru: "Круассан, один шт.",
+  //     ro: "in sortiment 1 buc",
+  //   },
+  //   price: 35,
+  //   productType: "breakFast",
+  // },
   {
-    image: "terci_de_ovaz.png",
+    image: "bors_rosu_cu_carne_de_vita.webp",
     name: {
-      ru: "Овсянка",
-      ro: "Terci de ovaz",
+      ru: "Красный борщ 350/50 г",
+      ro: "Bors rosu 350/50 g",
     },
     description: {
-      ru: "Овсянка с молоком и водой, с джемом, 300 г",
-      ro: "pe lapte,apa ,cu gem 300g",
+      ru: "с говядиной",
+      ro: "cu carne de vita",
     },
-    price: 35,
-    productType: "breakFast",
-  },
-  {
-    image: "croissant.png",
-    name: {
-      ru: "Круассан",
-      ro: "Croissant",
-    },
-    description: {
-      ru: "Круассан, один шт.",
-      ro: "in sortiment 1 buc",
-    },
-    price: 35,
-    productType: "breakFast",
-  },
-  {
-    image: "bors_rosu.png",
-    name: {
-      ru: "Красный борщ",
-      ro: "Bors rosu",
-    },
-    description: {
-      ru: "с говядиной 350/50/50 г",
-      ro: "cu carne de vita 350/50/50 g",
-    },
-    price: 60,
+    price: 75,
     productType: "supe",
   },
   {
-    image: "zeama_de_gaina.png",
+    image: "zeamă_din_găină_de_casă.webp",
     name: {
-      ru: "Куриный бульон",
+      ru: "Домашняя зама",
       ro: "Zeama de gaina",
     },
     description: {
-      ru: "домашний 350/50 г",
+      ru: "с куриным мясом 350/50 г",
       ro: "de casa 350/50 g",
     },
-    price: 55,
+    price: 75,
     productType: "supe",
   },
   {
-    image: "soleanca.png",
+    image: "Soleancă (350_50) 75 MDL.webp",
     name: {
-      ru: "Овощной суп",
+      ru: "Солянка",
       ro: "Soleanca",
     },
     description: {
       ru: "350/50 г",
       ro: "350/50 g",
     },
-    price: 60,
+    price: 75,
     productType: "supe",
   },
   {
-    image: "supa_de_spanac.png",
+    image: "Supă-cremă cu cașcaval.webp",
     name: {
-      ru: "Шпинатный суп",
-      ro: "Supa de spanac",
+      ru: "Сырный крем-суп",
+      ro: "Supă-cremă cu cașcaval",
     },
     description: {
-      ru: "250/30 г",
-      ro: "250/30 g",
+      ru: "300/30 г",
+      ro: "300/30 g",
     },
     price: 70,
     productType: "supe",
   },
   {
-    image: "crem_supa.png",
+    image: "Supă-cremă cu ciuperci.webp",
     name: {
-      ru: "Сливочный суп",
+      ru: "Supă-cremă cu ciuperci",
       ro: "Crem supa",
     },
     description: {
-      ru: "с сыром 380/30 г",
-      ro: "de cascaval 380 /30g",
-    },
-    price: 55,
-    productType: "supe",
-  },
-  {
-    image: "salata_shopski.png",
-    name: {
-      ru: "Салат Шопски",
-      ro: "Salata Shopski",
-    },
-    description: {
-      ru: "200 г",
-      ro: "200 g",
+      ru: "300 г",
+      ro: "300 g",
     },
     price: 70,
-    productType: "salads",
+    productType: "supe",
   },
+  
+
+  ////
   {
-    image: "salata_caesar.png",
+    image: "caesar_cu_somon.webp",
     name: {
-      ru: "Салат Цезарь",
-      ro: "Salata Caesar ",
+      ru: "Салат Цезарь с лососем",
+      ro: "Caesar cu somon",
     },
     description: {
-      ru: "с курицей 320 г",
-      ro: "cu carne de pui 320 g",
+      ru: "260 г",
+      ro: "260 g",
     },
-    price: 90,
+    price: 130,
     productType: "salads",
   },
   {
-    image: "salata_de_varza.png",
+    image: "salată_cu_carne_de_vită.webp",
     name: {
-      ru: "Салат из капусты",
-      ro: "Salata de varza ",
-    },
-    description: {
-      ru: "200-50 г",
-      ro: "200-50g",
-    },
-    price: 40,
-    productType: "salads",
-  },
-  {
-    image: "salata_cu_varza_murata.png",
-    name: {
-      ru: "Салат со сладкой капустой",
-      ro: "Salata cu varza murata",
-    },
-    description: {
-      ru: "200 г",
-      ro: "200 g",
-    },
-    price: 40,
-    productType: "salads",
-  },
-  {
-    image: "salata_exotic.png",
-    name: {
-      ru: "Салат Экзотика",
-      ro: "Salata Exotic",
-    },
-    description: {
-      ru: "с курицей и сыром 250 г",
-      ro: "cu pui si cascaval 250g",
-    },
-    price: 75,
-    productType: "salads",
-  },
-  {
-    image: "salata_mozzarella_perle.png",
-    name: {
-      ru: "Салат с моцареллой и перлами",
-      ro: "Salata Mozzarella Perle",
+      ru: "Салат с говядиной",
+      ro: "Salata cu carne de vita",
     },
     description: {
       ru: "250 г",
       ro: "250 g",
     },
-    price: 75,
+    price: 105,
     productType: "salads",
   },
   {
-    image: "salata_calda.png",
+    image: "salată_bulgărească_Shopski.webp",
     name: {
-      ru: "Горячий салат",
-      ro: "Salata calda",
+      ru: "Салат Шопски",
+      ro: "Salata Shopski",
     },
     description: {
-      ru: "с говядиной 320 г",
-      ro: "cu carne de vita 320g",
+      ru: "350 г",
+      ro: "350 g",
+    },
+    price: 85,
+    productType: "salads",
+  },
+  {
+    image: "Caesar cu piept de pui (260) 100 MDL.webp",
+    name: {
+      ru: "Салат Цезарь",
+      ro: "Salata Caesar ",
+    },
+    description: {
+      ru: "с курицей 260 г",
+      ro: "cu carne de pui 260 g",
     },
     price: 100,
     productType: "salads",
   },
   {
-    image: "salata_din_legume.png",
+    image: "Salată din varză cu mazăre (200) 50 MDL.webp",
     name: {
-      ru: "Салат из овощей",
-      ro: "Salata din legume",
+      ru: "Салат из капусты",
+      ro: "Salata de varza ",
     },
     description: {
-      ru: "жареные овощи",
-      ro: "legume coapte",
+      ru: "200 г",
+      ro: "200g",
     },
-    price: 75,
+    price: 50,
     productType: "salads",
   },
   {
-    image: "salata_cu_ton.png",
+    image: "șold_de_găină_carry_cu_legume.webp",
     name: {
-      ru: "Салат с тунцом",
-      ro: "Salata cu ton",
+      ru: "Теплый салат с куриной грудкой и броколи",
+      ro: "Salata calda cu pui si brocoli",
     },
     description: {
-      ru: "тунец",
-      ro: "ton",
+      ru: "300 г",
+      ro: "300 g",
+    },
+    price: 110,
+    productType: "salads",
+  },
+  {
+    image: "Salată caldă cu legume coapte (300_50) 95 MDL.webp",
+    name: {
+      ru: "Теплый салат из запеченых овощей",
+      ro: "Salata calda cu legume coapte",
+    },
+    description: {
+      ru: "300/50 г",
+      ro: "300/50 g",
     },
     price: 95,
     productType: "salads",
   },
-  {
-    image: "mix_de_legume.png",
-    name: {
-      ru: "Смесь овощей",
-      ro: "Mix de legume",
-    },
-    description: {
-      ru: "Смесь овощей",
-      ro: "Mix de legume",
-    },
-    price: 60,
-    productType: "salads",
-  },
+  ///////
   {
     image: "hering_cu_cartofi_fierti.png",
     name: {
