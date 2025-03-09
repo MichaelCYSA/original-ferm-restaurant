@@ -526,852 +526,807 @@ const productsMig = [
   },
   ///////
   {
-    image: "hering_cu_cartofi_fierti.png",
+    image: "platou_cu_slănină_de_casă.webp",
     name: {
-      ru: "Сельдь с вареным картофелем",
-      ro: "Hering cu cartofi fierti",
+      ru: "Плато с домашним салом",
+      ro: "Platou cu slanina de casa",
     },
     description: {
-      ru: "с вареной картошкой 100/250 г",
-      ro: "cu cartofi fierti 100/250 g",
+      ru: "200/50 г",
+      ro: "200/50 g",
     },
-    price: 70,
+    price: 130,
     productType: "goldSnacks",
   },
   {
-    image: "gingerica.png",
+    image: "cașcaval_hot_brie_cu_ciabatta.webp",
     name: {
-      ru: "Жинжерица",
-      ro: "Gingerica",
+      ru: "Сыр hot brie с чиабаттой",
+      ro: "Cascaval hot brie cu ciabatta",
     },
     description: {
-      ru: "с вареной картошкой 100/250/50 г",
-      ro: "cu cartofi fierti 100/250/50 g",
-    },
-    price: 70,
-    productType: "goldSnacks",
-  },
-  {
-    image: "platou_de_legume.png",
-    name: {
-      ru: "Овощная тарелка",
-      ro: "Platou de legume",
-    },
-    description: {
-      ru: "свежие 450 г",
-      ro: "proaspete 450 g",
-    },
-    price: 90,
-    productType: "goldSnacks",
-  },
-  {
-    image: "platou_de_cascavaluri.png",
-    name: {
-      ru: "Тарелка сыров",
-      ro: "Platou de cascavaluri",
-    },
-    description: {
-      ru: "от “Ferma Noastra” 300 г",
-      ro: "de la “Ferma Noastra” 300 g",
+      ru: "125/100 г",
+      ro: "125/100 g",
     },
     price: 120,
     productType: "goldSnacks",
   },
   {
-    image: "platou_de_slanina.png",
+    image: "piept_de_porc_picant.webp",
     name: {
-      ru: "Тарелка со свиной саломой",
-      ro: "Platou de Slanina",
-    },
-    description: {
-      ru: "380 г",
-      ro: "380 g",
-    },
-    price: 90,
-    productType: "goldSnacks",
-  },
-  {
-    image: "platou_de_salamuri.png",
-    name: {
-      ru: "Тарелка салями",
-      ro: "Platou de salamuri",
-    },
-    description: {
-      ru: "250 г",
-      ro: "250 g",
-    },
-    price: 140,
-    productType: "goldSnacks",
-  },
-  {
-    image: "platou_de_muraturi.png",
-    name: {
-      ru: "Плато из маринадных овощей",
-      ro: "Platou de muraturi",
-    },
-    description: {
-      ru: "450г маринадных овощей",
-      ro: "450g de muraturi",
-    },
-    price: 60,
-    productType: "goldSnacks",
-  },
-  {
-    image: "burratta_cu_salata.png",
-    name: {
-      ru: "Буррата с салатом",
-      ro: "Burratta cu salata",
-    },
-    description: {
-      ru: "250г бурраты с помидорами черри и базиликом",
-      ro: "Burrata cu roșii cherysi și busuioc, 250g",
-    },
-    price: 99,
-    productType: "goldSnacks",
-  },
-  {
-    image: "bruschete.png",
-    name: {
-      ru: "Брускетта с лососем",
-      ro: "Bruschete",
-    },
-    description: {
-      ru: "2 шт. брускетты с лососем",
-      ro: "Bruschete cu somon, 2 bucăți",
-    },
-    price: 85,
-    productType: "goldSnacks",
-  },
-  {
-    image: "bruschete_mozzarella.png",
-    name: {
-      ru: "Брускетта с моцареллой",
-      ro: "Bruschete",
-    },
-    description: {
-      ru: "250г брускетты с моцареллой",
-      ro: "Bruschete cu mozzarella, 250g",
-    },
-    price: 65,
-    productType: "goldSnacks",
-  },
-  {
-    image: "bruschete_rosbif.png",
-    name: {
-      ru: "Брускетта с говяжьим ростбифом",
-      ro: "Bruschete",
-    },
-    description: {
-      ru: "250г брускетты с говяжьим ростбифом",
-      ro: "Bruschete cu roșbif, 250g",
-    },
-    price: 70,
-    productType: "goldSnacks",
-  },
-  {
-    image: "cascaval_buffalo.png",
-    name: {
-      ru: "Буффало сыр",
-      ro: "Cascaval Buffalo",
-    },
-    description: {
-      ru: "Сыр теледжио с хлебом 125/50 г",
-      ro: "Teleggio pane 125/50 g",
-    },
-    price: 140,
-    productType: "hostSnack",
-  },
-  {
-    image: "aripioare_de_pui.png",
-    name: {
-      ru: "Куриные крылышки",
-      ro: "Aripioare de pui",
-    },
-    description: {
-      ru: "Куриные наггетсы с картофелем по-деревенски 150/130/50 г",
-      ro: "cu cartofi pai 150/130/50 g",
-    },
-    price: 85,
-    productType: "hostSnack",
-  },
-  {
-    image: "nughete_de_pui.png",
-    name: {
-      ru: "Куриные наггетсы",
-      ro: "Nughete de pui",
-    },
-    description: {
-      ru: "Куриные наггетсы с картофелем по-деревенски 150/130/50 г",
-      ro: "cu cartofi pai 150/130/50 g",
-    },
-    price: 85,
-    productType: "hostSnack",
-  },
-  {
-    image: "placinte_in_asortiment.png",
-    name: {
-      ru: "Пироги ассортимент",
-      ro: "Placinte in asortiment",
-    },
-    description: {
-      ru: "200 г пирогов в ассортименте",
-      ro: "200 g",
-    },
-    price: 40,
-    productType: "hostSnack",
-  },
-  {
-    image: "nacios.png",
-    name: {
-      ru: "Нацос",
-      ro: "Nacios",
-    },
-    description: {
-      ru: "50г/50г",
-      ro: "50g/50g",
-    },
-    price: 40,
-    productType: "beerSnack",
-  },
-  {
-    image: "crutoane_cu_usturoi.png",
-    name: {
-      ru: "Хрустящие гренки с чесноком",
-      ro: "Crutoane cu usturoi",
-    },
-    description: {
-      ru: "250/50 г",
-      ro: "250/50 g",
-    },
-    price: 40,
-    productType: "beerSnack",
-  },
-  {
-    image: "migdale_prajite.png",
-    name: {
-      ru: "Жареные миндаль",
-      ro: "Migdale prajite",
-    },
-    description: {
-      ru: "100 г",
-      ro: "100 g",
-    },
-    price: 60,
-    productType: "beerSnack",
-  },
-  {
-    image: "pietrosel.png",
-    name: {
-      ru: "Крошка хлеба",
-      ro: "Pietrosel",
-    },
-    description: {
-      ru: "130/50 г",
-      ro: "130/50 g",
-    },
-    price: 65,
-    productType: "beerSnack",
-  },
-  {
-    image: "ineluse.png",
-    name: {
-      ru: "Кольца лука",
-      ro: "Ineluse",
-    },
-    description: {
-      ru: "лук+соус тартар 130/50 г",
-      ro: "ceapa+sos tartar 130/50 g",
-    },
-    price: 60,
-    productType: "beerSnack",
-  },
-  {
-    image: "ineluse_calmar.png",
-    name: {
-      ru: "Кольца кальмара",
-      ro: "Ineluse",
-    },
-    description: {
-      ru: "кальмар+соус тартар 130/50 г",
-      ro: "de calmar+sos tartar 130/50 g",
-    },
-    price: 70,
-    productType: "beerSnack",
-  },
-  {
-    image: "basturma_de_vita.png",
-    name: {
-      ru: "Бастурма из говядины",
-      ro: "Basturma de vita",
-    },
-    description: {
-      ru: "50 г",
-      ro: "50 g",
-    },
-    price: 70,
-    productType: "beerSnack",
-  },
-  {
-    image: "ciolan_de_proc.png",
-    name: {
-      ru: "Свиной голень",
-      ro: "Ciolan de proc",
-    },
-    description: {
-      ru: "Свиная голень",
-      ro: "Ciolan de proc",
-    },
-    price: 199,
-    productType: "mainDishes",
-  },
-  {
-    image: "guleas_unguresc.png",
-    name: {
-      ru: "Венгерский гуляш",
-      ro: "Guleas Unguresc",
-    },
-    description: {
-      ru: "Венгерский гуляш",
-      ro: "Guleas Unguresc",
-    },
-    price: 80,
-    productType: "mainDishes",
-  },
-  {
-    image: "file_de_somon.png",
-    name: {
-      ru: "Жареный лосось",
-      ro: "File de somon",
-    },
-    description: {
-      ru: "Жареный лосось",
-      ro: "File de somon",
-    },
-    price: 170,
-    productType: "mainDishes",
-  },
-  {
-    image: "tocanita_de_iepuras.png",
-    name: {
-      ru: "Зайчатина тушеная",
-      ro: "Tocanita de iepuras",
-    },
-    description: {
-      ru: "Зайчатина тушеная",
-      ro: "Tocanita de iepuras",
-    },
-    price: 95,
-    productType: "mainDishes",
-  },
-  {
-    image: "paste_cu_carne.png",
-    name: {
-      ru: "Макароны с говядиной",
-      ro: "Paste cu carne",
-    },
-    description: {
-      ru: "Макароны с говядиной",
-      ro: "Paste cu carne",
-    },
-    price: 90,
-    productType: "mainDishes",
-  },
-  {
-    image: "paste_cu_somon.png",
-    name: {
-      ru: "Макароны с лососем",
-      ro: "Paste cu somon",
-    },
-    description: {
-      ru: "Макароны с лососем",
-      ro: "Paste cu somon",
-    },
-    price: 110,
-    productType: "mainDishes",
-  },
-  {
-    image: "piept_de_pui.png",
-    name: {
-      ru: "Куриная грудка",
-      ro: "Piept de pui",
-    },
-    description: {
-      ru: "Куриная грудка, 180/50 г",
-      ro: "Piept de pui",
-    },
-    price: 75,
-    productType: "mainDishes",
-  },
-  {
-    image: "frigarui_de_pui.png",
-    name: {
-      ru: "Куриные шашлычки",
-      ro: "Frigarui de pui",
-    },
-    description: {
-      ru: "Куриные шашлычки, 300/25/25 г",
-      ro: "Frigarui de pui",
-    },
-    price: 95,
-    productType: "mainDishes",
-  },
-  {
-    image: "frigarui_de_porc.png",
-    name: {
-      ru: "Свинные шашлычки",
-      ro: "Frigarui de porc",
-    },
-    description: {
-      ru: "Свинные шашлычки, 250/50/50 г",
-      ro: "Frigarui de porc",
-    },
-    price: 105,
-    productType: "mainDishes",
-  },
-  {
-    image: "frigarui_de_vita.png",
-    name: {
-      ru: "Говяжьи шашлычки",
-      ro: "Frigarui de vita",
-    },
-    description: {
-      ru: "Говяжьи шашлычки, 250/50/50 г",
-      ro: "Frigarui de vita",
-    },
-    price: 155,
-    productType: "mainDishes",
-  },
-  {
-    image: "mici_de_casa.png",
-    name: {
-      ru: "Домашние мичи",
-      ro: "Mici de casa",
-    },
-    description: {
-      ru: "Домашние мичи, салат из капусты 180/100/50 г",
-      ro: "Mici de casa",
-    },
-    price: 90,
-    productType: "mainDishes",
-  },
-  {
-    image: "steak.png",
-    name: {
-      ru: "Бифштекс",
-      ro: "Steak",
-    },
-    description: {
-      ru: "Бифштекс, 250/50/50 г",
-      ro: "Steak",
-    },
-    price: 155,
-    productType: "mainDishes",
-  },
-  {
-    image: "carne_de_bivol_inabusit_in_vin.png",
-    name: {
-      ru: "Мясо бизона тушеное в вине",
-      ro: "Carne de Bivol inabusit in vin",
-    },
-    description: {
-      ru: "Мясо бизона, овощи, запеченные картофель",
-      ro: "Carne de bivol,Legume, Cartofi copti",
-    },
-    price: 140,
-    productType: "mainDishes",
-  },
-  {
-    image: "snitel.png",
-    name: {
-      ru: "Куриный шницель",
-      ro: "Snitel",
-    },
-    description: {
-      ru: "Куриный шницель, 180/50 г",
-      ro: "de pui 180/50 g",
-    },
-    price: 75,
-    productType: "mainDishes",
-  },
-  {
-    image: "burger_de_pui.png",
-    name: {
-      ru: "Куриный бургер",
-      ro: "Burger de pui",
-    },
-    description: {
-      ru: "Куриный бургер, 400 г",
-      ro: "400g",
-    },
-    price: 90,
-    productType: "mainDishes",
-  },
-  {
-    image: "burger_de_vita.png",
-    name: {
-      ru: "Говяжий бургер",
-      ro: "Burger de vita",
-    },
-    description: {
-      ru: "Говяжий бургер, 400 г",
-      ro: "400g",
-    },
-    price: 90,
-    productType: "mainDishes",
-  },
-  {
-    image: "carnita_de_curcan.png",
-    name: {
-      ru: "Туриця на мангалі з картоплею",
-      ro: "Carnita de curcan",
-    },
-    description: {
-      ru: "Туриця, картопля, 550 г",
-      ro: "cu cartofi in oala 550 g",
-    },
-    price: 155,
-    productType: "mainDishes",
-  },
-  {
-    image: "costita_de_vitel.png",
-    name: {
-      ru: "Говяжьи ребрышки",
-      ro: "Costita de vitel",
-    },
-    description: {
-      ru: "Говяжьи ребрышки, 100 г",
-      ro: "100 g",
-    },
-    price: 35,
-    productType: "mainDishes",
-  },
-  {
-    image: "platou_de_carne_gril.png",
-    name: {
-      ru: "Жареное мясо",
-      ro: "Platou de carne gril",
-    },
-    description: {
-      ru: "Жареное мясо, 1500 г",
-      ro: "Platou de carne gril",
-    },
-    price: 600,
-    productType: "mainDishes",
-  },
-  {
-    image: "cartofi_copti.png",
-    name: {
-      ru: "Жареная картошка",
-      ro: "Cartofi copti",
-    },
-    description: {
-      ru: "Жареная картошка с розмарином, 250 г",
-      ro: "Cartofi copti",
-    },
-    price: 40,
-    productType: "gaskets",
-  },
-  {
-    image: "cartofi_pai_ketchup.png",
-    name: {
-      ru: "Картофель фри с кетчупом",
-      ro: "Cartofi pai + ketchup",
-    },
-    description: {
-      ru: "Картофель фри с кетчупом, 130/50 г",
-      ro: "Cartofi pai + ketchup",
-    },
-    price: 35,
-    productType: "gaskets",
-  },
-  {
-    image: "piure_de_cartofi.png",
-    name: {
-      ru: "Пюре из картофеля",
-      ro: "Piure de cartofi",
-    },
-    description: {
-      ru: "Пюре из картофеля, 200 г",
-      ro: "Piure de cartofi",
-    },
-    price: 30,
-    productType: "gaskets",
-  },
-  {
-    image: "cartofi_prajiti_ca_acasa.png",
-    name: {
-      ru: "Домашняя жареная картошка",
-      ro: "Cartofi prajiti ca acasa",
-    },
-    description: {
-      ru: "Домашняя жареная картошка, 300 г",
-      ro: "Cartofi prajiti ca acasa",
-    },
-    price: 50,
-    productType: "gaskets",
-  },
-  {
-    image: "mamaliga.png",
-    name: {
-      ru: "Полента",
-      ro: "Mamaliga",
-    },
-    description: {
-      ru: "Полента со сметаной и сыром, 350 г",
-      ro: "Mamaliga",
-    },
-    price: 50,
-    productType: "gaskets",
-  },
-  {
-    image: "orez_cu_legume.png",
-    name: {
-      ru: "Рис с овощами",
-      ro: "Orez cu legume",
-    },
-    description: {
-      ru: "Рис с овощами, 250 г",
-      ro: "Orez cu legume",
-    },
-    price: 35,
-    productType: "gaskets",
-  },
-  {
-    image: "piure_de_brocoli.png",
-    name: {
-      ru: "Брокколи пюре",
-      ro: "Piure de brocoli",
-    },
-    description: {
-      ru: "Пюре из брокколи, 200 г",
-      ro: "Piure de brocoli",
-    },
-    price: 45,
-    productType: "gaskets",
-  },
-  {
-    image: "pastari.png",
-    name: {
-      ru: "Паста",
-      ro: "Pastari",
-    },
-    description: {
-      ru: "Паста, 270 г",
-      ro: "Pastari",
-    },
-    price: 40,
-    productType: "gaskets",
-  },
-  {
-    image: "paste_cu_unt.png",
-    name: {
-      ru: "Паста с маслом",
-      ro: "Paste cu unt",
-    },
-    description: {
-      ru: "Паста с маслом, 200 г",
-      ro: "Paste cu unt",
-    },
-    price: 30,
-    productType: "gaskets",
-  },
-  {
-    image: "fasole_cu_legume.png",
-    name: {
-      ru: "Фасоль с овощами",
-      ro: "Fasole cu legume",
-    },
-    description: {
-      ru: "Фасоль с овощами, 200 г",
-      ro: "Fasole cu legume",
-    },
-    price: 50,
-    productType: "gaskets",
-  },
-  {
-    image: "varza_calita.png",
-    name: {
-      ru: "Тушеная капуста",
-      ro: "Varza calita",
-    },
-    description: {
-      ru: "Тушеная капуста, 200 г",
-      ro: "Varza calita",
-    },
-    price: 40,
-    productType: "gaskets",
-  },
-  {
-    image: "margherita.png",
-    name: {
-      ru: "Маргарита",
-      ro: "Margherita",
-    },
-    description: {
-      ru: "Соус из помидоров, моцарелла",
-      ro: "Sos de rosii, mozzarella",
-    },
-    price: 85,
-    productType: "pizza",
-  },
-  {
-    image: "diavola.png",
-    name: {
-      ru: "Дьявола",
-      ro: "Diavola",
-    },
-    description: {
-      ru: "Соус из помидоров, острая салями, моцарелла",
-      ro: "Sos de rosii, salam picant, mozzarella",
-    },
-    price: 95,
-    productType: "pizza",
-  },
-  {
-    image: "tonno.png",
-    name: {
-      ru: "Тонно",
-      ro: "Tonno",
-    },
-    description: {
-      ru: "Соус из помидоров, руккола, черри, Прошутто, моцарелла, тунец",
-      ro: "Sos de rosii, rucola, cherry, Provola, mozzarella, ton",
-    },
-    price: 115,
-    productType: "pizza",
-  },
-  {
-    image: "capriciossa.png",
-    name: {
-      ru: "Капричиоза",
-      ro: "Capriciossa",
-    },
-    description: {
-      ru: "Свинина, запеченная баклажан, соус из помидоров, грибы, козий сыр, моцарелла",
-      ro: "Ceafa de porc, vanata coapta, sos de rosii, ciuperci, branza decapra, mozzarella",
-    },
-    price: 110,
-    productType: "pizza",
-  },
-  {
-    image: "pollo.png",
-    name: {
-      ru: "Полло",
-      ro: "Pollo",
-    },
-    description: {
-      ru: "Перец, грибы, куриное филе, моцарелла, соус из помидоров",
-      ro: "Gogosari, ciuperci, piept de pui, mozzarella, sos de rosii.",
-    },
-    price: 110,
-    productType: "pizza",
-  },
-  {
-    image: "prosciutto_e_funghi.png",
-    name: {
-      ru: 'Пицца "Прошутто и грибы"',
-      ro: "Prosciutto e funghi",
-    },
-    description: {
-      ru: "Моцарелла, прошутто, ветчина, грибы, томатный соус",
-      ro: "Mozzarella, prosciutto, cotto, ciuperci, sos de rosii",
-    },
-    price: 98,
-    productType: "pizza",
-  },
-  {
-    image: "quattro_formaggi.png",
-    name: {
-      ru: 'Пицца "Четыре сыра"',
-      ro: "Quattro formaggi",
-    },
-    description: {
-      ru: "Моцарелла, горгонзола, проволоне, рикотта, томатный соус",
-      ro: "Mozzarella, gorgonzola, provola edam, ricotta",
-    },
-    price: 115,
-    productType: "pizza",
-  },
-  {
-    image: "ferma_cu_origini.png",
-    name: {
-      ru: 'Пицца "Ферма с оригиналами"',
-      ro: "Ferma cu origini",
-    },
-    description: {
-      ru: "Томатный соус, моцарелла, кукуруза, прошутто, грибы, сладкий перец, оливки",
-      ro: "Sos de rosii, mozzarella, porumb, prosciutto, ciuperci, gogosari, masline",
-    },
-    price: 110,
-    productType: "pizza",
-  },
-  {
-    image: "carbonara.png",
-    name: {
-      ru: 'Пицца "Карбонара"',
-      ro: "Carbonara",
-    },
-    description: {
-      ru: "Томатный соус, моцарелла, бекон, яйцо",
-      ro: "Sos de rosii, mozzarella, bacon, ou",
-    },
-    price: 98,
-    productType: "pizza",
-  },
-  {
-    image: "leggera.png",
-    name: {
-      ru: "Леггера",
-      ro: "Leggera",
-    },
-    description: {
-      ru: "Мясо теленка, куринная грудка, бекон, соус томатный, моцарелла, пршут",
-      ro: "Carne de vitel,piept de pui becon,sos de rosii, mozzarella,proschiutto ",
-    },
-    price: 115,
-    productType: "pizza",
-  },
-  {
-    image: "pizza_praga.png",
-    name: {
-      ru: "Пицца Прага",
-      ro: "Pizza Praga",
-    },
-    description: {
-      ru: "Соус томатный, моцарелла, бекон, колбаски охотничьи Пражские, сыр эдам",
-      ro: "Sos de rosii,mozzarella,becon carnaciori vanatoresti de Praga,cascaval edam",
-    },
-    price: 105,
-    productType: "pizza",
-  },
-  {
-    image: "vegetariana.png",
-    name: {
-      ru: "Вегетарианская",
-      ro: "Vegetariana",
-    },
-    description: {
-      ru: "Соус томатный, овощи гриль",
-      ro: "Sos de rosii, legume grill",
-    },
-    price: 85,
-    productType: "pizza",
-  },
-  {
-    image: "focaccia.png",
-    name: {
-      ru: "Фокачча",
-      ro: "Focaccia",
+      ru: "Свиная грудинка",
+      ro: "Piept de porc picant",
     },
     description: {
       ru: "200 г",
       ro: "200 g",
     },
-    price: 25,
+    price: 120,
+    productType: "goldSnacks",
+  },
+  {
+    image: "Platou murături (400_50) 90 MDL.webp",
+    name: {
+      ru: "Ассорти солений",
+      ro: "Platou muraturi",
+    },
+    description: {
+      ru: "400/50 г",
+      ro: "400/50 g",
+    },
+    price: 90,
+    productType: "goldSnacks",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Плато из свежих овощей",
+      ro: "Platou legume proaspete",
+    },
+    description: {
+      ru: "450 г",
+      ro: "450 g",
+    },
+    price: 120,
+    productType: "goldSnacks",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Кващеная капуста ассорти",
+      ro: "Mix varza murata",
+    },
+    description: {
+      ru: "150/150 г",
+      ro: "150/150 g",
+    },
+    price: 65,
+    productType: "goldSnacks",
+  },
+  //////////////////////////
+  // {
+  //   image: "aripioare_de_pui.png",
+  //   name: {
+  //     ru: "Куриные крылышки",
+  //     ro: "Aripioare de pui",
+  //   },
+  //   description: {
+  //     ru: "Куриные наггетсы с картофелем по-деревенски 150/130/50 г",
+  //     ro: "cu cartofi pai 150/130/50 g",
+  //   },
+  //   price: 85,
+  //   productType: "hostSnack",
+  // },
+  // {
+  //   image: "nughete_de_pui.png",
+  //   name: {
+  //     ru: "Куриные наггетсы",
+  //     ro: "Nughete de pui",
+  //   },
+  //   description: {
+  //     ru: "Куриные наггетсы с картофелем по-деревенски 150/130/50 г",
+  //     ro: "cu cartofi pai 150/130/50 g",
+  //   },
+  //   price: 85,
+  //   productType: "hostSnack",
+  // },
+  // {
+  //   image: "placinte_in_asortiment.png",
+  //   name: {
+  //     ru: "Пироги ассортимент",
+  //     ro: "Placinte in asortiment",
+  //   },
+  //   description: {
+  //     ru: "200 г пирогов в ассортименте",
+  //     ro: "200 g",
+  //   },
+  //   price: 40,
+  //   productType: "hostSnack",
+  // },
+  {
+    image: "migdale.webp",
+    name: {
+      ru: "Миндаль",
+      ro: "Migdale prajite",
+    },
+    description: {
+      ru: "100г",
+      ro: "100g",
+    },
+    price: 80,
+    productType: "beerSnack",
+  },
+  {
+    image: "midii.webp",
+    name: {
+      ru: "Мидий пане",
+      ro: "Midii pane",
+    },
+    description: {
+      ru: "140 г",
+      ro: "140 g",
+    },
+    price: 100,
+    productType: "beerSnack",
+  },
+  {
+    image: "inele.webp",
+    name: {
+      ru: "Кольца кальмара",
+      ro: "Inele de calamar",
+    },
+    description: {
+      ru: "130/50 г",
+      ro: "130/50 g",
+    },
+    price: 90,
+    productType: "beerSnack",
+  },
+  {
+    image: "raci.webp",
+    name: {
+      ru: "Раки",
+      ro: "Raci",
+    },
+    description: {
+      ru: "800 г",
+      ro: "800 g",
+    },
+    price: 550,
+    productType: "beerSnack",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Луковые кольца ",
+      ro: "Inele de ciapa",
+    },
+    description: {
+      ru: "130/50 г",
+      ro: "130/50 g",
+    },
+    price: 60,
+    productType: "beerSnack",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Арахис",
+      ro: "Arahide prajite",
+    },
+    description: {
+      ru: "100 г",
+      ro: "100 g",
+    },
+    price: 50,
+    productType: "beerSnack",
+  },
+  {
+    image: "Crutoane de casă cu usturoi (200_50) 40 MDL.webp",
+    name: {
+      ru: "Гренки домашние с чесноком",
+      ro: "Crutoane de casa cu usturoi",
+    },
+    description: {
+      ru: "200/50 г",
+      ro: "200/50 g",
+    },
+    price: 40,
+    productType: "beerSnack",
+  },
+  {
+    image: "Sudjuc (50) 60 MDL.webp",
+    name: {
+      ru: "Суджук",
+      ro: "Sudjuc",
+    },
+    description: {
+      ru: "50 г",
+      ro: "50 g",
+    },
+    price: 60,
+    productType: "beerSnack",
+  },
+  {
+    image: "Coriușca (130) 70 MDL.webp",
+    name: {
+      ru: "Корюшка",
+      ro: "Coriusca",
+    },
+    description: {
+      ru: "130 г",
+      ro: "130 g",
+    },
+    price: 70,
+    productType: "beerSnack",
+  },
+  {
+    image: "Cîrnăciori vînătorești (100) 65 MDL.webp",
+    name: {
+      ru: "Охотничьи колбаски",
+      ro: "Cîrnaciori vînatoresti",
+    },
+    description: {
+      ru: "100 г",
+      ro: "100 g",
+    },
+    price: 65,
+    productType: "beerSnack",
+  },
+///
+
+
+  {
+    image: "cîrnăciori_de_porc_cu_salată_de_varză.webp",
+    name: {
+      ru: "Колбаски свиные с салатом из капусты",
+      ro: "Cîrnaciori de porc cu salata de varza",
+    },
+    description: {
+      ru: "180/100 г",
+      ro: "180/100g",
+    },
+    price: 110,
+    productType: "mainDishes",
+  },
+  {
+    image: "șold_de_găină_carry_cu_legume.webp",
+    name: {
+      ru: "Бедро куриное карри",
+      ro: "Sold de gaina carry cu legume",
+    },
+    description: {
+      ru: "320/200 г",
+      ro: "320/200g",
+    },
+    price: 120,
+    productType: "mainDishes",
+  },
+  {
+    image: "antricot_de_porc_cu_cartofi_și_ciuperci.webp",
+    name: {
+      ru: "Свинина с картошкой и грибами",
+      ro: "Antricot de porc cu cartofi si ciuperci",
+    },
+    description: {
+      ru: "200/220г",
+      ro: "200/220g",
+    },
+    price: 150,
+    productType: "mainDishes",
+  },
+  {
+    image: "Paste cu somon (300) 125 MDL.webp",
+    name: {
+      ru: "Домашняя паста с лососем",
+      ro: "Paste cu somon",
+    },
+    description: {
+      ru: "300г",
+      ro: "300g",
+    },
+    price: 125,
+    productType: "mainDishes",
+  },
+  {
+    image: "Paste cu pui și ciuperci (350) 110 MDL.webp",
+    name: {
+      ru: "Паста с куриной грудкой и грибами",
+      ro: "Paste cu pui si ciuperci",
+    },
+    description: {
+      ru: "350г",
+      ro: "350g",
+    },
+    price: 110,
+    productType: "mainDishes",
+  },
+  {
+    image: "Păstrav cu legume la grătar (270_200) 220 MDL.webp",
+    name: {
+      ru: "Форель с овощами гриль",
+      ro: "Pastrav cu legume la gratar",
+    },
+    description: {
+      ru: "270/200 г",
+      ro: "270/200 g",
+    },
+    price: 220,
+    productType: "mainDishes",
+  },
+  {
+    image: "Păstrav cu mămăligă (270_200) 220 MDL.webp",
+    name: {
+      ru: "Форель с мамалыгой",
+      ro: "Pastrav cu mamaliga",
+    },
+    description: {
+      ru: "270/200 г",
+      ro: "270/200 g",
+    },
+    price: 220,
+    productType: "mainDishes",
+  },
+  {
+    image: "fasole_cu_bacon.webp",
+    name: {
+      ru: "Фасоль с беконом",
+      ro: "Fasole cu bаcon",
+    },
+    description: {
+      ru: "300 г",
+      ro: "300 g",
+    },
+    price: 100,
+    productType: "mainDishes",
+  },
+  {
+    image: "carne_de_vițel_cu_sos_de_vișină.webp",
+    name: {
+      ru: "Телятина с вишневым соусом",
+      ro: "Carne de vitel cu sos de visina",
+    },
+    description: {
+      ru: "250/50 г",
+      ro: "250/50 g",
+    },
+    price: 150,
+    productType: "mainDishes",
+  },
+  {
+    image: "carne_de_miel_cu_orez.webp",
+    name: {
+      ru: "Баранина с рисом",
+      ro: "Carne de miel cu orez",
+    },
+    description: {
+      ru: "250/200 г",
+      ro: "250/200 g",
+    },
+    price: 160,
+    productType: "mainDishes",
+  },
+  {
+    image: "Tocană de pui cu mămăligă (300_200) 135 MDL.webp",
+    name: {
+      ru: "Мамалыга с куриным рагу",
+      ro: "Tocana de pui cu mamaliga",
+    },
+    description: {
+      ru: "250/250 г",
+      ro: "250/250 g",
+    },
+    price: 135,
+    productType: "mainDishes",
+  },
+  {
+    image: "Tocană de iepure cu mămăligă (250_200) 175 MDL.webp",
+    name: {
+      ru: "Рагу из кролика с мамалыгой",
+      ro: "Tocana de iepure cu mamaliga",
+    },
+    description: {
+      ru: "250/250 г",
+      ro: "250/250 g",
+    },
+    price: 175,
+    productType: "mainDishes",
+  },
+  {
+    image: "Carne de vițel înăbușită în vin (250_200) 160 MDL.webp",
+    name: {
+      ru: "Говядина тушеная в красном вине",
+      ro: "Carne de vitel inabusita în vin",
+    },
+    description: {
+      ru: "250/200 г",
+      ro: "250/200 g",
+    },
+    price: 160,
+    productType: "mainDishes",
+  },
+  {
+    image: "Mici cu salată de varză (170_100) 110 MDL.webp",
+    name: {
+      ru: "Мититеи с салатом из капусты",
+      ro: "Mici cu salata de varza",
+    },
+    description: {
+      ru: "170/100 г",
+      ro: "170/100 g",
+    },
+    price: 110,
+    productType: "mainDishes",
+  },
+  {
+    image: "ciolan_de_porc_cu_varză_călită.webp",
+    name: {
+      ru: "Свиная рулька с тушеной капустой",
+      ro: "Ciolan de porc cu varza calita",
+    },
+    description: {
+      ru: "500/250 г",
+      ro: "500/250 g",
+    },
+    price: 240,
+    productType: "mainDishes",
+  },
+  {
+    image: "carp_prăjit.webp",
+    name: {
+      ru: "Карп жареный",
+      ro: "Carp prajit",
+    },
+    description: {
+      ru: "100 г",
+      ro: "100 g",
+    },
+    price: 40,
+    productType: "mainDishes",
+  },
+  {
+    image: "tocană_de_porc_cu_mămăligă.webp",
+    name: {
+      ru: "Рагу из свинины с мамалыгой",
+      ro: "Tocana de porc cu mamaliga",
+    },
+    description: {
+      ru: "250/250 г",
+      ro: "250/250 g",
+    },
+    price: 145,
+    productType: "mainDishes",
+  },
+  {
+    image: "Pulpă de rață cu piure de cartofi și varză călită (200_200_150) 200 MDL).webp",
+    name: {
+      ru: "Утиная ножка с картофельным пюре и тушеной капустой",
+      ro: "Pulpa de rata cu piure de cartofi si varza calita",
+    },
+    description: {
+      ru: "200/200/150 г",
+      ro: "200/200/150 g",
+    },
+    price: 200,
+    productType: "mainDishes",
+  },
+  {
+    image: "Șnițel de pui cu varză picantă (180_100) 120 MDL.webp",
+    name: {
+      ru: "Шницель куриный с красной капустой",
+      ro: "Snitel de pui cu varza picanta",
+    },
+    description: {
+      ru: "180/100 г",
+      ro: "180/100 g",
+    },
+    price: 120,
+    productType: "mainDishes",
+  },
+  {
+    image: "Frigărui de porc cu salată de varză (200_100_50) 130 MDL.webp",
+    name: {
+      ru: "Шашлык свиной",
+      ro: "Frigarui de porc cu salata de varza",
+    },
+    description: {
+      ru: "200/100/50 г",
+      ro: "200/100/50 g",
+    },
+    price: 130,
+    productType: "mainDishes",
+  },
+  {
+    image: "Frigărui de pui (200_50) 120 MDL.webp",
+    name: {
+      ru: "Шашлык куринный",
+      ro: "Frigarui de pui",
+    },
+    description: {
+      ru: "200/50 г",
+      ro: "200/50 g",
+    },
+    price: 120,
+    productType: "mainDishes",
+  },
+  {
+    image: "Burgher de vită (300) 100 MDL.webp",
+    name: {
+      ru: "Бургер говяжий",
+      ro: "Burgher de vita",
+    },
+    description: {
+      ru: "300 г",
+      ro: "300 g",
+    },
+    price: 100,
+    productType: "mainDishes",
+  },
+  {
+    image: "Burgher de pui (300) 95 MDL.webp",
+    name: {
+      ru: "Бургер куриный",
+      ro: "Burgher de pui",
+    },
+    description: {
+      ru: "300 г",
+      ro: "300 g",
+    },
+    price: 95,
+    productType: "mainDishes",
+  },
+  {
+    image: "Platou cu carne la grătar (1000_100) 750 MDL.webp",
+    name: {
+      ru: "Мясное ассорти на гриле",
+      ro: "Platou cu carne la gratar",
+    },
+    description: {
+      ru: "1000/100 г",
+      ro: "1000/100 g",
+    },
+    price: 750,
+    productType: "mainDishes",
+  },
+  {
+    image: "Pui Tapaka (1_50) 160 MDL.webp",
+    name: {
+      ru: "Цыпленок табака",
+      ro: "Pui Tapaka",
+    },
+    description: {
+      ru: "1/50",
+      ro: "1/50",
+    },
+    price: 160,
+    productType: "mainDishes",
+  },
+  {
+    image: "Mămăligă cu smîntînă și brînză (200_50_25) 55 MDL.webp",
+    name: {
+      ru: "Мамалыга с брынзой и сметаной",
+      ro: "Mamaliga cu smîntîna si brînza",
+    },
+    description: {
+      ru: "200/50/25 г",
+      ro: "200/50/25 g",
+    },
+    price: 55,
+    productType: "gaskets",
+  },
+  {
+    image: "Piure de cartofi (200) 35 MDL.webp",
+    name: {
+      ru: "Картофельное пюре",
+      ro: "Piure de cartofi",
+    },
+    description: {
+      ru: "200 г",
+      ro: "200 g",
+    },
+    price: 35,
+    productType: "gaskets",
+  },
+  {
+    image: "Cartofi prăjiți ca acasă (300) 55 MDL.webp",
+    name: {
+      ru: "Картошка по-домашнему",
+      ro: "Cartofi prajiti ca acasa",
+    },
+    description: {
+      ru: "300 г",
+      ro: "300 g",
+    },
+    price: 55,
+    productType: "gaskets",
+  },
+  {
+    image: "Cartofi copți cu rozmarin (250) 45 MDL.webp",
+    name: {
+      ru: "Запеченый картофель с розмарином",
+      ro: "Cartofi copti cu rozmarin",
+    },
+    description: {
+      ru: "250 г",
+      ro: "250 g",
+    },
+    price: 45,
+    productType: "gaskets",
+  },
+  {
+    image: "Cartofi pai cu sos ketcup (130_50) 45 MDL.webp",
+    name: {
+      ru: "Кортошка фри с кетчупом",
+      ro: "Cartofi pai cu sos ketcup",
+    },
+    description: {
+      ru: "130/50 г",
+      ro: "130/50 g",
+    },
+    price: 45,
+    productType: "gaskets",
+  },
+  {
+    image: "Legume la grătar (250) 75 MDL.webp",
+    name: {
+      ru: "Овощи гриль",
+      ro: "Legume la gratar",
+    },
+    description: {
+      ru: "250 г",
+      ro: "250 g",
+    },
+    price: 75,
+    productType: "gaskets",
+  },
+ 
+//
+  {
+    image: "vegetariană.webp",
+    name: {
+      ru: "Vegetariana",
+      ro: "Vegetariana",
+    },
+    description: {
+      ru: "sos rosii, legume grill 400g",
+      ro: "sos rosii, legume grill 400g",
+    },
+    price: 110,
     productType: "pizza",
   },
   {
-    image: "napoleon.png",
+    image: "capriciosa.webp",
+    name: {
+      ru: "Capriciosa",
+      ro: "Capriciosa",
+    },
+    description: {
+      ru: "sos rosii, mozzarella,ciuperci ceafă de porc, vînată coaptă,brinză de capră 550g",
+      ro: "sos rosii, mozzarella,ciuperci ceafă de porc, vînată coaptă,brinză de capră 550g",
+    },
+    price: 120,
+    productType: "pizza",
+  },
+  {
+    image: "quatro_formaggi.webp",
+    name: {
+      ru: "Quattro formaggi",
+      ro: "Quattro formaggi",
+    },
+    description: {
+      ru: "mozzarella, cașcaval rusesc gorgonzola, canestrato 400g",
+      ro:  "mozzarella, cașcaval rusesc gorgonzola, canestrato 400g",
+    },
+    price: 120,
+    productType: "pizza",
+  },
+  {
+    image: "pollo.webp",
+    name: {
+      ru: "Pollo",
+      ro: "Pollo",
+    },
+    description: {
+      ru: "Sos de roșii, mozzarela,piept de pui, prosciutto cotto, ciuperci 400g",
+      ro: "Sos de roșii, mozzarela,piept de pui, prosciutto cotto, ciuperci 400g",
+    },
+    price: 120,
+    productType: "pizza",
+  },
+  {
+    image: "margarita.webp",
+    name: {
+      ru: "Margarita",
+      ro: "Margarita",
+    },
+    description: {
+      ru: "sos rosii, mozzarella 450g",
+      ro: "sos rosii, mozzarella 450g",
+    },
+    price: 100,
+    productType: "pizza",
+  },
+  {
+    image: "pere_și_prosciuto.webp",
+    name: {
+      ru: 'Pere Si Prosciuto',
+      ro: "Pere Si Prosciuto",
+    },
+    description: {
+      ru: "pere, brie, prosciutto crudo, mozzarella 500g",
+      ro: "pere, brie, prosciutto crudo, mozzarella 500g",
+    },
+    price: 120,
+    productType: "pizza",
+  },
+  {
+    image: "diavola.webp",
+    name: {
+      ru: 'Diavola',
+      ro: "Diavola",
+    },
+    description: {
+      ru: "sos rosii, mozzarella,salam picant 450g",
+      ro: "sos rosii, mozzarella,salam picant 450g",
+    },
+    price: 120,
+    productType: "pizza",
+  },
+  {
+    image: "leggera.webp",
+    name: {
+      ru: 'Leggera',
+      ro: "Leggera",
+    },
+    description: {
+      ru: "sos rosii, mozzarella prosciutto cotto, piept pui carne de vitel, bacon 600g",
+      ro: "Sos de rosii, mozzarella, porumb, prosciutto, ciuperci, gogosari, masline 600g",
+    },
+    price: 120,
+    productType: "pizza",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: 'Pizza cherry',
+      ro: "Pizza cherry",
+    },
+    description: {
+      ru: "mozzarella, friscă prosciutto cotto, cherry, măsline 500g",
+      ro: "mozzarella, friscă prosciutto cotto, cherry, măsline 500g",
+    },
+    price: 120,
+    productType: "pizza",
+  },
+  {
+    image: "Focaccia (200) 30 MDL.webp",
+    name: {
+      ru: "Focaccia",
+      ro: "Focaccia",
+    },
+    description: {
+      ru: "200g",
+      ro: "200g",
+    },
+    price: 30,
+    productType: "pizza",
+  },
+///////////
+{
+  image: "panna_cotta.webp",
+  name: {
+    ru: "Panna Cotta",
+    ro: "Panna Cotta",
+  },
+  description: {
+    ru: "150 г",
+    ro: "150 g",
+  },
+  price: 60,
+  productType: "deserts",
+},
+  {
+    image: "napoleon.webp",
     name: {
       ru: "Наполеон",
       ro: "Napoleon",
@@ -1380,87 +1335,76 @@ const productsMig = [
       ru: "180 г",
       ro: "180 g",
     },
-    price: 65,
+    price: 70,
     productType: "deserts",
   },
   {
-    image: "medovic.png",
+    image: "no_image.png",
     name: {
-      ru: "Медовик",
-      ro: "Medovic",
+      ru: "Тирамису",
+      ro: "Tiramisu",
     },
     description: {
-      ru: "140 г",
-      ro: "140 g",
+      ru: "175 г",
+      ro: "175 g",
     },
-    price: 65,
+    price: 75,
     productType: "deserts",
   },
   {
-    image: "cusma_lui_guguta.png",
+    image: "gugutsa.webp",
     name: {
       ru: "Гушма луй Гугуца",
       ro: "Cusma lui Guguta",
     },
     description: {
       ru: "170 г",
-      ro: "170 g",
-    },
-    price: 65,
-    productType: "deserts",
-  },
-  {
-    image: "prajitura.png",
-    name: {
-      ru: "Пирожное",
-      ro: "Prajitura",
-    },
-    description: {
-      ru: "Вкус детства 90 г",
-      ro: "Gustul copilariei 90g",
-    },
-    price: 55,
-    productType: "deserts",
-  },
-  {
-    image: "prune_cu_nuca.png",
-    name: {
-      ru: "Сливы с орехами",
-      ro: "Prune cu nuca",
-    },
-    description: {
-      ru: "в винном сиропе с кремом из сметаны 200 г",
-      ro: "n sirop de vincu crema de smantana 200 g",
-    },
-    price: 65,
-    productType: "deserts",
-  },
-  {
-    image: "fondant.png",
-    name: {
-      ru: "Фондан",
-      ro: "Fondant",
-    },
-    description: {
-      ru: "шоколадный 70/50 г",
-      ro: "de ciocolata 70/50 g",
+      ro: "175 g",
     },
     price: 70,
     productType: "deserts",
   },
   {
-    image: "inghetata_adevarata.png",
+    image: "no_img.png",
     name: {
-      ru: "Настоящее мороженое",
-      ro: "Inghetata adevarata",
+      ru: "Вкус детства",
+      ro: "Gustul copilariei",
     },
     description: {
-      ru: "(Пломбир/Шоколад/Фундук/Фисташки/Ежевика, Клубника, 1 шарик 50 г)",
-      ro: "(Plombir/Ciocolata /Nocciola/ Fistic/Mure,Capsuna ,1 bila  50 g",
+      ru: "90 г",
+      ro: "90g",
     },
-    price: 15,
+    price: 55,
     productType: "deserts",
   },
+  {
+    image: "fondant.webp",
+    name: {
+      ru: "Фондан",
+      ro: "Fondant",
+    },
+    description: {
+      ru: "70/50 г",
+      ro: "70/50 g",
+    },
+    price: 70,
+    productType: "deserts",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Мороженое",
+      ro: "Înghețata in asortiment",
+    },
+    description: {
+      ru: "150 г",
+      ro: "150 g",
+    },
+    price: 75,
+    productType: "deserts",
+  },
+
+  //
   {
     image: "guizza.png",
     name: {
