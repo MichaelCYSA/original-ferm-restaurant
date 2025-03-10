@@ -59,12 +59,13 @@ const SupplementsItem = ({
         {(item.name as any)?.[lang || "ro"]} - {item.price} mdl
       </Typography>
       {!isAuth ? (
-        <IconButton
-          disabled={Boolean(item.disabled)}
-          onClick={() => addToCart(item)}
-        >
-          <AddIcon sx={{ color: theme.palette.customColor.main }} />
-        </IconButton>
+        // <IconButton
+        //   disabled={Boolean(item.disabled)}
+        //   onClick={() => addToCart(item)}
+        // >
+        //   <AddIcon sx={{ color: theme.palette.customColor.main }} />
+        // </IconButton>
+        <></>
       ) : (
         <Box
           display={"flex"}
@@ -73,7 +74,7 @@ const SupplementsItem = ({
           width={1}
           justifyContent={"flex-end"}
           pb={1}
-          mt={{xs: 2, md: -2.75}}
+          mt={{ xs: 2, md: -2.75 }}
         >
           <IconButton
             size="small"
@@ -94,7 +95,7 @@ const SupplementsItem = ({
             }}
           >
             {item.disabled ? (
-              <TurnRightIcon sx={{ color: 'white' }} />
+              <TurnRightIcon sx={{ color: "white" }} />
             ) : (
               <BlockIcon sx={{ color: "red" }} />
             )}

@@ -1,23 +1,32 @@
-import { IProduct } from '@/constants/products';
-import { useCartContext } from '@/contexts/cartContext';
-import { Translated, useLangContext, useTranslated } from '@/lang/languageContext';
-import { useDeleteProductMutation, useUpdateProductMutation } from '@/store/api/product';
-import BlockIcon from '@mui/icons-material/Block';
-import EditIcon from '@mui/icons-material/Edit';
-import TurnRightIcon from '@mui/icons-material/TurnRight';
-import { Box, Button, IconButton, Typography, useTheme } from '@mui/material';
-import Image from 'next/legacy/image';
-import { toast } from 'react-toastify';
+import { IProduct } from "@/constants/products";
+import { useCartContext } from "@/contexts/cartContext";
+import {
+  Translated,
+  useLangContext,
+  useTranslated,
+} from "@/lang/languageContext";
+import {
+  useDeleteProductMutation,
+  useUpdateProductMutation,
+} from "@/store/api/product";
+import BlockIcon from "@mui/icons-material/Block";
+import EditIcon from "@mui/icons-material/Edit";
+import TurnRightIcon from "@mui/icons-material/TurnRight";
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import Image from "next/legacy/image";
+import { toast } from "react-toastify";
 
-import DeleteModal from './DeleteModal/DeleteModal';
+import DeleteModal from "./DeleteModal/DeleteModal";
 
 const ProductCard = ({
   item,
   isAuth,
-  handleEdit = (item: IProduct) => () => { },
+  handleEdit = (item: IProduct) => () => {},
+  imgDisabled,
 }: {
   item: IProduct;
   isAuth?: boolean;
+  imgDisabled?: boolean;
   handleEdit?: (item: IProduct) => () => void;
 }) => {
   const { addToCart } = useCartContext();
@@ -39,13 +48,13 @@ const ProductCard = ({
   };
   const handleUpdate =
     ({ id, disabled }: { id?: string; disabled: boolean }) =>
-      () => {
-        updateProduct({ id, data: { disabled } }).then((res: any) => {
-          if (res.error) {
-            return toast.error(t("ocurred_an_error_try_again"));
-          }
-        });
-      };
+    () => {
+      updateProduct({ id, data: { disabled } }).then((res: any) => {
+        if (res.error) {
+          return toast.error(t("ocurred_an_error_try_again"));
+        }
+      });
+    };
 
   return (
     <Box
@@ -69,7 +78,7 @@ const ProductCard = ({
             display={"flex"}
             gap={1}
             sx={{ position: "absolute", right: "0px", top: "0px", zIndex: 1 }}
-            flexWrap={'wrap'}
+            flexWrap={"wrap"}
           >
             <IconButton
               size="small"
@@ -90,21 +99,27 @@ const ProductCard = ({
               }}
             >
               {item.disabled ? (
-                <TurnRightIcon sx={{ color: 'white' }} />
+                <TurnRightIcon sx={{ color: "white" }} />
               ) : (
                 <BlockIcon sx={{ color: "red" }} />
               )}
             </IconButton>
-            <DeleteModal isLoading={isLoading || isUpdating} deleteFn={handleDelete(item._id)} />
+            <DeleteModal
+              isLoading={isLoading || isUpdating}
+              deleteFn={handleDelete(item._id)}
+            />
           </Box>
         )}
-        <Image
-          src={`/product-photos/${item.image}`}
-          alt="salat"
-          width={200}
-          height={200}
-          layout="responsive"
-        />
+        {!imgDisabled ? (
+          <Image
+            src={`/webp/${item.image}`}
+            alt="salat"
+            width={200}
+            height={200}
+            layout="responsive"
+          />
+        ) : null}
+
         <Typography
           component={"span"}
           mt={1}
@@ -119,15 +134,26 @@ const ProductCard = ({
         >
           {(item.name as any)?.[lang]}
         </Typography>
-        <Box sx={{ height: 46 }}>
+        <Box
+          sx={{
+            display: "-webkit-box",
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: 2,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "normal",
+            height: 40,
+          }}
+        >
           <Typography mb={1} variant="h4">
             {(item.description as any)?.[lang]}
           </Typography>
         </Box>
+
         <Typography variant="h3" mt={"34px"}>
           {item.price} MDL
         </Typography>
-        {!isAuth && (
+        {/* {!isAuth && (
           <Box display={"flex"} gap={"21px"} mt={2} alignItems={"center"}>
             <Button
               onClick={handleAddProducts}
@@ -144,7 +170,7 @@ const ProductCard = ({
               alt="shopping-cart"
             />
           </Box>
-        )}
+        )} */}
       </Box>
     </Box>
   );

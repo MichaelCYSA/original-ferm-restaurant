@@ -1,4 +1,3 @@
-
 export interface Product {
   _id?: string;
   name: string;
@@ -53,39 +52,47 @@ export const toppings: ArrayOfSupplementsItems = [
 ];
 export const sauces: ArrayOfSupplementsItems = [
   {
-    name: "Sos caesar",
-    price: 15,
-  },
-  {
-    name: "Sos tartar",
-    price: 10,
-  },
-  {
-    name: "Sos de usturoi",
-    price: 10,
-  },
-  {
-    name: "Sos de cascaval",
+    name: "Chetchup",
     price: 15,
   },
   {
     name: "Maioneza",
-    price: 10,
+    price: 15,
   },
   {
-    name: "Ketchup",
-    price: 10,
+    name: "Sos chetcup/maioneză",
+    price: 15,
   },
   {
-    name: "Smantana",
-    price: 10,
+    name: "Adjică",
+    price: 15,
   },
   {
-    name: "Adjica",
-    price: 10,
+    name: "Sos cezar",
+    price: 20,
   },
   {
-    name: "Miere de albini",
+    name: "Sos tarta",
+    price: 20,
+  },
+  {
+    name: "Sos usturoi",
+    price: 15,
+  },
+  {
+    name: "Smântână",
+    price: 15,
+  },
+  {
+    name: "Hrean",
+    price: 15,
+  },
+  {
+    name: "Mustar",
+    price: 15,
+  },
+  {
+    name: "Gem de visină",
     price: 15,
   },
 ];
@@ -126,35 +133,47 @@ export const translatedSauces: ArrayOfSupplementsItems = [
 ];
 export const translatedToppings: ArrayOfSupplementsItems = [
   {
-    name: "miereDeAlbini",
+    name: "Miere de albini",
     price: 15,
   },
   {
-    name: "becon",
+    name: "Bаcon",
     price: 25,
   },
   {
-    name: "sunca",
+    name: "Șuncă",
     price: 25,
   },
   {
-    name: "cascaval",
+    name: "Salam picant",
+    price: 30,
+  },
+  {
+    name: "Slănină",
+    price: 20,
+  },
+  {
+    name: "Cașcaval",
+    price: 20,
+  },
+  {
+    name: "Brînză sărată",
+    price: 20,
+  },
+  {
+    name: "Ciuperci",
     price: 15,
   },
   {
-    name: "branza",
-    price: 15,
-  },
-  {
-    name: "ciuperci",
-    price: 15,
-  },
-  {
-    name: "slanina",
+    name: "Castraveți murați",
     price: 25,
   },
   {
-    name: "salamPicant",
+    name: "Roșii murate",
+    price: 25,
+  },
+  {
+    name: "Varza murată",
     price: 25,
   },
 ];
@@ -176,10 +195,10 @@ export const productCatagories = [
     label: "goldSnacks",
     value: "goldSnacks",
   },
-  {
-    label: "hostSnack",
-    value: "hostSnack",
-  },
+  // {
+  //   label: "hostSnack",
+  //   value: "hostSnack",
+  // },
   {
     label: "beerSnack",
     value: "beerSnack",
@@ -205,16 +224,16 @@ export const productCatagories = [
     value: "non_alchogol",
   },
   {
-    label: "milk_shakes_lemonads",
-    value: "milk_shakes_lemonads",
+    label: "milk_shakes_lemonades",
+    value: "milk_shakes_lemonades",
   },
   {
     label: "hot_drinks",
     value: "hot_drinks",
   },
   {
-    label: "alchogol_coctails",
-    value: "alchogol_coctails",
+    label: "alcohol_cocktails",
+    value: "alcohol_cocktails",
   },
   {
     label: "beer",
@@ -229,33 +248,33 @@ export const productCatagories = [
     value: "champagne",
   },
   {
-    label: "strong_alchogol",
-    value: "strong_alchogol",
-  }
+    label: "strong_alcohol",
+    value: "strong_alcohol",
+  },
 ];
 
 export const productCategoriesCookTime = {
-    "breakFast": 600000,
-    "supe": 600000,
-    "salads": 600000,
-    "goldSnacks": 600000,
-    "hostSnack": 600000,
-    "beerSnack": 600000,
-    "mainDishes": 1200000,
-    "gaskets": 600000,
-    "pizza": 1200000,
-    "deserts": 600000,
-    "non_alchogol": 0,
-    "milk_shakes_lemonads": 0,
-    "hot_drinks": 0,
-    "alchogol_coctails": 0,
-    "beer": 0,
-    "wines": 0,
-    "champagne": 0,
-    "strong_alchogol": 0,
-    "souces": 0,
-    "toppings": 0
-  }
+  breakFast: 600000,
+  supe: 600000,
+  salads: 600000,
+  goldSnacks: 600000,
+  hostSnack: 600000,
+  beerSnack: 600000,
+  mainDishes: 1200000,
+  gaskets: 600000,
+  pizza: 1200000,
+  deserts: 600000,
+  non_alchogol: 0,
+  milk_shakes_lemonads: 0,
+  hot_drinks: 0,
+  alchogol_coctails: 0,
+  beer: 0,
+  wines: 0,
+  champagne: 0,
+  strong_alchogol: 0,
+  souces: 0,
+  toppings: 0,
+};
 
 export const suplimentar = [
   {
@@ -265,8 +284,8 @@ export const suplimentar = [
   {
     label: "toppings",
     value: "toppings",
-  }
-]
+  },
+];
 
 export interface IProduct {
   image: string;
@@ -282,7 +301,7 @@ export interface IProduct {
   productType: string;
   count?: number;
   _id?: string;
-  disabled?:boolean
+  disabled?: boolean;
 }
 
 const productsMig = [
@@ -338,33 +357,6 @@ const productsMig = [
     price: 75,
     productType: "breakFast",
   },
-
-  // {
-  //   image: "terci_de_ovaz.png",
-  //   name: {
-  //     ru: "Овсянка",
-  //     ro: "Terci de ovaz",
-  //   },
-  //   description: {
-  //     ru: "Овсянка с молоком и водой, с джемом, 300 г",
-  //     ro: "pe lapte,apa ,cu gem 300g",
-  //   },
-  //   price: 35,
-  //   productType: "breakFast",
-  // },
-  // {
-  //   image: "croissant.png",
-  //   name: {
-  //     ru: "Круассан",
-  //     ro: "Croissant",
-  //   },
-  //   description: {
-  //     ru: "Круассан, один шт.",
-  //     ro: "in sortiment 1 buc",
-  //   },
-  //   price: 35,
-  //   productType: "breakFast",
-  // },
   {
     image: "bors_rosu_cu_carne_de_vita.webp",
     name: {
@@ -430,9 +422,6 @@ const productsMig = [
     price: 70,
     productType: "supe",
   },
-  
-
-  ////
   {
     image: "caesar_cu_somon.webp",
     name: {
@@ -524,7 +513,6 @@ const productsMig = [
     price: 95,
     productType: "salads",
   },
-  ///////
   {
     image: "platou_cu_slănină_de_casă.webp",
     name: {
@@ -603,46 +591,6 @@ const productsMig = [
     price: 65,
     productType: "goldSnacks",
   },
-  //////////////////////////
-  // {
-  //   image: "aripioare_de_pui.png",
-  //   name: {
-  //     ru: "Куриные крылышки",
-  //     ro: "Aripioare de pui",
-  //   },
-  //   description: {
-  //     ru: "Куриные наггетсы с картофелем по-деревенски 150/130/50 г",
-  //     ro: "cu cartofi pai 150/130/50 g",
-  //   },
-  //   price: 85,
-  //   productType: "hostSnack",
-  // },
-  // {
-  //   image: "nughete_de_pui.png",
-  //   name: {
-  //     ru: "Куриные наггетсы",
-  //     ro: "Nughete de pui",
-  //   },
-  //   description: {
-  //     ru: "Куриные наггетсы с картофелем по-деревенски 150/130/50 г",
-  //     ro: "cu cartofi pai 150/130/50 g",
-  //   },
-  //   price: 85,
-  //   productType: "hostSnack",
-  // },
-  // {
-  //   image: "placinte_in_asortiment.png",
-  //   name: {
-  //     ru: "Пироги ассортимент",
-  //     ro: "Placinte in asortiment",
-  //   },
-  //   description: {
-  //     ru: "200 г пирогов в ассортименте",
-  //     ro: "200 g",
-  //   },
-  //   price: 40,
-  //   productType: "hostSnack",
-  // },
   {
     image: "migdale.webp",
     name: {
@@ -773,9 +721,6 @@ const productsMig = [
     price: 65,
     productType: "beerSnack",
   },
-///
-
-
   {
     image: "cîrnăciori_de_porc_cu_salată_de_varză.webp",
     name: {
@@ -998,7 +943,8 @@ const productsMig = [
     productType: "mainDishes",
   },
   {
-    image: "Pulpă de rață cu piure de cartofi și varză călită (200_200_150) 200 MDL).webp",
+    image:
+      "Pulpă de rață cu piure de cartofi și varză călită (200_200_150) 200 MDL).webp",
     name: {
       ru: "Утиная ножка с картофельным пюре и тушеной капустой",
       ro: "Pulpa de rata cu piure de cartofi si varza calita",
@@ -1179,8 +1125,6 @@ const productsMig = [
     price: 75,
     productType: "gaskets",
   },
- 
-//
   {
     image: "vegetariană.webp",
     name: {
@@ -1215,7 +1159,7 @@ const productsMig = [
     },
     description: {
       ru: "mozzarella, cașcaval rusesc gorgonzola, canestrato 400g",
-      ro:  "mozzarella, cașcaval rusesc gorgonzola, canestrato 400g",
+      ro: "mozzarella, cașcaval rusesc gorgonzola, canestrato 400g",
     },
     price: 120,
     productType: "pizza",
@@ -1249,7 +1193,7 @@ const productsMig = [
   {
     image: "pere_și_prosciuto.webp",
     name: {
-      ru: 'Pere Si Prosciuto',
+      ru: "Pere Si Prosciuto",
       ro: "Pere Si Prosciuto",
     },
     description: {
@@ -1262,7 +1206,7 @@ const productsMig = [
   {
     image: "diavola.webp",
     name: {
-      ru: 'Diavola',
+      ru: "Diavola",
       ro: "Diavola",
     },
     description: {
@@ -1275,7 +1219,7 @@ const productsMig = [
   {
     image: "leggera.webp",
     name: {
-      ru: 'Leggera',
+      ru: "Leggera",
       ro: "Leggera",
     },
     description: {
@@ -1288,7 +1232,7 @@ const productsMig = [
   {
     image: "no_img.png",
     name: {
-      ru: 'Pizza cherry',
+      ru: "Pizza cherry",
       ro: "Pizza cherry",
     },
     description: {
@@ -1311,20 +1255,19 @@ const productsMig = [
     price: 30,
     productType: "pizza",
   },
-///////////
-{
-  image: "panna_cotta.webp",
-  name: {
-    ru: "Panna Cotta",
-    ro: "Panna Cotta",
+  {
+    image: "panna_cotta.webp",
+    name: {
+      ru: "Panna Cotta",
+      ro: "Panna Cotta",
+    },
+    description: {
+      ru: "150 г",
+      ro: "150 g",
+    },
+    price: 60,
+    productType: "deserts",
   },
-  description: {
-    ru: "150 г",
-    ro: "150 g",
-  },
-  price: 60,
-  productType: "deserts",
-},
   {
     image: "napoleon.webp",
     name: {
@@ -1403,244 +1346,60 @@ const productsMig = [
     price: 75,
     productType: "deserts",
   },
-
-  //
   {
     image: "guizza.png",
-    name: {
-      ru: "Guizza",
-      ro: "Guizza",
-    },
-    description: {
-      ru: "(apa plata/gazoasa) 500ml ",
-      ro: "(apa plata/gazoasa) 500ml ",
-    },
-    price: 15,
-    productType: "non_alchogol",
-  },
-  {
-    image: "plose.png",
-    name: {
-      ru: "Plose",
-      ro: "Plose",
-    },
-    description: {
-      ru: "(apa plata/gazata) 250/750ml",
-      ro: "(apa plata/gazata) 250/750ml",
-    },
-    price: "74.24",
-    productType: "non_alchogol",
-  },
-  {
-    image: "coca_cola_sprite_fanta.png",
-    name: {
-      ru: "Coca Cola,Sprite,Fanta",
-      ro: "Coca Cola,Sprite,Fanta",
-    },
-    description: {
-      ru: "300/500 ml",
-      ro: "300/500 ml",
-    },
-    price: "48.69",
-    productType: "non_alchogol",
-  },
-  {
-    image: "ceai_rece.png",
-    name: {
-      ru: "Ceai rece",
-      ro: "Ceai rece",
-    },
-    description: {
-      ru: "500 ml",
-      ro: "500 ml",
-    },
-    price: 25,
-    productType: "non_alchogol",
-  },
-  {
-    image: "suc_jaffa.png",
-    name: {
-      ru: "Suc Jaffa",
-      ro: "Suc Jaffa",
-    },
-    description: {
-      ru: "250/950 ml",
-      ro: "250/950 ml",
-    },
-    price: "90.37",
-    productType: "non_alchogol",
-  },
-  {
-    image: "suc_fresh.png",
-    name: {
-      ru: "Suc Fresh",
-      ro: "Suc Fresh",
-    },
-    description: {
-      ru: "orange/grapefruit 250 ml",
-      ro: "orange/grapefruit 250 ml",
-    },
-    price: 45,
-    productType: "non_alchogol",
-  },
-  {
-    image: "borjomi.png",
-    name: {
-      ru: "Borjomi",
-      ro: "Borjomi",
-    },
-    description: {
-      ru: "500 ml",
-      ro: "500 ml",
-    },
-    price: 45,
-    productType: "non_alchogol",
-  },
-  {
-    image: "milkshake.png",
-    name: {
-      ru: "Milkshake",
-      ro: "Milkshake",
-    },
-    description: {
-      ru: "350 ml  ",
-      ro: "350 ml  ",
-    },
-    price: 45,
-    productType: "milk_shakes_lemonads",
-  },
-  {
-    image: "limonada_clasica.png",
-    name: {
-      ru: "Limonada clasica",
-      ro: "Limonada clasica",
-    },
-    description: {
-      ru: "350 ml/1L",
-      ro: "350 ml/1L",
-    },
-    price: "91.17",
-    productType: "milk_shakes_lemonads",
-  },
-  {
-    image: "limonada_de_capsuna.png",
-    name: {
-      ru: "Limonada de capsuna",
-      ro: "Limonada de capsuna",
-    },
-    description: {
-      ru: "350 ml/1L",
-      ro: "350 ml/1L",
-    },
-    price: "19.01",
-    productType: "milk_shakes_lemonads",
-  },
-  {
-    image: "ceai_rece_de_casa.png",
-    name: {
-      ru: "Ceai rece de casa",
-      ro: "Ceai rece de casa",
-    },
-    description: {
-      ru: "350 ml/1L",
-      ro: "350 ml/1L",
-    },
-    price: "43.75",
-    productType: "milk_shakes_lemonads",
-  },
-  {
-    image: "pina_colada.png",
-    name: {
-      ru: "Pina Colada",
-      ro: "Pina Colada",
-    },
-    description: {
-      ru: "250/950 ml",
-      ro: "250/950 ml",
-    },
-    price: "91.46",
-    productType: "milk_shakes_lemonads",
-  },
-  {
-    image: "frappe.png",
-    name: {
-      ru: "Frappe",
-      ro: "Frappe",
-    },
-    description: {
-      ru: "350 ml",
-      ro: "350 ml",
-    },
-    price: 35,
-    productType: "milk_shakes_lemonads",
-  },
-  {
-    image: "espresso.png",
     name: {
       ru: "Espresso",
       ro: "Espresso",
     },
     description: {
-      ru: "30 ml ",
-      ro: "30 ml ",
+      ru: "30ml ",
+      ro: "30ml ",
     },
-    price: 20,
+    price: 30,
     productType: "hot_drinks",
   },
   {
-    image: "americano.png",
+    image: "plose.png",
     name: {
       ru: "Americano",
       ro: "Americano",
     },
     description: {
-      ru: "100 ml",
-      ro: "100 ml",
+      ru: "100ml",
+      ro: "100ml",
     },
-    price: 20,
+    price: "30",
     productType: "hot_drinks",
   },
   {
-    image: "cappuccino.png",
+    image: "coca_cola_sprite_fanta.png",
     name: {
-      ru: "Cappuccino",
-      ro: "Cappuccino",
+      ru: "Cappucino",
+      ro: "Cappucino",
     },
     description: {
       ru: "250ml",
       ro: "250ml",
     },
-    price: 30,
+    price: "40",
     productType: "hot_drinks",
   },
   {
-    image: "latte.png",
+    image: "ceai_rece.png",
     name: {
       ru: "Latte",
       ro: "Latte",
     },
     description: {
-      ru: "300 ml",
-      ro: "300 ml",
+      ru: "300ml",
+      ro: "300ml",
     },
-    price: 30,
+    price: 40,
     productType: "hot_drinks",
   },
   {
-    image: "mocaccino.png",
-    name: {
-      ru: "Mocaccino",
-      ro: "Mocaccino",
-    },
-    description: {
-      ru: "",
-      ro: "",
-    },
-    price: 30,
-    productType: "hot_drinks",
-  },
-  {
-    image: "cacao.png",
+    image: "suc_jaffa.png",
     name: {
       ru: "Cacao",
       ro: "Cacao",
@@ -1649,27 +1408,14 @@ const productsMig = [
       ru: "250 ml",
       ro: "250 ml",
     },
-    price: 30,
+    price: 35,
     productType: "hot_drinks",
   },
   {
-    image: "ceai_de_catina.png",
+    image: "suc_fresh.png",
     name: {
-      ru: "Ceai de catina",
-      ro: "Ceai de catina",
-    },
-    description: {
-      ru: "ghimbir si portocala ,450 ml",
-      ro: "ghimbir si portocala ,450 ml",
-    },
-    price: 50,
-    productType: "hot_drinks",
-  },
-  {
-    image: "ceai_de_plante.png",
-    name: {
-      ru: "Ceai de Plante",
-      ro: "Ceai de Plante",
+      ru: "Ceai de plante",
+      ro: "Ceai de plante",
     },
     description: {
       ru: "450 ml",
@@ -1679,679 +1425,1049 @@ const productsMig = [
     productType: "hot_drinks",
   },
   {
-    image: "aperol_spritz.png",
+    image: "borjomi.png",
     name: {
-      ru: "Aperol Spritz",
-      ro: "Aperol Spritz",
+      ru: "Ceai de catina,ghimbir si portocale",
+      ro: "Ceai de catina,ghimbir si portocale",
     },
     description: {
-      ru: "350  ml",
-      ro: "350  ml",
-    },
-    price: 65,
-    productType: "alchogol_coctails",
-  },
-  {
-    image: "gin_tonic.png",
-    name: {
-      ru: "Gin tonic",
-      ro: "Gin tonic",
-    },
-    description: {
-      ru: "350 ml",
-      ro: "350 ml",
-    },
-    price: 55,
-    productType: "alchogol_coctails",
-  },
-  {
-    image: "cuba_libre.png",
-    name: {
-      ru: "Cuba Libre",
-      ro: "Cuba Libre",
-    },
-    description: {
-      ru: "350 ml",
-      ro: "350 ml",
+      ru: "450 ml",
+      ro: "450 ml",
     },
     price: 60,
-    productType: "alchogol_coctails",
+    productType: "hot_drinks",
   },
   {
-    image: "green_mexican.png",
+    image: "milkshake.png",
     name: {
-      ru: "Green Mexican",
-      ro: "Green Mexican",
+      ru: "Ice Mochaccino",
+      ro: "Ice Mochaccino",
     },
     description: {
-      ru: "60 ml",
-      ro: "60 ml",
-    },
-    price: 55,
-    productType: "alchogol_coctails",
-  },
-  {
-    image: "long_island_ice_tea.png",
-    name: {
-      ru: "Long Island Ice Tea",
-      ro: "Long Island Ice Tea",
-    },
-    description: {
-      ru: "",
-      ro: "",
-    },
-    price: 90,
-    productType: "alchogol_coctails",
-  },
-  {
-    image: "glintwein.png",
-    name: {
-      ru: "Glintwein",
-      ro: "Glintwein",
-    },
-    description: {
-      ru: "55 ml",
-      ro: "55 ml",
-    },
-    price: 30,
-    productType: "alchogol_coctails",
-  },
-  {
-    image: "pale_ale.png",
-    name: {
-      ru: "Pale Ale",
-      ro: "Pale Ale",
-    },
-    description: {
-      ru: "350  ml",
-      ro: "350  ml",
+      ru: "330 ml  ",
+      ro: "330 ml  ",
     },
     price: 45,
-    productType: "beer",
+    productType: "non_alchogol",
   },
   {
-    image: "efes_pilsner.png",
+    image: "limonada_clasica.png",
     name: {
-      ru: "Efes pilsner",
-      ro: "Efes pilsner",
+      ru: "Ice Latte",
+      ro: "Ice Latte",
     },
     description: {
-      ru: "f/a ,c/a 500 ml",
-      ro: "f/a ,c/a 500 ml",
+      ru: "300ml",
+      ro: "300ml",
     },
     price: 40,
-    productType: "beer",
+    productType: "non_alchogol",
   },
   {
-    image: "kozel.png",
+    image: "limonada_clasica.png",
     name: {
-      ru: "Kozel",
-      ro: "Kozel",
+      ru: "Espresso Tonic",
+      ro: "Espresso Tonic",
     },
     description: {
-      ru: "bruna / blonda 500 ml",
-      ro: "bruna / blonda 500 ml",
+      ru: "220ml",
+      ro: "220ml",
     },
     price: 40,
-    productType: "beer",
+    productType: "non_alchogol",
   },
   {
-    image: "corona_extra.png",
+    image: "limonada_clasica.png",
     name: {
-      ru: "Corona Extra",
-      ro: "Corona Extra",
+      ru: "Dorna c/g & f/g",
+      ro: "Dorna c/g & f/g",
     },
     description: {
-      ru: "355 ml",
-      ro: "355 ml",
+      ru: "330ml",
+      ro: "330ml",
+    },
+    price: 30,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "Dorna c/g & f/g",
+      ro: "Dorna c/g & f/g",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 50,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "SanBenedetto",
+      ro: "SanBenedetto",
+    },
+    description: {
+      ru: "250ml",
+      ro: "250ml",
+    },
+    price: 35,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "SanBenedetto",
+      ro: "SanBenedetto",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 65,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "Coca-cola/Fanta/Sprite",
+      ro: "Coca-cola/Fanta/Sprite",
+    },
+    description: {
+      ru: "250ml",
+      ro: "250ml",
+    },
+    price: 30,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "Schweppes Tonic",
+      ro: "Schweppes Tonic",
+    },
+    description: {
+      ru: "250ml",
+      ro: "250ml",
+    },
+    price: 30,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "Borjomi",
+      ro: "Borjomi",
+    },
+    description: {
+      ru: "500ml",
+      ro: "500ml",
     },
     price: 55,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "Suc Fresh orange/grapefruit",
+      ro: "Suc Fresh orange/grapefruit",
+    },
+    description: {
+      ru: "250ml",
+      ro: "250ml",
+    },
+    price: 55,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "Suc JAFFA in asortiment",
+      ro: "Suc JAFFA in asortiment",
+    },
+    description: {
+      ru: "250ml",
+      ro: "250ml",
+    },
+    price: 30,
+    productType: "non_alchogol",
+  },
+  {
+    image: "limonada_clasica.png",
+    name: {
+      ru: "Suc JAFFA in asortiment",
+      ro: "Suc JAFFA in asortiment",
+    },
+    description: {
+      ru: "950ml",
+      ro: "950ml",
+    },
+    price: 30,
+    productType: "non_alchogol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Fautor *310 Savignion Blanc&Aligote",
+      ro: "Fautor *310 Savignion Blanc&Aligote",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 220,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Fautor *310 Merlot&Feteasca Neagra",
+      ro: "Fautor *310 Merlot&Feteasca Neagra",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 220,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Fautor *310 Merlot&Rara Neagra",
+      ro: "Fautor *310 Merlot&Rara Neagra",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 220,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Aurore Rara Neagra 220",
+      ro: "Aurore Rara Neagra 220",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 350,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Aurore Feteasca Neagra-Tempranillo 2022",
+      ro: "Aurore Feteasca Neagra-Tempranillo 2022",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 350,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Aurore Feteasca Regala 2022",
+      ro: "Aurore Feteasca Regala 2022",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 350,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Aurore Albarino-Sauvignon Blanc",
+      ro: "Aurore Albarino-Sauvignon Blanc",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 350,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Chardonnay de Purcari 1827",
+      ro: "Chardonnay de Purcari 1827",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 280,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Pinot Grigio de Purcari 1827",
+      ro: "Pinot Grigio de Purcari 1827",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 280,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Rose de Purcari 1827",
+      ro: "Rose de Purcari 1827",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 280,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Purcari Cabernet Sauvignon 1827",
+      ro: "Purcari Cabernet Sauvignon 1827",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 280,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Bostovan Chardonnay",
+      ro: "Bostovan Chardonnay",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 160,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Bostovan Muscat Rose",
+      ro: "Bostovan Muscat Rose",
+    },
+    description: {
+      ru: "150ml",
+      ro: "150ml",
+    },
+    price: 35,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Bostovan Muscat Rose",
+      ro: "Bostovan Muscat Rose",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 160,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Bostovan Cebrenret Sauvignon",
+      ro: "Bostovan Cebrenret Sauvignon",
+    },
+    description: {
+      ru: "150ml",
+      ro: "150ml",
+    },
+    price: 35,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Bostovan Cebrenret Sauvignon",
+      ro: "Bostovan Cebrenret Sauvignon",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 160,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Vinul casei alb/rosu",
+      ro: "Vinul casei alb/rosu",
+    },
+    description: {
+      ru: "1L",
+      ro: "1L",
+    },
+    price: 140,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Vinul casei la pahar",
+      ro: "Vinul casei la pahar",
+    },
+    description: {
+      ru: "150ml",
+      ro: "150ml",
+    },
+    price: 35,
+    productType: "wines",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Bere la halbă KOZEL blonda",
+      ro: "Bere la halbă KOZEL blonda",
+    },
+    description: {
+      ru: "500ml",
+      ro: "500ml",
+    },
+    price: 50,
     productType: "beer",
   },
   {
-    image: "hoegaarden.png",
+    image: "no_img.png",
+    name: {
+      ru: "Birra Moretti blondă / f.a.",
+      ro: "Birra Moretti blondă / f.a.",
+    },
+    description: {
+      ru: "330ml",
+      ro: "330ml",
+    },
+    price: 50,
+    productType: "beer",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Paulaner filtrată / nefiltrată / f.a.",
+      ro: "Paulaner filtrată / nefiltrată / f.a.",
+    },
+    description: {
+      ru: "500ml",
+      ro: "500ml",
+    },
+    price: 75,
+    productType: "beer",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Kozel (blondă/brună)",
+      ro: "Kozel (blondă/brună)",
+    },
+    description: {
+      ru: "500ml",
+      ro: "500ml",
+    },
+    price: 50,
+    productType: "beer",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "EFES Pilsener (blondă/fără alcool)",
+      ro: "EFES Pilsener (blondă/fără alcool)",
+    },
+    description: {
+      ru: "500ml",
+      ro: "500ml",
+    },
+    price: 50,
+    productType: "beer",
+  },
+  {
+    image: "no_img.png",
     name: {
       ru: "Hoegaarden",
       ro: "Hoegaarden",
     },
     description: {
-      ru: "330 ml",
-      ro: "330 ml",
-    },
-    price: 50,
-    productType: "beer",
-  },
-  {
-    image: "franziskaner.png",
-    name: {
-      ru: "Franziskaner",
-      ro: "Franziskaner",
-    },
-    description: {
-      ru: "Weissbier 500 ml",
-      ro: "Weissbier 500 ml",
+      ru: "330ml",
+      ro: "330ml",
     },
     price: 60,
     productType: "beer",
   },
   {
-    image: "kronenbourg.png",
+    image: "no_img.png",
     name: {
-      ru: "Kronenbourg",
-      ro: "Kronenbourg",
+      ru: "Corona Extra",
+      ro: "Corona Extra",
     },
     description: {
-      ru: "460 ml",
-      ro: "460 ml",
+      ru: "355ml",
+      ro: "355ml",
     },
-    price: 45,
+    price: 65,
     productType: "beer",
   },
   {
-    image: "kozel_blonda_halba.png",
+    image: "no_img.png",
     name: {
-      ru: "Kozel blonda  HALBA",
-      ro: "Kozel blonda  HALBA",
+      ru: "Cricova Lacrima Dulce",
+      ro: "Cricova Lacrima Dulce",
     },
     description: {
-      ru: "500 ml",
-      ro: "500 ml",
+      ru: "150/750ml",
+      ro: "150/750ml",
+    },
+    price: {
+      "150ml": 40,
+      "750ml": 180,
+    },
+    productType: "champagne",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Cricova Criseco",
+      ro: "Cricova Criseco",
+    },
+    description: {
+      ru: "150/750ml",
+      ro: "150/750ml",
+    },
+    price: {
+      "150ml": 40,
+      "750ml": 180,
+    },
+    productType: "champagne",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Cricova Alb Brut",
+      ro: "Cricova Alb Brut",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 220,
+    productType: "champagne",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Cricova Alb Dulce",
+      ro: "Cricova Alb Dulce",
+    },
+    description: {
+      ru: "750ml",
+      ro: "750ml",
+    },
+    price: 180,
+    productType: "champagne",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Aperol Spritz",
+      ro: "Aperol Spritz",
+    },
+    description: {
+      ru: "350ml",
+      ro: "350ml",
+    },
+    price: 75,
+    productType: "alcohol_cocktails",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Blue Curacao",
+      ro: "Blue Curacao",
+    },
+    description: {
+      ru: "350ml",
+      ro: "350ml",
+    },
+    price: 80,
+    productType: "alcohol_cocktails",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Gin Tonic",
+      ro: "Gin Tonic",
+    },
+    description: {
+      ru: "220ml",
+      ro: "220ml",
+    },
+    price: 70,
+    productType: "alcohol_cocktails",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Glintwein",
+      ro: "Glintwein",
+    },
+    description: {
+      ru: "200ml",
+      ro: "200ml",
     },
     price: 35,
-    productType: "beer",
+    productType: "alcohol_cocktails",
   },
   {
-    image: "sauvignon_blanc_aligote.png",
+    image: "no_img.png",
     name: {
-      ru: "Sauvignon Blanc Aligote",
-      ro: "Sauvignon Blanc Aligote",
+      ru: "Mojito",
+      ro: "Mojito",
     },
     description: {
-      ru: "(alb, sec) 0,75 ml",
-      ro: "(alb, sec) 0,75 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 210,
-    productType: "wines",
+    price: 70,
+    productType: "alcohol_cocktails",
   },
   {
-    image: "merlot_rara_neagra.png",
+    image: "no_img.png",
     name: {
-      ru: "Merlot Rara Neagra",
-      ro: "Merlot Rara Neagra",
+      ru: "Margarita classic/strawberry",
+      ro: "Margarita classic/strawberry",
     },
     description: {
-      ru: "(rosu, sec) 0,75 ml",
-      ro: "(rosu, sec) 0,75 ml",
+      ru: "160ml",
+      ro: "160ml",
     },
-    price: 210,
-    productType: "wines",
+    price: 75,
+    productType: "alcohol_cocktails",
   },
   {
-    image: "merlot_feteasca_nearga.png",
+    image: "no_img.png",
     name: {
-      ru: "Merlot Feteasca Nearga",
-      ro: "Merlot Feteasca Nearga",
+      ru: "Blue Lagoon",
+      ro: "Blue Lagoon",
     },
     description: {
-      ru: "(roz, sec)0,75 ml",
-      ro: "(roz, sec)0,75 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 210,
-    productType: "wines",
+    price: 75,
+    productType: "alcohol_cocktails",
   },
   {
-    image: "aurore_feteasca_neagra.png",
+    image: "no_img.png",
     name: {
-      ru: "Aurore Feteasca Neagra",
-      ro: "Aurore Feteasca Neagra",
+      ru: "Pina Colada",
+      ro: "Pina Colada",
     },
     description: {
-      ru: "0,75 ml",
-      ro: "0,75 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 350,
-    productType: "wines",
+    price: 65,
+    productType: "alcohol_cocktails",
   },
   {
-    image: "aurore_pinot_grigio.png",
+    image: "no_img.png",
     name: {
-      ru: "Aurore Pinot Grigio",
-      ro: "Aurore Pinot Grigio",
+      ru: "Green Mexican",
+      ro: "Green Mexican",
     },
     description: {
-      ru: "0,75 ml",
-      ro: "0,75 ml",
+      ru: "60ml",
+      ro: "60ml",
     },
-    price: 350,
-    productType: "wines",
+    price: 55,
+    productType: "alcohol_cocktails",
   },
   {
-    image: "aurore_rara_neagra.png",
+    image: "no_img.png",
     name: {
-      ru: "Aurore Rara Neagra",
-      ro: "Aurore Rara Neagra",
+      ru: "Milkshake Clasic",
+      ro: "Milkshake Clasic",
     },
     description: {
-      ru: "0,75 ml",
-      ro: "0,75 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 350,
-    productType: "wines",
+    price: 45,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "uneori_cabernet_sauvignon.png",
+    image: "no_img.png",
     name: {
-      ru: "Uneori Cabernet Sauvignon",
-      ro: "Uneori Cabernet Sauvignon",
+      ru: "Milkshake capsuni si banane",
+      ro: "Milkshake capsuni si banane",
     },
     description: {
-      ru: "750 ml",
-      ro: "750 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 200,
-    productType: "wines",
+    price: 65,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "uneori_riesling.png",
+    image: "no_img.png",
     name: {
-      ru: "Uneori Riesling",
-      ro: "Uneori Riesling",
+      ru: "Milkshake Oreo",
+      ro: "Milkshake Oreo",
     },
     description: {
-      ru: "750 ml",
-      ro: "750 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 200,
-    productType: "wines",
+    price: 75,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "uneori_muscat_rose.png",
+    image: "no_img.png",
     name: {
-      ru: "Uneori Muscat Rose",
-      ro: "Uneori Muscat Rose",
+      ru: "Mojito",
+      ro: "Mojito",
     },
     description: {
-      ru: "750 ml",
-      ro: "750 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 240,
-    productType: "wines",
+    price: 50,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "cabernet_sauvignon.png",
+    image: "no_img.png",
     name: {
-      ru: "Cabernet Sauvignon",
-      ro: "Cabernet Sauvignon",
+      ru: "Blue Curacao",
+      ro: "Blue Curacao",
     },
     description: {
-      ru: "150/750 ml",
-      ro: "150/750 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: "24.92",
-    productType: "wines",
+    price: 50,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "muscat_rose.png",
+    image: "no_img.png",
     name: {
-      ru: "Muscat Rose",
-      ro: "Muscat Rose",
+      ru: "Pina Colada",
+      ro: "Pina Colada",
     },
     description: {
-      ru: "150/750 ml",
-      ro: "150/750 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: "87.07",
-    productType: "wines",
+    price: 50,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "chardonnay.png",
+    image: "no_img.png",
     name: {
-      ru: "Chardonnay",
-      ro: "Chardonnay",
+      ru: "Limonada clasică/căpșuni",
+      ro: "Limonada clasică/căpșuni",
     },
     description: {
-      ru: "150/750 ml ml",
-      ro: "150/750 ml ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: "30.10",
-    productType: "wines",
+    price: 45,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "orasul_subteran_viorica.png",
+    image: "no_img.png",
     name: {
-      ru: "Orasul Subteran Viorica",
-      ro: "Orasul Subteran Viorica",
+      ru: "Limonada clasică/căpșuni",
+      ro: "Limonada clasică/căpșuni",
     },
     description: {
-      ru: "750 ml",
-      ro: "750 ml",
+      ru: "1L",
+      ro: "1L",
     },
-    price: 200,
-    productType: "wines",
+    price: 95,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "orasul_subteran_rose.png",
+    image: "no_img.png",
     name: {
-      ru: "Orasul Subteran",
-      ro: "Orasul Subteran",
+      ru: "Ceai rece de casa",
+      ro: "Ceai rece de casa",
     },
     description: {
-      ru: "Cabernet /Rose  750 ml",
-      ro: "Cabernet /Rose  750 ml",
+      ru: "350ml",
+      ro: "350ml",
     },
-    price: 200,
-    productType: "wines",
+    price: 75,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "orasul_subteran_neagra.png",
+    image: "no_img.png",
     name: {
-      ru: "Orasul Subteran",
-      ro: "Orasul Subteran",
+      ru: "Ceai rece de casa",
+      ro: "Ceai rece de casa",
     },
     description: {
-      ru: "Feteasca Neagra 750 ml",
-      ro: "Feteasca Neagra 750 ml",
+      ru: "1L",
+      ro: "1L",
     },
-    price: 200,
-    productType: "wines",
+    price: 75,
+    productType: "milk_shakes_lemonades",
   },
   {
-    image: "lacrima_dulce.png",
+    image: "no_img.png",
     name: {
-      ru: "Lacrima Dulce",
-      ro: "Lacrima Dulce",
+      ru: "Martini Bianco/Rosso",
+      ro: "Martini Bianco/Rosso",
     },
     description: {
-      ru: "750 ml",
-      ro: "750 ml",
+      ru: "40ml",
+      ro: "40ml",
     },
-    price: 170,
-    productType: "champagne",
+    price: 40,
+    productType: "strong_alcohol",
   },
   {
-    image: "alb_brut.png",
+    image: "no_img.png",
     name: {
-      ru: "Alb Brut",
-      ro: "Alb Brut",
+      ru: "Baileys Original Irish Cream",
+      ro: "Baileys Original Irish Cream",
     },
     description: {
-      ru: "750 ml",
-      ro: "750 ml",
+      ru: "40ml",
+      ro: "40ml",
     },
-    price: 210,
-    productType: "champagne",
+    price: 55,
+    productType: "strong_alcohol",
   },
   {
-    image: "crisseco.png",
-    name: {
-      ru: "Crisseco",
-      ro: "Crisseco",
-    },
-    description: {
-      ru: "150/ 750 ml",
-      ro: "150/ 750 ml",
-    },
-    price: "20.46",
-    productType: "champagne",
-  },
-  {
-    image: "asti_martini.png",
-    name: {
-      ru: "Asti Martini",
-      ro: "Asti Martini",
-    },
-    description: {
-      ru: "750 ml",
-      ro: "750 ml",
-    },
-    price: 295,
-    productType: "champagne",
-  },
-  {
-    image: "jagermeister.png",
+    image: "no_img.png",
     name: {
       ru: "Jagermeister",
       ro: "Jagermeister",
     },
     description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 50,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "bailey_s.png",
-    name: {
-      ru: "Bailey’s",
-      ro: "Bailey’s",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 50,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "martini_rosso.png",
-    name: {
-      ru: "Martini Rosso",
-      ro: "Martini Rosso",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 35,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "martini_bianco.png",
-    name: {
-      ru: "Martini Bianco",
-      ro: "Martini Bianco",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 35,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "jose_cuervo.png",
-    name: {
-      ru: "Jose Cuervo",
-      ro: "Jose Cuervo",
-    },
-    description: {
-      ru: "Reposado/ Silver 50 ml",
-      ro: "Reposado/ Silver 50 ml",
-    },
-    price: 50,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "tabacco.png",
-    name: {
-      ru: "Tabacco",
-      ro: "Tabacco",
-    },
-    description: {
-      ru: "Silver Premium 50 ml",
-      ro: "Silver Premium 50 ml",
-    },
-    price: 40,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "bacardi.png",
-    name: {
-      ru: "Bacardi",
-      ro: "Bacardi",
-    },
-    description: {
-      ru: "Oakheart 50 ml",
-      ro: "Oakheart 50 ml",
-    },
-    price: 50,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "tuica_de_gutui_caise_prune.png",
-    name: {
-      ru: "Tuica de gutui,caise prune",
-      ro: "Tuica de gutui,caise prune",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 35,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "nemiroff.png",
-    name: {
-      ru: "Nemiroff",
-      ro: "Nemiroff",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 25,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "finlandia.png",
-    name: {
-      ru: "Finlandia",
-      ro: "Finlandia",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 35,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "bardar_5_ani.png",
-    name: {
-      ru: "Bardar 5 ani",
-      ro: "Bardar 5 ani",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 30,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "bardar_7_ani.png",
-    name: {
-      ru: "Bardar 7 ani",
-      ro: "Bardar 7 ani",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 45,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "calarasi_5_ani.png",
-    name: {
-      ru: "Calarasi 5 ani",
-      ro: "Calarasi 5 ani",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 30,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "calarasi_7_ani.png",
-    name: {
-      ru: "Calarasi 7 ani",
-      ro: "Calarasi 7 ani",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 40,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "balti_7_ani.png",
-    name: {
-      ru: "Balti 7 ani",
-      ro: "Balti 7 ani",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 40,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "speranta_9_ani.png",
-    name: {
-      ru: "Speranta 9 ani",
-      ro: "Speranta 9 ani",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
-    },
-    price: 50,
-    productType: "strong_alchogol",
-  },
-  {
-    image: "bucuria_10_anii.png",
-    name: {
-      ru: "Bucuria 10 anii",
-      ro: "Bucuria 10 anii",
-    },
-    description: {
-      ru: "50 ml",
-      ro: "50 ml",
+      ru: "40ml",
+      ro: "40ml",
     },
     price: 55,
-    productType: "strong_alchogol",
+    productType: "strong_alcohol",
   },
   {
-    image: "jameson.png",
+    image: "no_img.png",
     name: {
-      ru: "Jameson",
-      ro: "Jameson",
+      ru: "ȚUICĂ DE CASĂ",
+      ro: "ȚUICĂ DE CASĂ",
     },
     description: {
-      ru: "50 ml",
-      ro: "50 ml",
+      ru: "40ml",
+      ro: "40ml",
     },
-    price: 50,
-    productType: "strong_alchogol",
+    price: 40,
+    productType: "strong_alcohol",
   },
   {
-    image: "jack_daniel_s.png",
+    image: "no_img.png",
     name: {
-      ru: "Jack Daniel’s",
-      ro: "Jack Daniel’s",
+      ru: "BARDAR 5YO",
+      ro: "BARDAR 5YO",
     },
     description: {
-      ru: "50 ml",
-      ro: "50 ml",
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 35,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "CALARAȘI 5YO",
+      ro: "CALARAȘI 5YO",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 35,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "BARDAR 7YO",
+      ro: "BARDAR 7YO",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
     },
     price: 50,
-    productType: "strong_alchogol",
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "CALARAȘI 7YO",
+      ro: "CALARAȘI 7YO",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 50,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "BARZA ALBA SPERANTA 9YO",
+      ro: "BARZA ALBA SPERANTA 9YO",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 60,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "BARZA ALBA BUCURIA 10YO",
+      ro: "BARZA ALBA BUCURIA 10YO",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 70,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "Absolut Vodca",
+      ro: "Absolut Vodca",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 40,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "FINLANDIA Vodca",
+      ro: "FINLANDIA Vodca",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 40,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "HORTIȚA Vodca",
+      ro: "HORTIȚA Vodca",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 35,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "JOSE CUERVO Silver/gold",
+      ro: "JOSE CUERVO Silver/gold",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 55,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "TOBACCO Silver",
+      ro: "TOBACCO Silver",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 50,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "BACARDI Rum",
+      ro: "BACARDI Rum",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 60,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "JAMESON Irish",
+      ro: "JAMESON Irish",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 60,
+    productType: "strong_alcohol",
+  },
+  {
+    image: "no_img.png",
+    name: {
+      ru: "JACK DANIEL’S",
+      ro: "JACK DANIEL’S",
+    },
+    description: {
+      ru: "40ml",
+      ro: "40ml",
+    },
+    price: 65,
+    productType: "strong_alcohol",
   },
 ];

@@ -6,6 +6,16 @@ import ProductCard from "../ProductCard";
 import ProductCreateEditModal from "../ProductCreateEditModal/ProductCreateEditModal";
 import { useState } from "react";
 
+const disabledImgSections = [
+  "non_alchogol",
+  "milk_shakes_lemonades",
+  "hot_drinks",
+  "alcohol_cocktails",
+  "beer",
+  "wines",
+  "champagne",
+  "strong_alcohol",
+];
 const ProductsSection = ({
   section,
   id,
@@ -16,10 +26,7 @@ const ProductsSection = ({
   isAuth?: boolean;
 }) => {
   const [editData, setEditData] = useState<IProduct | undefined>();
-  const {
-    data,
-    isLoading = true,
-  } = useGetProductsQuery({ type: section });
+  const { data, isLoading = true } = useGetProductsQuery({ type: section });
 
   const theme = useTheme();
 
@@ -54,6 +61,7 @@ const ProductsSection = ({
             }}
           >
             <ProductCard
+              imgDisabled={disabledImgSections.includes(section)}
               isAuth={isAuth}
               item={product}
               handleEdit={handleEdit}

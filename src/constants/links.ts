@@ -1,4 +1,4 @@
-import { seactionContacts, sectionBankets } from './sections';
+import { seactionContacts, sectionBankets } from "./sections";
 
 export const headerLinks = [
   {
@@ -31,16 +31,14 @@ export const mainDishes = "mainDishes";
 export const gaskets = "gaskets";
 export const desserts = "deserts";
 export const nonAlchogol = "non_alchogol";
-export const milkShakes = "milk_shakes_lemonads";
+export const milkShakes = "milk_shakes_lemonades";
 export const coffee = "hot_drinks";
-export const alchogolCoctails = "alchogol_coctails";
+export const alchogolCoctails = "alcohol_cocktails";
 
 export const beer = "beer";
 export const wines = "wines";
 export const champagne = "champagne";
-export const strong_alchogol = "strong_alchogol";
-
-
+export const strong_alchogol = "strong_alcohol";
 
 export const menuLinks = [
   {
