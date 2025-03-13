@@ -1,4 +1,4 @@
-import { IProduct } from "@/constants/products";
+import { IProduct, drinkTypes } from "@/constants/products";
 import { useCartContext } from "@/contexts/cartContext";
 import {
   Translated,
@@ -56,13 +56,16 @@ const ProductCard = ({
       });
     };
 
+  const isDrink = drinkTypes.includes(item.productType);
+
+  console.log(typeof item.price === "object", item.price, item);
   return (
     <Box
       width={1}
       padding={"20px"}
       borderRadius={"10px"}
       display={"flex"}
-      border={"1.5px solid #9FCD57"}
+      border={`1.5px solid ${isDrink ? "#908787" : "#9FCD57"}`}
       justifyContent={"center"}
       minHeight={"100%"}
     >
@@ -128,7 +131,7 @@ const ProductCard = ({
             overflow: "hidden",
             textOverflow: "ellipsis",
             lineClamp: 2,
-            height: 46,
+            height: isDrink ? "auto" : 40,
             boxOrient: "vertical",
           }}
         >
@@ -142,16 +145,19 @@ const ProductCard = ({
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "normal",
-            height: 40,
+            height: isDrink ? "auto" : 40,
           }}
         >
-          <Typography mb={1} variant="h4">
+          <Typography mb={isDrink ? 0 : 1} variant="h4">
             {(item.description as any)?.[lang]}
           </Typography>
         </Box>
 
         <Typography variant="h3" mt={"34px"}>
-          {item.price} MDL
+          {typeof item.price === "object"
+            ? `${Object.values(item.price).join("/")}`
+            : item.price}{" "}
+          MDL
         </Typography>
         {/* {!isAuth && (
           <Box display={"flex"} gap={"21px"} mt={2} alignItems={"center"}>

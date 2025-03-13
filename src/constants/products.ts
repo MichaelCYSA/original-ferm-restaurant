@@ -253,6 +253,17 @@ export const productCatagories = [
   },
 ];
 
+export const drinkTypes = [
+  "non_alchogol",
+  "milk_shakes_lemonades",
+  "hot_drinks",
+  "alcohol_cocktails",
+  "beer",
+  "wines",
+  "champagne",
+  "strong_alcohol",
+];
+
 export const productCategoriesCookTime = {
   breakFast: 600000,
   supe: 600000,
@@ -488,7 +499,7 @@ const productsMig = [
     productType: "salads",
   },
   {
-    image: "șold_de_găină_carry_cu_legume.webp",
+    image: "no_image.png",
     name: {
       ru: "Теплый салат с куриной грудкой и броколи",
       ro: "Salata calda cu pui si brocoli",
@@ -644,7 +655,7 @@ const productsMig = [
     productType: "beerSnack",
   },
   {
-    image: "no_img.png",
+    image: "Inele de ceapă (130_50) 60 MDL.webp",
     name: {
       ru: "Луковые кольца ",
       ro: "Inele de ciapa",
@@ -1087,7 +1098,7 @@ const productsMig = [
     productType: "gaskets",
   },
   {
-    image: "Cartofi copți cu rozmarin (250) 45 MDL.webp",
+    image: "Cartofi copți cu rozmarin (250) 45 MDL .webp",
     name: {
       ru: "Запеченый картофель с розмарином",
       ro: "Cartofi copti cu rozmarin",
@@ -1269,7 +1280,7 @@ const productsMig = [
     productType: "deserts",
   },
   {
-    image: "napoleon.webp",
+    image: "no_image.png",
     name: {
       ru: "Наполеон",
       ro: "Napoleon",
@@ -1282,7 +1293,7 @@ const productsMig = [
     productType: "deserts",
   },
   {
-    image: "no_image.png",
+    image: "Tiramisu.webp",
     name: {
       ru: "Тирамису",
       ro: "Tiramisu",
@@ -1957,10 +1968,7 @@ const productsMig = [
       ru: "150/750ml",
       ro: "150/750ml",
     },
-    price: {
-      "150ml": 40,
-      "750ml": 180,
-    },
+    price: 180,
     productType: "champagne",
   },
   {
