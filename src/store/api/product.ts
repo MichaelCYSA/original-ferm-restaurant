@@ -8,6 +8,10 @@ const productsApi = apiService.injectEndpoints({
       query: ({ type }) => `/product/${type}`,
       providesTags: [productTag],
     }),
+    getAdminProducts: build.query({
+      query: ({ type }) => `/admin/product/${type}`,
+      providesTags: [productTag],
+    }),
     createProduct: build.mutation({
       query: ({ data }: { data: IProduct; id?: string }) => ({
         url: "/product",
@@ -37,6 +41,7 @@ const productsApi = apiService.injectEndpoints({
 
 export const {
   useGetProductsQuery,
+  useGetAdminProductsQuery,
   useCreateProductMutation,
   useUpdateProductMutation,
   useDeleteProductMutation,

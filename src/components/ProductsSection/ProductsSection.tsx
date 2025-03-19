@@ -1,5 +1,8 @@
 import { IProduct } from "@/constants/products";
-import { useGetProductsQuery } from "@/store/api/product";
+import {
+  useGetProductsQuery,
+  useGetAdminProductsQuery,
+} from "@/store/api/product";
 import { Box, CircularProgress, useTheme } from "@mui/material";
 
 import ProductCard from "../ProductCard";
@@ -26,7 +29,9 @@ const ProductsSection = ({
   isAuth?: boolean;
 }) => {
   const [editData, setEditData] = useState<IProduct | undefined>();
-  const { data, isLoading = true } = useGetProductsQuery({ type: section });
+
+  const useQuery = isAuth ? useGetAdminProductsQuery : useGetProductsQuery;
+  const { data, isLoading = true } = useQuery({ type: section });
 
   const theme = useTheme();
 

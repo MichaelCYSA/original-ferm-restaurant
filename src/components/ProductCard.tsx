@@ -58,7 +58,6 @@ const ProductCard = ({
 
   const isDrink = drinkTypes.includes(item.productType);
 
-  console.log(typeof item.price === "object", item.price, item);
   return (
     <Box
       width={1}
@@ -115,7 +114,11 @@ const ProductCard = ({
         )}
         {!imgDisabled ? (
           <Image
-            src={`/webp/${item.image}`}
+            src={
+              item.image && item.image?.includes("http")
+                ? item.image
+                : `/webp/${item.image}`
+            }
             alt="salat"
             width={200}
             height={200}
@@ -131,7 +134,8 @@ const ProductCard = ({
             overflow: "hidden",
             textOverflow: "ellipsis",
             lineClamp: 2,
-            height: isDrink ? "auto" : 40,
+            lineHeight: "18px",
+            // height: isDrink ? "auto" : 40,
             boxOrient: "vertical",
           }}
         >

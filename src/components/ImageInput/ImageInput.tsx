@@ -40,7 +40,7 @@ const ImageInput = ({
         throw new Error(`Failed to upload image (status ${response.status})`);
       }
       const data = await response.json();
-      onChange(data.data);
+      onChange(`http://178.17.170.142:9000/img/${data.data}`);
     } catch (error) {
       toast.error(t("ocurred_an_error_try_again"));
     }
@@ -60,9 +60,7 @@ const ImageInput = ({
         sx={{ cursor: "pointer" }}
       >
         <Image
-          src={
-            value ? `${config.PRODUCT_IMG_HOST}/${value}` : "/img_upload.png"
-          }
+          src={value ? value : "/img_upload.png"}
           width={200}
           height={200}
           alt={"img"}
