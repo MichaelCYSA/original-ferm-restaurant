@@ -132,7 +132,7 @@ const Contacts = () => (
               href={"tel:373078323231"}
               variant="h3"
             >
-              +3730783 23 231
+              +373783 23 231
             </Typography>
           </Box>
 
@@ -144,7 +144,7 @@ const Contacts = () => (
             <QueryBuilderOutlinedIcon
               sx={{ fontSize: "25px", color: "#9FCD57" }}
             />
-            <Typography variant="h3">Lucram 10-22:00</Typography>
+            <Typography variant="h3">Grafic de lucru 10-22:00</Typography>
           </Box>
 
           <Box
@@ -152,12 +152,25 @@ const Contacts = () => (
             gap={2}
             justifyContent={{ xs: "center", md: "flex-end" }}
           >
-            <FacebookIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
+            <a
+              target="_blank"
+              href="https://www.tiktok.com/discover/ferma-cu-origini"
+            >
+              <img
+                src={"/tiktok.png"}
+                style={{ width: 25, height: 25, borderRadius: 5 }}
+              />
+            </a>
+            <FacebookIcon
+              sx={{ fontSize: "32px", color: "#9FCD57", mt: -0.5 }}
+            />
             <a
               target="_blank"
               href="https://www.instagram.com/restaurant.fermacuorigini/#"
             >
-              <InstagramIcon sx={{ fontSize: "25px", color: "#9FCD57" }} />
+              <InstagramIcon
+                sx={{ fontSize: "32px", color: "#9FCD57", mt: -0.5 }}
+              />
             </a>
             <Typography
               component={"a"}

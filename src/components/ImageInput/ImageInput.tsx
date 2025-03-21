@@ -40,7 +40,7 @@ const ImageInput = ({
         throw new Error(`Failed to upload image (status ${response.status})`);
       }
       const data = await response.json();
-      onChange(`http://178.17.170.142:9000/img/${data.data}`);
+      onChange(`https://fermacuorigini.pizza/img/${data.data}`);
     } catch (error) {
       toast.error(t("ocurred_an_error_try_again"));
     }
