@@ -86,10 +86,6 @@ export const menuLinks = [
     link: desserts,
   },
   {
-    name: "deserts",
-    link: desserts,
-  },
-  {
     name: nonAlchogol,
     link: nonAlchogol,
   },

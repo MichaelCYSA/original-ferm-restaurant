@@ -129,10 +129,10 @@ const Contacts = () => (
             <Typography
               component={"a"}
               sx={{ textDecoration: "none" }}
-              href={"tel:373078323231"}
+              href={"tel:37378323231"}
               variant="h3"
             >
-              +373783 23 231
+              +373 78 32 32 31
             </Typography>
           </Box>
 

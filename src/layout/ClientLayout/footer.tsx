@@ -103,7 +103,7 @@ const Footer = () => {
             <Typography variant="h3">
               {Translated("working")} 10-22:00, Tel.:{" "}
               <a style={{ color: "white" }} href={"tel:+37378323231"}>
-                0783 23 231
+                078 32 32 31
               </a>
             </Typography>
             <Box display={"flex"} gap={2} alignItems={"flex-end"}>
