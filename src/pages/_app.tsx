@@ -11,6 +11,7 @@ import { store } from "@/store";
 import { CartProvider } from "@/contexts/cartContext";
 import Notifications from "@/components/Notifications/Notifications";
 import type { AppProps } from "next/app";
+import { CookiesProvider } from "react-cookie";
 
 const Layuot = ({ children }: { children: JSX.Element }) => {
   const { pathname } = useRouter();
@@ -27,17 +28,19 @@ const Layuot = ({ children }: { children: JSX.Element }) => {
 function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <LanguageContextWrapper>
-        <Notifications>
-          <CartProvider>
-            <ThemeProvider theme={theme}>
-              <Layuot>
-                <Component {...pageProps} />
-              </Layuot>
-            </ThemeProvider>
-          </CartProvider>
-        </Notifications>
-      </LanguageContextWrapper>
+      <CookiesProvider>
+        <LanguageContextWrapper>
+          <Notifications>
+            <CartProvider>
+              <ThemeProvider theme={theme}>
+                <Layuot>
+                  <Component {...pageProps} />
+                </Layuot>
+              </ThemeProvider>
+            </CartProvider>
+          </Notifications>
+        </LanguageContextWrapper>
+      </CookiesProvider>
     </Provider>
   );
 }
