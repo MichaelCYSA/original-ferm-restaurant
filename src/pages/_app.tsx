@@ -12,8 +12,9 @@ import { CartProvider } from "@/contexts/cartContext";
 import Notifications from "@/components/Notifications/Notifications";
 import type { AppProps } from "next/app";
 import { CookiesProvider } from "react-cookie";
+import { ReactNode } from "react";
 
-const Layuot = ({ children }: { children: JSX.Element }) => {
+const Layuot = ({ children }: { children: ReactNode }) => {
   const { pathname } = useRouter();
 
   if (pathname.includes("admin")) {

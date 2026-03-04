@@ -3,8 +3,9 @@ import Box from "@mui/material/Box";
 import Footer from "./footer";
 import Header from "./header";
 import LayuotContainer from "../../components/Containers/LayuotContainer";
+import { ReactNode } from "react";
 
-const ClientLayout = ({ children }: { children: JSX.Element }) => {
+const ClientLayout = ({ children }: { children: ReactNode }) => {
   return (
     <Box width={1}>
       <Header />

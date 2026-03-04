@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 import ro from "./ro.json";
 import ru from "./ru.json";
@@ -23,7 +29,7 @@ export const useLangContext = () => useContext(LanguageContext);
 export const LanguageContextWrapper = ({
   children,
 }: {
-  children: JSX.Element;
+  children: ReactNode;
 }) => {
   const [lang, setLang] = useState<string>("ro");
 

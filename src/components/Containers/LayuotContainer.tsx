@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
+import { ReactNode } from "react";
 
-const LayuotContainer = ({ children }: { children: JSX.Element }) => (
+const LayuotContainer = ({ children }: { children: ReactNode }) => (
   <Box
     maxWidth={"1126px"}
     minWidth={"475px"}

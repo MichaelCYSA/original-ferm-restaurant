@@ -6,7 +6,7 @@ export const headerLinks = [
     link: "menu",
   },
   {
-    name: "Banchete",
+    name: "bacnhets",
     link: sectionBankets.sectionId,
   },
   {

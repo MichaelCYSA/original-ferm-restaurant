@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
+import { ReactNode } from "react";
 
-const MainContainer = ({ children }: { children: JSX.Element }) => {
+const MainContainer = ({ children }: { children: ReactNode }) => {
   return (
     <Box
       sx={{

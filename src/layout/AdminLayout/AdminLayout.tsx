@@ -30,7 +30,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-const AdminLayout = ({ children }: { children: JSX.Element }) => {
+const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 

@@ -11,7 +11,7 @@ import {
   useCreateOrderMutation,
   useUpdateOrderMutation,
 } from "@/store/api/orders";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { toast } from "react-toastify";
 import { useTranslated } from "@/lang/languageContext";
 import { useRouter } from "next/router";
@@ -47,7 +47,7 @@ const OrderForm = ({
     cart.map((product: any) => {
       orderedProducts[product._id] = Number(product.count);
     });
-  
+
     requestFunction({
       data: { ...data, totalPrice, products: orderedProducts },
       id: order?._id,
@@ -62,8 +62,8 @@ const OrderForm = ({
       clearCart();
       reset({ ...orderDefaultValues });
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 1000)
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 1000);
     });
   };
 
@@ -145,7 +145,7 @@ const FormContainer = ({
   children,
   justifyContent,
 }: {
-  children: JSX.Element;
+  children: ReactNode;
   justifyContent?: string;
 }) => {
   return (
