@@ -59,13 +59,12 @@ const SupplementsItem = ({
         {(item.name as any)?.[lang || "ro"]} - {item.price} mdl
       </Typography>
       {!isAuth ? (
-        // <IconButton
-        //   disabled={Boolean(item.disabled)}
-        //   onClick={() => addToCart(item)}
-        // >
-        //   <AddIcon sx={{ color: theme.palette.customColor.main }} />
-        // </IconButton>
-        <></>
+        <IconButton
+          disabled={Boolean(item.disabled)}
+          onClick={() => addToCart(item)}
+        >
+          <AddIcon sx={{ color: theme.palette.customColor.main }} />
+        </IconButton>
       ) : (
         <Box
           display={"flex"}

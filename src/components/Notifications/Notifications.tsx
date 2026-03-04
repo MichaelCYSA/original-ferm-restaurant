@@ -1,9 +1,10 @@
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
-import { useMediaQuery, useTheme } from '@mui/material';
-import { ToastContainer } from 'react-toastify';
+import { useMediaQuery, useTheme } from "@mui/material";
+import { ToastContainer } from "react-toastify";
+import { ReactNode } from "react";
 
-const Notifications = ({ children }: { children: JSX.Element }) => {
+const Notifications = ({ children }: { children: ReactNode }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (

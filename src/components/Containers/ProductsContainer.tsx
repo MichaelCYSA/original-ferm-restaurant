@@ -1,12 +1,13 @@
 import { Box } from "@mui/material";
 import SectionDividerBox from "../SectionDividerBox";
+import { ReactNode } from "react";
 
 const ProductsContainer = ({
   children,
   containerId,
   containerName,
 }: {
-  children: JSX.Element;
+  children: ReactNode;
   containerName: string;
   containerId: string;
 }) => {

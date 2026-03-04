@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from "react";
+import React, { ReactNode, createContext, useContext } from "react";
 import { useCart, IUseCartReturn } from "@/hooks/useCart";
 
 const noopFn = () => {};
@@ -9,10 +9,10 @@ const CartContext = createContext<IUseCartReturn>({
   minusProduct: noopFn,
   cart: [],
   totalPrice: 0,
-  clearCart: noopFn
+  clearCart: noopFn,
 });
 
-export const CartProvider = ({ children }: { children: JSX.Element }) => {
+export const CartProvider = ({ children }: { children: ReactNode }) => {
   const cart = useCart();
 
   return (
