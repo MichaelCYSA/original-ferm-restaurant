@@ -46,7 +46,6 @@ echo ""
 docker run -d \
     --name "${CONTAINER_NAME}" \
     -p "${PORT_HOST}:${PORT_CONTAINER}" \
-    --env-file ../.env \
     --restart unless-stopped \
     "${IMAGE_NAME}"
 
