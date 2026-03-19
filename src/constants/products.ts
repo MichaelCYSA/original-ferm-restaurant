@@ -184,24 +184,16 @@ export const productCatagories = [
     value: "breakFast",
   },
   {
-    label: "supe",
-    value: "supe",
-  },
-  {
     label: "salads",
     value: "salads",
   },
   {
+    label: "supe",
+    value: "supe",
+  },
+  {
     label: "goldSnacks",
     value: "goldSnacks",
-  },
-  // {
-  //   label: "hostSnack",
-  //   value: "hostSnack",
-  // },
-  {
-    label: "beerSnack",
-    value: "beerSnack",
   },
   {
     label: "mainDishes",
@@ -215,42 +207,55 @@ export const productCatagories = [
     label: "pizza",
     value: "pizza",
   },
+  // {
+  //   label: "hostSnack",
+  //   value: "hostSnack",
+  // },
+  {
+    label: "beerSnack",
+    value: "beerSnack",
+  },
   {
     label: "deserts",
     value: "deserts",
-  },
-  {
-    label: "non_alchogol",
-    value: "non_alchogol",
-  },
-  {
-    label: "milk_shakes_lemonades",
-    value: "milk_shakes_lemonades",
   },
   {
     label: "hot_drinks",
     value: "hot_drinks",
   },
   {
-    label: "alcohol_cocktails",
-    value: "alcohol_cocktails",
-  },
-  {
-    label: "beer",
-    value: "beer",
+    label: "champagne",
+    value: "champagne",
   },
   {
     label: "wines",
     value: "wines",
   },
   {
-    label: "champagne",
-    value: "champagne",
+    label: "beer",
+    value: "beer",
   },
-  {
-    label: "strong_alcohol",
-    value: "strong_alcohol",
-  },
+  // {
+  //   label: "hot_drinks",
+  //   value: "hot_drinks",
+  // },
+  // {
+  //   label: "non_alchogol",
+  //   value: "non_alchogol",
+  // },
+  // {
+  //   label: "milk_shakes_lemonades",
+  //   value: "milk_shakes_lemonades",
+  // },
+  // {
+  //   label: "alcohol_cocktails",
+  //   value: "alcohol_cocktails",
+  // },
+
+  // {
+  //   label: "strong_alcohol",
+  //   value: "strong_alcohol",
+  // },
 ];
 
 export const drinkTypes = [
