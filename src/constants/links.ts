@@ -41,37 +41,25 @@ export const champagne = "champagne";
 export const strong_alchogol = "strong_alcohol";
 
 export const menuLinks = [
+  // {
+  //   name: "Toate",
+  //   link: mainContainer,
+  // },
+  // {
+  //   name: "breakFast",
+  //   link: breakfast,
+  // },
   {
-    name: "Toate",
-    link: mainContainer,
-  },
-  {
-    name: "breakFast",
-    link: breakfast,
+    name: "salads",
+    link: salads,
   },
   {
     name: "supe",
     link: soup,
   },
   {
-    name: "salads",
-    link: salads,
-  },
-  {
     name: "goldSnacks",
     link: goldSnacks,
-  },
-  {
-    name: "pizza",
-    link: pizza,
-  },
-  {
-    name: "hostSnack",
-    link: hostSnack,
-  },
-  {
-    name: "beerSnack",
-    link: beerSnack,
   },
   {
     name: "mainDishes",
@@ -82,39 +70,53 @@ export const menuLinks = [
     link: gaskets,
   },
   {
+    name: "pizza",
+    link: pizza,
+  },
+  // {
+  //   name: "hostSnack",
+  //   link: hostSnack,
+  // },
+  {
+    name: "beerSnack",
+    link: beerSnack,
+  },
+  {
     name: "deserts",
     link: desserts,
-  },
-  {
-    name: nonAlchogol,
-    link: nonAlchogol,
-  },
-  {
-    name: milkShakes,
-    link: milkShakes,
   },
   {
     name: coffee,
     link: coffee,
   },
+  // {
+  //   name: nonAlchogol,
+  //   link: nonAlchogol,
+  // },
+  // {
+  //   name: milkShakes,
+  //   link: milkShakes,
+  // },
+
+  // {
+  //   name: alchogolCoctails,
+  //   link: alchogolCoctails,
+  // },
+
   {
-    name: alchogolCoctails,
-    link: alchogolCoctails,
-  },
-  {
-    name: beer,
-    link: beer,
+    name: champagne,
+    link: champagne,
   },
   {
     name: wines,
     link: wines,
   },
   {
-    name: champagne,
-    link: champagne,
+    name: beer,
+    link: beer,
   },
-  {
-    name: strong_alchogol,
-    link: strong_alchogol,
-  },
+  // {
+  //   name: strong_alchogol,
+  //   link: strong_alchogol,
+  // },
 ];
