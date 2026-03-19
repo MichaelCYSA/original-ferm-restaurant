@@ -179,10 +179,10 @@ export const translatedToppings: ArrayOfSupplementsItems = [
 ];
 
 export const productCatagories = [
-  {
-    label: "breakFast",
-    value: "breakFast",
-  },
+  // {
+  //   label: "breakFast",
+  //   value: "breakFast",
+  // },
   {
     label: "salads",
     value: "salads",

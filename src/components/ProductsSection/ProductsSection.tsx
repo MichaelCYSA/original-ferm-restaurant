@@ -19,6 +19,7 @@ const disabledImgSections = [
   "champagne",
   "strong_alcohol",
 ];
+
 const ProductsSection = ({
   section,
   id,
